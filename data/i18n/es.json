@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Mapa de herramientas",
+    "subtitle": "Qué son, para qué sirven y cómo se usan de forma legítima.",
+    "disclaimer": "Uso educativo. Utiliza estas herramientas solo en sistemas propios o con autorización expresa.",
+    "searchPlaceholder": "Busca por nombre o por tarea",
+    "searchLabel": "Buscar por nombre de herramienta o por tarea",
+    "noResults": "Ninguna herramienta coincide.",
+    "resultsCount": "{n} herramientas hacen esto",
+    "openTool": "Ir a la web oficial",
+    "relatedTitle": "Relacionadas",
+    "legitimateUseTitle": "Ejemplo de uso legítimo",
+    "closePanel": "Cerrar ficha",
+    "emptyPanel": "Elige una herramienta para ver su ficha."
+  },
+  "controls": {
+    "branchMode": "Ramas abiertas",
+    "branchSingle": "Solo una",
+    "branchMulti": "Varias a la vez",
+    "toLight": "Cambiar a modo claro",
+    "toDark": "Cambiar a modo oscuro"
+  },
+  "zone": {
+    "offensive": "Ofensiva",
+    "defensive": "Defensiva",
+    "transversal": "Transversal"
+  },
+  "field": {
+    "license": "Licencia",
+    "platforms": "Plataforma",
+    "level": "Nivel",
+    "status": "Estado",
+    "osiLayer": "Capa OSI"
+  },
+  "license": { "free": "Gratis", "freemium": "Freemium", "paid": "De pago" },
+  "level": { "beginner": "Principiante", "intermediate": "Intermedio", "advanced": "Avanzado" },
+  "status": { "active": "Activa", "emerging": "Emergente", "historical": "Histórica" },
+  "platform": { "web": "Web", "cli": "Terminal", "desktop": "Escritorio", "mobile": "Móvil" },
+  "na": "No aplica",
+  "category": {
+    "osint": "OSINT",
+    "network-analysis": "Análisis de red",
+    "scanning": "Escaneo y enumeración",
+    "forensics": "Forense y respuesta"
+  },
+  "subcategory": {
+    "domains": "Dominios e infraestructura",
+    "people": "Personas, correos y teléfonos",
+    "metadata": "Metadatos",
+    "geolocation": "Geolocalización",
+    "capture": "Captura y análisis",
+    "mitm": "Man-in-the-middle",
+    "ports": "Puertos y hosts",
+    "vulns": "Vulnerabilidades",
+    "disk": "Disco",
+    "memory": "Memoria"
+  }
+}

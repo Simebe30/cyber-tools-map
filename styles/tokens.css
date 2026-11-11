@@ -1,0 +1,40 @@
+/* Design tokens: single source of truth for colour, type and spacing. */
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+  --space-4: 16px; --space-5: 24px; --space-6: 32px;
+  --radius: 10px;  --radius-pill: 999px;
+  --tap: 44px; /* minimum touch target */
+
+  /* Zone accents: shared across themes. */
+  --zone-offensive: #EA580C;
+  --zone-defensive: #2563EB;
+  --zone-transversal: #9333EA;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0F1419;
+  --surface: #121A21;
+  --surface-2: #161E26;
+  --border: #2E3A46;
+  --border-soft: #232D38;
+  --text: #E6EDF3;
+  --text-muted: #9AA7B4;
+  --text-strong: #FFFFFF;
+  --link: #93C5FD;
+}
+
+:root[data-theme="light"] {
+  --bg: #F4F6F8;
+  --surface: #FFFFFF;
+  --surface-2: #FFFFFF;
+  --border: #CBD3DC;
+  --border-soft: #E2E7EC;
+  --text: #0F1419;
+  --text-muted: #4B5563;
+  --text-strong: #000000;
+  --link: #1D4ED8;
+}

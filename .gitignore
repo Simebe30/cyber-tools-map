@@ -1,0 +1,8 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Dependencies (none yet, but in case tooling is added)
+node_modules/

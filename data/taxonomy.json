@@ -1,0 +1,22 @@
+{
+  "zones": {
+    "offensive":   { "accent": "#EA580C" },
+    "defensive":   { "accent": "#2563EB" },
+    "transversal": { "accent": "#9333EA" }
+  },
+  "categories": [
+    { "id": "osint", "zone": "transversal", "icon": "search",
+      "subcategories": [
+        { "id": "domains" },
+        { "id": "people" },
+        { "id": "metadata" },
+        { "id": "geolocation" }
+      ] },
+    { "id": "network-analysis", "zone": "transversal", "icon": "nodes",
+      "subcategories": [ { "id": "capture" }, { "id": "mitm" } ] },
+    { "id": "scanning", "zone": "offensive", "icon": "radar",
+      "subcategories": [ { "id": "ports" }, { "id": "vulns" } ] },
+    { "id": "forensics", "zone": "defensive", "icon": "fingerprint",
+      "subcategories": [ { "id": "disk" }, { "id": "memory" } ] }
+  ]
+}

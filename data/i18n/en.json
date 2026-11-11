@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Cyber Tools Map",
+    "subtitle": "What they are, what they are for and how to use them legitimately.",
+    "disclaimer": "Educational use. Only use these tools on your own systems or with explicit authorization.",
+    "searchPlaceholder": "Search by name or by task",
+    "searchLabel": "Search by tool name or by task",
+    "noResults": "No tool matches.",
+    "resultsCount": "{n} tools do this",
+    "openTool": "Go to the official site",
+    "relatedTitle": "Related",
+    "legitimateUseTitle": "Legitimate use example",
+    "closePanel": "Close panel",
+    "emptyPanel": "Pick a tool to see its details."
+  },
+  "controls": {
+    "branchMode": "Open branches",
+    "branchSingle": "One only",
+    "branchMulti": "Several at once",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "zone": {
+    "offensive": "Offensive",
+    "defensive": "Defensive",
+    "transversal": "Cross-cutting"
+  },
+  "field": {
+    "license": "License",
+    "platforms": "Platform",
+    "level": "Level",
+    "status": "Status",
+    "osiLayer": "OSI layer"
+  },
+  "license": { "free": "Free", "freemium": "Freemium", "paid": "Paid" },
+  "level": { "beginner": "Beginner", "intermediate": "Intermediate", "advanced": "Advanced" },
+  "status": { "active": "Active", "emerging": "Emerging", "historical": "Historical" },
+  "platform": { "web": "Web", "cli": "CLI", "desktop": "Desktop", "mobile": "Mobile" },
+  "na": "N/A",
+  "category": {
+    "osint": "OSINT",
+    "network-analysis": "Network analysis",
+    "scanning": "Scanning & enumeration",
+    "forensics": "Forensics & response"
+  },
+  "subcategory": {
+    "domains": "Domains & infrastructure",
+    "people": "People, emails & phones",
+    "metadata": "Metadata",
+    "geolocation": "Geolocation",
+    "capture": "Capture & analysis",
+    "mitm": "Man-in-the-middle",
+    "ports": "Ports & hosts",
+    "vulns": "Vulnerabilities",
+    "disk": "Disk",
+    "memory": "Memory"
+  }
+}

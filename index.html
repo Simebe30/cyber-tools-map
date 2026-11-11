@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Tools Map</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/app.css" />
+</head>
+<body>
+  <!-- Icon sprite, fetched once and referenced with <use href="#icon-..."> -->
+  <div id="sprite" hidden></div>
+
+  <div class="app">
+    <header class="app__header">
+      <div>
+        <h1 class="app__title">Cyber Tools Map</h1>
+        <p class="app__subtitle" data-i18n="app.subtitle"></p>
+      </div>
+      <div id="controls"></div>
+    </header>
+
+    <main class="app__body">
+      <section id="tree" class="app__tree" aria-label="Categorías"></section>
+      <div id="panel" class="app__panel"></div>
+    </main>
+
+    <footer class="app__footer" data-i18n="app.disclaimer"></footer>
+  </div>
+
+  <script>
+    // Inline the sprite so <use href="#id"> resolves without a separate request.
+    fetch("assets/icons.svg")
+      .then((r) => r.text())
+      .then((svg) => { document.getElementById("sprite").innerHTML = svg; });
+  </script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

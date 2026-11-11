@@ -1,0 +1,77 @@
+[
+  {
+    "id": "overpass-turbo",
+    "category": "osint",
+    "subcategory": "geolocation",
+    "name": "Overpass Turbo",
+    "license": "free",
+    "platforms": ["web"],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://overpass-turbo.eu",
+    "related": ["shodan"],
+    "tags": ["geolocation", "osm", "verification", "map"],
+    "i18n": {
+      "es": {
+        "summary": "Interfaz web para consultar los datos de OpenStreetMap con el lenguaje Overpass QL y ver los resultados en un mapa.",
+        "legitimateUse": "Verificar dónde se tomó una foto buscando los lugares con una iglesia a menos de 100 m de un puente sobre un río."
+      },
+      "en": {
+        "summary": "Web interface to query OpenStreetMap data with the Overpass QL language and see the results on a map.",
+        "legitimateUse": "Verify where a photo was taken by searching for places with a church within 100 m of a bridge over a river."
+      }
+    }
+  },
+  {
+    "id": "theharvester",
+    "category": "osint",
+    "subcategory": "people",
+    "name": "theHarvester",
+    "license": "free",
+    "platforms": ["cli"],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/laramies/theHarvester",
+    "related": ["shodan"],
+    "tags": ["email", "subdomain", "recon", "footprinting"],
+    "i18n": {
+      "es": {
+        "summary": "Recopila correos, nombres, subdominios y hosts asociados a un dominio a partir de fuentes públicas.",
+        "legitimateUse": "Como paso de reconocimiento en una auditoría autorizada, para ver qué información de tu propia empresa es pública."
+      },
+      "en": {
+        "summary": "Gathers emails, names, subdomains and hosts linked to a domain from public sources.",
+        "legitimateUse": "As a reconnaissance step in an authorized audit, to see what information about your own company is public."
+      }
+    }
+  },
+  {
+    "id": "shodan",
+    "category": "osint",
+    "subcategory": "domains",
+    "name": "Shodan",
+    "license": "freemium",
+    "platforms": ["web", "cli"],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.shodan.io",
+    "related": ["theharvester"],
+    "tags": ["devices", "exposure", "iot", "recon"],
+    "i18n": {
+      "es": {
+        "summary": "Buscador de dispositivos conectados a internet: servidores, cámaras, routers y sistemas industriales expuestos.",
+        "legitimateUse": "Comprobar qué servicios de tu propia organización están expuestos a internet sin que debieran estarlo."
+      },
+      "en": {
+        "summary": "Search engine for internet-connected devices: exposed servers, cameras, routers and industrial systems.",
+        "legitimateUse": "Check which services of your own organization are exposed to the internet when they should not be."
+      }
+    }
+  }
+]
