@@ -1,22 +1,310 @@
 {
   "zones": {
-    "offensive":   { "accent": "#EA580C" },
-    "defensive":   { "accent": "#2563EB" },
-    "transversal": { "accent": "#9333EA" }
+    "offensive": {
+      "accent": "#EA580C"
+    },
+    "defensive": {
+      "accent": "#2563EB"
+    },
+    "transversal": {
+      "accent": "#9333EA"
+    }
   },
   "categories": [
-    { "id": "osint", "zone": "transversal", "icon": "search",
+    {
+      "id": "osint",
+      "zone": "transversal",
+      "icon": "search",
       "subcategories": [
-        { "id": "domains" },
-        { "id": "people" },
-        { "id": "metadata" },
-        { "id": "geolocation" }
-      ] },
-    { "id": "network-analysis", "zone": "transversal", "icon": "nodes",
-      "subcategories": [ { "id": "capture" }, { "id": "mitm" } ] },
-    { "id": "scanning", "zone": "offensive", "icon": "radar",
-      "subcategories": [ { "id": "ports" }, { "id": "vulns" } ] },
-    { "id": "forensics", "zone": "defensive", "icon": "fingerprint",
-      "subcategories": [ { "id": "disk" }, { "id": "memory" } ] }
+        {
+          "id": "domains"
+        },
+        {
+          "id": "projectdiscovery"
+        },
+        {
+          "id": "people"
+        },
+        {
+          "id": "metadata"
+        },
+        {
+          "id": "geolocation"
+        },
+        {
+          "id": "social"
+        },
+        {
+          "id": "cloud-exposure"
+        },
+        {
+          "id": "transport"
+        },
+        {
+          "id": "darkweb"
+        },
+        {
+          "id": "frameworks"
+        },
+        {
+          "id": "data-sources"
+        }
+      ]
+    },
+    {
+      "id": "scanning",
+      "zone": "offensive",
+      "icon": "radar",
+      "subcategories": [
+        {
+          "id": "hosts-ports"
+        },
+        {
+          "id": "vulns"
+        },
+        {
+          "id": "service-enum"
+        }
+      ]
+    },
+    {
+      "id": "network-analysis",
+      "zone": "transversal",
+      "icon": "nodes",
+      "subcategories": [
+        {
+          "id": "capture"
+        },
+        {
+          "id": "packet-crafting"
+        },
+        {
+          "id": "mitm"
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "zone": "offensive",
+      "icon": "globe",
+      "subcategories": [
+        {
+          "id": "proxies"
+        },
+        {
+          "id": "content-discovery"
+        },
+        {
+          "id": "injection"
+        },
+        {
+          "id": "web-scanners"
+        }
+      ]
+    },
+    {
+      "id": "passwords",
+      "zone": "offensive",
+      "icon": "key",
+      "subcategories": [
+        {
+          "id": "cracking"
+        },
+        {
+          "id": "online-bruteforce"
+        },
+        {
+          "id": "wordlists"
+        },
+        {
+          "id": "hash-id"
+        }
+      ]
+    },
+    {
+      "id": "exploitation",
+      "zone": "offensive",
+      "icon": "bolt",
+      "subcategories": [
+        {
+          "id": "frameworks"
+        },
+        {
+          "id": "exploit-search"
+        },
+        {
+          "id": "shells"
+        }
+      ]
+    },
+    {
+      "id": "post-exploitation",
+      "zone": "offensive",
+      "icon": "stairs",
+      "subcategories": [
+        {
+          "id": "priv-linux"
+        },
+        {
+          "id": "priv-windows"
+        },
+        {
+          "id": "credentials"
+        },
+        {
+          "id": "pivoting"
+        }
+      ]
+    },
+    {
+      "id": "active-directory",
+      "zone": "offensive",
+      "icon": "sitemap",
+      "subcategories": [
+        {
+          "id": "ad-enum"
+        },
+        {
+          "id": "ad-kerberos"
+        }
+      ]
+    },
+    {
+      "id": "wireless",
+      "zone": "offensive",
+      "icon": "wifi",
+      "subcategories": [
+        {
+          "id": "wifi"
+        },
+        {
+          "id": "bluetooth"
+        }
+      ]
+    },
+    {
+      "id": "social-engineering",
+      "zone": "offensive",
+      "icon": "hook",
+      "subcategories": [
+        {
+          "id": "awareness"
+        },
+        {
+          "id": "mfa-phishing"
+        }
+      ]
+    },
+    {
+      "id": "forensics",
+      "zone": "defensive",
+      "icon": "fingerprint",
+      "subcategories": [
+        {
+          "id": "disk"
+        },
+        {
+          "id": "memory"
+        },
+        {
+          "id": "win-artifacts"
+        },
+        {
+          "id": "steganography"
+        },
+        {
+          "id": "forensic-analysis"
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "zone": "defensive",
+      "icon": "shield",
+      "subcategories": [
+        {
+          "id": "siem"
+        },
+        {
+          "id": "ids-ips"
+        },
+        {
+          "id": "hardening"
+        },
+        {
+          "id": "deception"
+        }
+      ]
+    },
+    {
+      "id": "reversing",
+      "zone": "defensive",
+      "icon": "bug",
+      "subcategories": [
+        {
+          "id": "disassemblers"
+        },
+        {
+          "id": "malware-env"
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "zone": "transversal",
+      "icon": "lock",
+      "subcategories": [
+        {
+          "id": "encryption"
+        },
+        {
+          "id": "anonymity"
+        },
+        {
+          "id": "comms"
+        },
+        {
+          "id": "metadata"
+        },
+        {
+          "id": "physical-opsec"
+        },
+        {
+          "id": "mobile"
+        },
+        {
+          "id": "browser"
+        },
+        {
+          "id": "self-audit"
+        },
+        {
+          "id": "anti-facial"
+        },
+        {
+          "id": "guides"
+        }
+      ]
+    },
+    {
+      "id": "labs",
+      "zone": "transversal",
+      "icon": "flask",
+      "subcategories": [
+        {
+          "id": "vulnerable-apps"
+        }
+      ]
+    },
+    {
+      "id": "work-environments",
+      "zone": "transversal",
+      "icon": "terminal",
+      "subcategories": [
+        {
+          "id": "distros-vms"
+        }
+      ]
+    }
   ]
 }
