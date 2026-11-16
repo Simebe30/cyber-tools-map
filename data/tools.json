@@ -2056,5 +2056,250 @@
         "legitimateUse": "Securely wipe a disk or USB of yours before selling, donating or discarding it, so no one can recover your data."
       }
     }
+  },
+  {
+    "id": "tor",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Tor",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.torproject.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tails",
+      "onionshare"
+    ],
+    "tags": [
+      "tor",
+      "anonymity",
+      "onion",
+      "browser",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es a la vez una red de anonimato y el navegador que la usa. Tu tráfico se envía cifrado a través de varios repetidores voluntarios, de modo que ni el sitio que visitas ni quien observe tu conexión pueden ver a la vez quién eres y qué haces. El Tor Browser viene ya configurado para no filtrar tu identidad.",
+        "legitimateUse": "Navegar o investigar sin revelar tu IP ni dejar un rastro fácil de correlacionar, por ejemplo al consultar fuentes sensibles."
+      },
+      "en": {
+        "summary": "It is both an anonymity network and the browser that uses it. Your traffic is sent encrypted through several volunteer relays, so neither the site you visit nor anyone watching your connection can see both who you are and what you are doing at once. Tor Browser comes preconfigured not to leak your identity.",
+        "legitimateUse": "Browse or research without revealing your IP or leaving an easily correlated trail, for example when consulting sensitive sources."
+      }
+    }
+  },
+  {
+    "id": "tails",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Tails",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://tails.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor"
+    ],
+    "tags": [
+      "live-os",
+      "amnesic",
+      "tor",
+      "anonymity",
+      "debian"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sistema operativo 'amnésico' que arrancas desde un USB y que no deja rastro en el ordenador: al apagarlo olvida todo. Obliga a que todo el tráfico salga por la red Tor y viene con herramientas de privacidad listas. Pensado para trabajar de forma anónima en un equipo que no es de confianza.",
+        "legitimateUse": "Trabajar con información sensible en un equipo prestado o ajeno sin dejar datos en el disco ni exponer tu identidad."
+      },
+      "en": {
+        "summary": "An 'amnesic' operating system you boot from a USB stick that leaves no trace on the computer: when you shut it down it forgets everything. It forces all traffic through the Tor network and ships with privacy tools ready. Designed to work anonymously on a machine you do not trust.",
+        "legitimateUse": "Work with sensitive information on a borrowed or untrusted machine without leaving data on the disk or exposing your identity."
+      }
+    }
+  },
+  {
+    "id": "onionshare",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "OnionShare",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://onionshare.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor"
+    ],
+    "tags": [
+      "file-sharing",
+      "tor",
+      "onion",
+      "anonymity",
+      "p2p"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para compartir archivos, alojar una web o chatear de forma anónima directamente desde tu equipo, sin servicios de terceros. Levanta un servicio .onion temporal en tu ordenador y genera una dirección imposible de adivinar; cuando terminas, el servicio desaparece. El otro extremo solo necesita el Tor Browser.",
+        "legitimateUse": "Enviar un archivo sensible a alguien sin subirlo a la nube: lo sirves tú mismo por Tor y la dirección caduca al acabar."
+      },
+      "en": {
+        "summary": "Used to share files, host a website or chat anonymously straight from your own computer, without third-party services. It spins up a temporary .onion service on your machine and generates an unguessable address; when you finish, the service disappears. The other end only needs Tor Browser.",
+        "legitimateUse": "Send a sensitive file to someone without uploading it to the cloud: you serve it yourself over Tor and the address expires when you are done."
+      }
+    }
+  },
+  {
+    "id": "mullvad-vpn",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Mullvad VPN",
+    "license": "paid",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://mullvad.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor",
+      "vopono"
+    ],
+    "tags": [
+      "vpn",
+      "privacy",
+      "no-logs",
+      "anonymous-payment",
+      "wireguard"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una VPN centrada en la privacidad: cifra tu conexión y oculta tu IP real haciéndola pasar por sus servidores. Lo distintivo es que no pide datos personales (te da un número de cuenta aleatorio), acepta pagos anónimos y tiene una política de no guardar registros auditada. Las apps son de código abierto.",
+        "legitimateUse": "Proteger tu tráfico en una red Wi-Fi pública y evitar que tu proveedor o la red vean los sitios que visitas.",
+        "price": "De pago, tarifa plana de 5 €/mes sin planes ni descuentos; no hay versión gratuita (sí 30 días de devolución). Consultar mullvad.net, nov 2026."
+      },
+      "en": {
+        "summary": "A privacy-focused VPN: it encrypts your connection and hides your real IP by routing it through its servers. What sets it apart is that it asks for no personal data (it gives you a random account number), accepts anonymous payments and has an audited no-logs policy. The apps are open source.",
+        "legitimateUse": "Protect your traffic on public Wi-Fi and stop your ISP or the network from seeing the sites you visit.",
+        "price": "Paid, flat €5/month with no tiers or discounts; there is no free version (but a 30-day refund). Check mullvad.net, Nov 2026."
+      }
+    }
+  },
+  {
+    "id": "vopono",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "vopono",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/jamesmcm/vopono",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "mullvad-vpn",
+      "tor"
+    ],
+    "tags": [
+      "vpn",
+      "network-namespace",
+      "kill-switch",
+      "rust",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para hacer pasar solo ciertas aplicaciones por una VPN o por Tor, en vez de toda tu conexión. Crea un 'espacio de red' temporal y aislado para la app que lances, con interruptor de corte (kill switch) incluido, mientras el resto del equipo sigue con la conexión normal. Escrito en Rust.",
+        "legitimateUse": "Aislar una herramienta concreta para que solo ella salga por la VPN, sin cambiar la conexión del resto de tu equipo."
+      },
+      "en": {
+        "summary": "Used to route only certain applications through a VPN or Tor, instead of your whole connection. It creates a temporary, isolated 'network namespace' for the app you launch, with a built-in kill switch, while the rest of the machine keeps its normal connection. Written in Rust.",
+        "legitimateUse": "Isolate a specific tool so only it exits through the VPN, without changing the rest of your machine's connection."
+      }
+    }
+  },
+  {
+    "id": "pi-hole",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Pi-hole",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://pi-hole.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "mullvad-vpn"
+    ],
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "tracker-blocking",
+      "network",
+      "self-hosted"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un 'agujero negro' para la publicidad y el rastreo que funciona a nivel de DNS para toda tu red. Lo instalas en un equipo o Raspberry Pi y lo pones como servidor DNS de tu router; a partir de ahí bloquea las peticiones a dominios de anuncios y rastreadores, protegiendo todos los dispositivos (incluidos móviles y smart TV) sin instalar nada en cada uno.",
+        "legitimateUse": "Reducir el rastreo y los anuncios en toda tu red doméstica desde un único punto, y de paso ver qué dominios consultan tus dispositivos."
+      },
+      "en": {
+        "summary": "A 'black hole' for ads and tracking that works at the DNS level for your whole network. You install it on a machine or Raspberry Pi and set it as your router's DNS server; from then on it blocks requests to ad and tracker domains, protecting every device (phones and smart TVs included) without installing anything on each one.",
+        "legitimateUse": "Reduce tracking and ads across your whole home network from a single point, and along the way see which domains your devices query."
+      }
+    }
   }
 ]
