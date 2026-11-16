@@ -1261,5 +1261,1045 @@
         "legitimateUse": "Inventory the technologies your own site exposes, to know what you must keep updated and which versions you are revealing unnecessarily."
       }
     }
+  },
+  {
+    "id": "marinetraffic",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "MarineTraffic",
+    "license": "freemium",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.marinetraffic.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "global-fishing-watch",
+      "adsb-exchange"
+    ],
+    "tags": [
+      "ais",
+      "ships",
+      "maritime",
+      "tracking",
+      "geolocation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa en tiempo casi real de los barcos del mundo. Se apoya en el sistema AIS que los buques emiten para posicionarse y muestra dónde está cada barco, su rumbo, su velocidad y sus datos (nombre, identificadores, tipo). Permite seguir un barco concreto o ver el tráfico de una zona o un puerto.",
+        "legitimateUse": "En una investigación OSINT, corroborar dónde estaba un barco en una fecha para verificar o desmentir una afirmación.",
+        "price": "Mapa básico gratuito tras registro; el seguimiento por satélite, el histórico y las funciones avanzadas son de pago (consultar precios en marinetraffic.com, nov 2026)."
+      },
+      "en": {
+        "summary": "A near-real-time map of the world's ships. It relies on the AIS signals vessels broadcast to position themselves and shows where each ship is, its course, speed and details (name, identifiers, type). You can follow a specific ship or see the traffic in an area or a port.",
+        "legitimateUse": "In an OSINT investigation, corroborate where a ship was on a given date to verify or disprove a claim.",
+        "price": "Basic map free after sign-up; satellite tracking, history and advanced features are paid (check pricing at marinetraffic.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "global-fishing-watch",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "Global Fishing Watch",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://globalfishingwatch.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "marinetraffic"
+    ],
+    "tags": [
+      "vessels",
+      "fishing",
+      "satellite",
+      "ais",
+      "transparency"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa abierto de la actividad de los barcos pesqueros en todo el mundo. Combina señales AIS, datos de los gobiernos e imágenes de satélite procesadas con aprendizaje automático para mostrar dónde y cuándo faena cada barco, los encuentros entre buques en alta mar y la presencia de embarcaciones.",
+        "legitimateUse": "Investigar patrones sospechosos en alta mar (como trasvases entre barcos) para apoyar una investigación de pesca ilegal o de cumplimiento."
+      },
+      "en": {
+        "summary": "An open map of fishing vessel activity worldwide. It combines AIS signals, government data and satellite imagery processed with machine learning to show where and when each vessel fishes, encounters between ships at sea and vessel presence.",
+        "legitimateUse": "Investigate suspicious patterns at sea (such as transshipments between ships) to support an illegal-fishing or compliance investigation."
+      }
+    }
+  },
+  {
+    "id": "adsb-exchange",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "ADS-B Exchange",
+    "license": "freemium",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.adsbexchange.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "marinetraffic"
+    ],
+    "tags": [
+      "adsb",
+      "aircraft",
+      "flight",
+      "tracking",
+      "unfiltered"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa comunitario de aviones en vuelo que muestra el tráfico aéreo sin filtrar. A diferencia de otros servicios, no oculta aviones militares ni privados, porque se nutre de una red de receptores de aficionados. Permite ver qué aeronave está dónde, su ruta y su altitud en tiempo real.",
+        "legitimateUse": "En periodismo o investigación, documentar el movimiento de una aeronave de interés público a partir de datos que otros servicios filtran.",
+        "price": "El mapa en vivo es gratuito; el acceso a datos históricos y a la API, y el uso comercial, son de pago (consultar adsbexchange.com, nov 2026)."
+      },
+      "en": {
+        "summary": "A community map of aircraft in flight that shows air traffic unfiltered. Unlike other services, it does not hide military or private aircraft, because it is fed by a network of hobbyist receivers. You can see which aircraft is where, its route and altitude in real time.",
+        "legitimateUse": "In journalism or research, document the movement of an aircraft of public interest from data other services filter out.",
+        "price": "The live map is free; access to historical data and the API, and commercial use, are paid (check adsbexchange.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "torbot",
+    "category": "osint",
+    "subcategory": "darkweb",
+    "name": "TorBot",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/DedSecInside/TorBot",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot"
+    ],
+    "tags": [
+      "dark-web",
+      "onion",
+      "crawler",
+      "tor",
+      "threat-intel"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta para explorar la web .onion (la red Tor) de forma automática. Partiendo de una dirección .onion, rastrea los enlaces que encuentra, comprueba si los sitios siguen vivos y recopila datos de las páginas, para mapear contenido de la dark web sin ir navegando a mano. Necesita Tor para funcionar.",
+        "legitimateUse": "En inteligencia de amenazas, rastrear foros o mercados .onion para detectar si se filtran datos o credenciales de tu organización."
+      },
+      "en": {
+        "summary": "A tool to automatically explore the .onion web (the Tor network). Starting from a .onion address, it crawls the links it finds, checks whether sites are still alive and collects data from pages, to map dark-web content without browsing by hand. It needs Tor to run.",
+        "legitimateUse": "In threat intelligence, crawl .onion forums or markets to detect whether your organization's data or credentials are being leaked."
+      }
+    }
+  },
+  {
+    "id": "spiderfoot",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "SpiderFoot",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web",
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/smicallef/spiderfoot",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "recon-ng",
+      "amass"
+    ],
+    "tags": [
+      "osint",
+      "automation",
+      "recon",
+      "attack-surface",
+      "framework"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework que automatiza la recogida de OSINT. Le das un objetivo (un dominio, una IP, un correo, un nombre…) y lanza más de 200 módulos que consultan fuentes públicas y relacionan los resultados entre sí, dibujando el mapa de la huella y la superficie de exposición de ese objetivo. Tiene interfaz web y de línea de comandos.",
+        "legitimateUse": "Lanzar un escaneo contra el dominio de tu propia organización para ver, de forma automática, toda la superficie que expone en internet."
+      },
+      "en": {
+        "summary": "A framework that automates OSINT collection. You give it a target (a domain, an IP, an email, a name…) and it runs 200+ modules that query public sources and correlate the results, drawing the footprint and exposure surface of that target. It has a web UI and a CLI.",
+        "legitimateUse": "Run a scan against your own organization's domain to automatically see the whole surface it exposes on the internet."
+      }
+    }
+  },
+  {
+    "id": "recon-ng",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "Recon-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/lanmaster53/recon-ng",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot",
+      "theharvester"
+    ],
+    "tags": [
+      "osint",
+      "recon",
+      "framework",
+      "modular",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework de reconocimiento OSINT con una interfaz y una lógica parecidas a las de Metasploit: trabajas por módulos, cada uno consulta una fuente o hace una tarea, y vas acumulando los resultados en un espacio de trabajo. Está pensado para automatizar el reconocimiento web de forma ordenada y repetible.",
+        "legitimateUse": "Organizar y automatizar el reconocimiento de la huella pública de tu propia organización en un flujo repetible para auditorías periódicas."
+      },
+      "en": {
+        "summary": "An OSINT reconnaissance framework with an interface and logic similar to Metasploit: you work through modules, each querying a source or doing a task, accumulating results in a workspace. It is designed to automate web reconnaissance in an orderly, repeatable way.",
+        "legitimateUse": "Organize and automate reconnaissance of your own organization's public footprint in a repeatable flow for periodic audits."
+      }
+    }
+  },
+  {
+    "id": "osint-framework",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "OSINT Framework",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://osintframework.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot"
+    ],
+    "tags": [
+      "osint",
+      "directory",
+      "resources",
+      "reference"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "No es una herramienta que busque por ti, sino un directorio: una web que organiza cientos de herramientas de OSINT en un árbol desplegable por tipo de dato (usuario, correo, dominio, imagen…). Sirve de punto de partida para saber qué herramienta usar en cada paso de una investigación.",
+        "legitimateUse": "Usarlo como mapa para elegir con qué herramienta empezar al investigar la exposición pública de tu propia organización o cuenta."
+      },
+      "en": {
+        "summary": "Not a tool that searches for you, but a directory: a website that organizes hundreds of OSINT tools in an expandable tree by data type (username, email, domain, image…). It is a starting point to know which tool to use at each step of an investigation.",
+        "legitimateUse": "Use it as a map to choose which tool to start with when investigating the public exposure of your own organization or account."
+      }
+    }
+  },
+  {
+    "id": "contratacion-sector-publico",
+    "category": "osint",
+    "subcategory": "data-sources",
+    "name": "Plataforma de Contratación del Sector Público",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.contrataciondelestado.es",
+    "verifiedAt": "2026-11-16",
+    "related": [],
+    "tags": [
+      "procurement",
+      "spain",
+      "public-data",
+      "osint",
+      "source"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el portal oficial donde el sector público de España publica sus licitaciones y contratos. Como fuente OSINT, permite consultar qué compra la Administración, a qué empresas y por cuánto, lo que revela información sobre organismos, proveedores y proyectos públicos.",
+        "legitimateUse": "Investigar qué tecnología o servicios de seguridad contrata un organismo público para entender su superficie y sus proveedores (caso típico de OSINT sobre contratación)."
+      },
+      "en": {
+        "summary": "The official portal where Spain's public sector publishes its tenders and contracts. As an OSINT source, it lets you check what the public administration buys, from which companies and for how much, revealing information about agencies, suppliers and public projects.",
+        "legitimateUse": "Investigate what technology or security services a public body procures to understand its surface and suppliers (a typical procurement-OSINT case)."
+      }
+    }
+  },
+  {
+    "id": "wazuh",
+    "category": "defense",
+    "subcategory": "siem",
+    "name": "Wazuh",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://wazuh.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "security-onion",
+      "elastic-security"
+    ],
+    "tags": [
+      "siem",
+      "xdr",
+      "edr",
+      "log-analysis",
+      "blue-team"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma de seguridad de código abierto que unifica SIEM y XDR. Instala un agente en cada equipo y servidor, recoge sus registros y eventos en un punto central, y los correla para detectar intrusiones, cambios sospechosos en ficheros, vulnerabilidades y problemas de cumplimiento, con un panel web para investigarlo todo.",
+        "legitimateUse": "Centralizar los registros de tus propios equipos para detectar y responder a incidentes, y comprobar que cumples normativas como PCI-DSS o el ENS."
+      },
+      "en": {
+        "summary": "An open-source security platform that unifies SIEM and XDR. It installs an agent on each machine and server, collects their logs and events centrally, and correlates them to detect intrusions, suspicious file changes, vulnerabilities and compliance issues, with a web dashboard to investigate everything.",
+        "legitimateUse": "Centralize your own machines' logs to detect and respond to incidents, and check compliance with standards such as PCI-DSS."
+      }
+    }
+  },
+  {
+    "id": "security-onion",
+    "category": "defense",
+    "subcategory": "siem",
+    "name": "Security Onion",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://securityonionsolutions.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "wazuh",
+      "suricata",
+      "zeek"
+    ],
+    "tags": [
+      "nsm",
+      "soc",
+      "threat-hunting",
+      "log-management",
+      "distro"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una distribución de Linux lista para montar un centro de monitorización de seguridad de red. Reúne y configura ya integradas varias herramientas (Suricata, Zeek, Wazuh, Elastic…) para capturar el tráfico, generar alertas y buscar amenazas, de modo que tienes un SOC casero o de empresa sin montar cada pieza a mano.",
+        "legitimateUse": "Montar un laboratorio de monitorización para analizar el tráfico de tu propia red y practicar la caza de amenazas (threat hunting)."
+      },
+      "en": {
+        "summary": "A Linux distribution ready to set up a network security monitoring center. It bundles and pre-integrates several tools (Suricata, Zeek, Wazuh, Elastic…) to capture traffic, generate alerts and hunt for threats, so you get a home or enterprise SOC without wiring each piece by hand.",
+        "legitimateUse": "Set up a monitoring lab to analyze your own network's traffic and practice threat hunting."
+      }
+    }
+  },
+  {
+    "id": "splunk",
+    "category": "defense",
+    "subcategory": "siem",
+    "name": "Splunk",
+    "license": "paid",
+    "github": false,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.splunk.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "elastic-security"
+    ],
+    "tags": [
+      "siem",
+      "log-analysis",
+      "enterprise",
+      "soc",
+      "analytics"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma comercial para recoger, indexar y analizar enormes volúmenes de registros y datos de máquina. Su capa de seguridad (Enterprise Security) es uno de los SIEM de referencia en empresas: busca, correla y alerta sobre eventos para detectar y responder a amenazas. Potente, pero de pago.",
+        "legitimateUse": "En una empresa, centralizar y analizar los registros de toda la infraestructura para que el equipo de seguridad detecte y responda a incidentes.",
+        "price": "De pago, por presupuesto según el volumen de datos. Hay una edición gratuita limitada (500 MB/día, sin funciones de seguridad) y una prueba de 60 días; Enterprise Security se cotiza aparte (consultar splunk.com, nov 2026)."
+      },
+      "en": {
+        "summary": "A commercial platform to collect, index and analyze huge volumes of logs and machine data. Its security layer (Enterprise Security) is one of the reference enterprise SIEMs: it searches, correlates and alerts on events to detect and respond to threats. Powerful, but paid.",
+        "legitimateUse": "In a company, centralize and analyze logs from the whole infrastructure so the security team can detect and respond to incidents.",
+        "price": "Paid, quote-based by data volume. There is a limited free edition (500 MB/day, no security features) and a 60-day trial; Enterprise Security is quoted separately (check splunk.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "elastic-security",
+    "category": "defense",
+    "subcategory": "siem",
+    "name": "Elastic Security",
+    "license": "freemium",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.elastic.co/security",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "splunk",
+      "wazuh"
+    ],
+    "tags": [
+      "siem",
+      "elk",
+      "detection",
+      "endpoint",
+      "threat-hunting"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la capa de seguridad (SIEM + protección de endpoints) construida sobre el stack de Elastic (Elasticsearch y Kibana). Recoge y busca registros a gran escala y trae un motor de detección con reglas listas para cazar amenazas. Tiene un nivel básico gratuito bastante completo y funciones avanzadas de pago.",
+        "legitimateUse": "Montar un SIEM sobre Elastic para centralizar los registros de tu organización y detectar amenazas con las reglas incluidas.",
+        "price": "Nivel Basic gratuito con SIEM y detección; las funciones avanzadas (Gold/Platinum/Enterprise) son de pago (consultar elastic.co, nov 2026). Licencia Elastic License 2.0 / SSPL (y AGPLv3 desde 2024)."
+      },
+      "en": {
+        "summary": "The security layer (SIEM + endpoint protection) built on the Elastic stack (Elasticsearch and Kibana). It collects and searches logs at scale and ships a detection engine with ready-made rules for threat hunting. It has a fairly complete free Basic tier and paid advanced features.",
+        "legitimateUse": "Set up a SIEM on Elastic to centralize your organization's logs and detect threats with the included rules.",
+        "price": "Free Basic tier with SIEM and detection; advanced features (Gold/Platinum/Enterprise) are paid (check elastic.co, Nov 2026). Elastic License 2.0 / SSPL (and AGPLv3 since 2024)."
+      }
+    }
+  },
+  {
+    "id": "suricata",
+    "category": "defense",
+    "subcategory": "ids-ips",
+    "name": "Suricata",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "3–7",
+    "url": "https://suricata.io",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "snort",
+      "zeek"
+    ],
+    "tags": [
+      "ids",
+      "ips",
+      "nsm",
+      "rules",
+      "network"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un motor de detección y prevención de intrusiones en la red (IDS/IPS). Analiza el tráfico en tiempo real comparándolo con reglas que describen ataques conocidos, y puede avisar (IDS) o bloquear el tráfico malicioso al vuelo (IPS). Es multihilo, así que aguanta redes rápidas.",
+        "legitimateUse": "Vigilar la entrada y salida de tu propia red con reglas actualizadas para detectar intrusiones o equipos comprometidos."
+      },
+      "en": {
+        "summary": "A network intrusion detection and prevention engine (IDS/IPS). It analyzes traffic in real time against rules that describe known attacks, and can alert (IDS) or block malicious traffic on the fly (IPS). It is multi-threaded, so it keeps up with fast networks.",
+        "legitimateUse": "Monitor your own network's ingress and egress with up-to-date rules to detect intrusions or compromised hosts."
+      }
+    }
+  },
+  {
+    "id": "snort",
+    "category": "defense",
+    "subcategory": "ids-ips",
+    "name": "Snort",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "3–7",
+    "url": "https://www.snort.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "suricata",
+      "zeek"
+    ],
+    "tags": [
+      "ids",
+      "ips",
+      "cisco",
+      "rules",
+      "network"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el IDS/IPS de red clásico, mantenido por Cisco. Inspecciona los paquetes en tiempo real y los compara con reglas para detectar o bloquear tráfico malicioso. Cuenta con un gran conjunto de reglas de la comunidad; además existe un conjunto 'oficial' por suscripción de pago con las reglas más recientes.",
+        "legitimateUse": "Desplegar un IDS en tu propia red para detectar patrones de ataque conocidos y registrar el tráfico sospechoso."
+      },
+      "en": {
+        "summary": "The classic network IDS/IPS, maintained by Cisco. It inspects packets in real time and matches them against rules to detect or block malicious traffic. It has a large community ruleset; there is also a paid 'subscriber' ruleset with the most recent rules.",
+        "legitimateUse": "Deploy an IDS on your own network to detect known attack patterns and log suspicious traffic."
+      }
+    }
+  },
+  {
+    "id": "zeek",
+    "category": "defense",
+    "subcategory": "ids-ips",
+    "name": "Zeek",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "3–7",
+    "url": "https://zeek.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "suricata",
+      "security-onion"
+    ],
+    "tags": [
+      "nsm",
+      "network-analysis",
+      "logs",
+      "threat-hunting",
+      "bro"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "No es un IDS al uso: en vez de buscar firmas de ataques, observa la red de forma pasiva y genera registros detallados de todo lo que pasa (conexiones, DNS, HTTP, TLS, ficheros transferidos…). Esos logs dan contexto para investigar incidentes y cazar amenazas que una alerta simple no vería. Antes se llamaba Bro.",
+        "legitimateUse": "Registrar la actividad de tu propia red para tener el contexto necesario cuando investigues un incidente."
+      },
+      "en": {
+        "summary": "Not a typical IDS: instead of looking for attack signatures, it passively observes the network and produces detailed logs of everything that happens (connections, DNS, HTTP, TLS, transferred files…). Those logs give context to investigate incidents and hunt threats a simple alert would miss. It used to be called Bro.",
+        "legitimateUse": "Log your own network's activity to have the context you need when investigating an incident."
+      }
+    }
+  },
+  {
+    "id": "lynis",
+    "category": "defense",
+    "subcategory": "hardening",
+    "name": "Lynis",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://cisofy.com/lynis/",
+    "verifiedAt": "2026-11-16",
+    "related": [],
+    "tags": [
+      "hardening",
+      "audit",
+      "compliance",
+      "linux",
+      "unix"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de auditoría y endurecimiento (hardening) para sistemas Unix, Linux y macOS. La ejecutas en el propio equipo y hace un repaso en profundidad de su configuración, buscando ajustes inseguros, software desactualizado y fallos, y te devuelve una lista de recomendaciones para reforzarlo. No necesita instalación.",
+        "legitimateUse": "Auditar tus propios servidores para encontrar configuraciones débiles y aplicar las recomendaciones de hardening antes de exponerlos."
+      },
+      "en": {
+        "summary": "A security auditing and hardening tool for Unix, Linux and macOS systems. You run it on the machine itself and it does an in-depth review of its configuration, looking for insecure settings, outdated software and weaknesses, returning a list of recommendations to harden it. No installation needed.",
+        "legitimateUse": "Audit your own servers to find weak configurations and apply the hardening recommendations before exposing them."
+      }
+    }
+  },
+  {
+    "id": "canarytokens",
+    "category": "defense",
+    "subcategory": "deception",
+    "name": "Canarytokens",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://canarytokens.org",
+    "verifiedAt": "2026-11-16",
+    "related": [],
+    "tags": [
+      "deception",
+      "honeytoken",
+      "detection",
+      "blue-team",
+      "tripwire"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sistema de 'señuelos' para detectar intrusos. Generas gratis un token (un documento, una URL, una clave falsa, etc.) y lo colocas en un sitio donde solo un intruso lo tocaría; en cuanto alguien lo abre o lo usa, te llega un aviso. Así te enteras de una intrusión por una vía muy fiable y con muy pocos falsos positivos.",
+        "legitimateUse": "Sembrar tokens en tus propios sistemas (un documento 'contraseñas.xlsx' falso, por ejemplo) para que salte una alarma si alguien no autorizado husmea."
+      },
+      "en": {
+        "summary": "A system of 'decoys' to detect intruders. You generate a token for free (a document, a URL, a fake key, etc.) and place it somewhere only an intruder would touch; the moment someone opens or uses it, you get an alert. It is a very reliable, low-false-positive way to learn of an intrusion.",
+        "legitimateUse": "Plant tokens in your own systems (a fake 'passwords.xlsx', for example) so an alarm fires if someone unauthorized snoops."
+      }
+    }
+  },
+  {
+    "id": "veracrypt",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "VeraCrypt",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.veracrypt.fr",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "keepassxc",
+      "nwipe"
+    ],
+    "tags": [
+      "encryption",
+      "disk",
+      "truecrypt",
+      "privacy",
+      "data-at-rest"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para cifrar datos de modo que, sin la contraseña, no se puedan leer. Crea un 'disco' cifrado dentro de un archivo (o cifra una partición o un USB entero) que se monta como una unidad normal mientras lo usas y se cifra y descifra al vuelo. Es el sucesor libre de TrueCrypt.",
+        "legitimateUse": "Cifrar un USB o una carpeta con datos sensibles tuyos para que, si lo pierdes o te lo roban, nadie pueda leer su contenido."
+      },
+      "en": {
+        "summary": "Used to encrypt data so that, without the password, it cannot be read. It creates an encrypted 'disk' inside a file (or encrypts a partition or a whole USB) that mounts as a normal drive while you use it and is encrypted and decrypted on the fly. It is the free successor to TrueCrypt.",
+        "legitimateUse": "Encrypt a USB stick or a folder of your own sensitive data so that, if you lose it or it is stolen, no one can read its contents."
+      }
+    }
+  },
+  {
+    "id": "keepassxc",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "KeePassXC",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://keepassxc.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "veracrypt"
+    ],
+    "tags": [
+      "password-manager",
+      "kdbx",
+      "credentials",
+      "privacy",
+      "offline"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un gestor de contraseñas que guarda todas tus credenciales en un único archivo cifrado en tu propio equipo, protegido por una contraseña maestra. Así puedes usar contraseñas largas y distintas en cada sitio sin memorizarlas y sin depender de un servicio en la nube.",
+        "legitimateUse": "Dejar de reutilizar contraseñas: guardar una distinta y fuerte para cada cuenta en tu propia base cifrada, reduciendo el impacto de una filtración."
+      },
+      "en": {
+        "summary": "A password manager that stores all your credentials in a single encrypted file on your own machine, protected by a master password. It lets you use long, unique passwords on every site without memorizing them, and without relying on a cloud service.",
+        "legitimateUse": "Stop reusing passwords: keep a unique, strong one for each account in your own encrypted vault, reducing the impact of a breach."
+      }
+    }
+  },
+  {
+    "id": "nwipe",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "nwipe",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/martijnvanbrummelen/nwipe",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "veracrypt"
+    ],
+    "tags": [
+      "secure-erase",
+      "data-wipe",
+      "disk",
+      "privacy",
+      "dban"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para borrar de forma segura el contenido de un disco, sobreescribiéndolo para que los datos no se puedan recuperar. A diferencia de un borrado normal (que solo quita la referencia al archivo), ofrece métodos de sobreescritura reconocidos. Es el motor que usa ShredOS y viene del dwipe de DBAN.",
+        "legitimateUse": "Borrar de forma segura un disco o un USB tuyo antes de venderlo, donarlo o tirarlo, para que nadie recupere tus datos."
+      },
+      "en": {
+        "summary": "Used to securely erase a disk's contents, overwriting them so the data cannot be recovered. Unlike a normal delete (which only removes the file's reference), it offers recognized overwrite methods. It is the engine behind ShredOS and comes from DBAN's dwipe.",
+        "legitimateUse": "Securely wipe a disk or USB of yours before selling, donating or discarding it, so no one can recover your data."
+      }
+    }
+  },
+  {
+    "id": "tor",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Tor",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.torproject.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tails",
+      "onionshare"
+    ],
+    "tags": [
+      "tor",
+      "anonymity",
+      "onion",
+      "browser",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es a la vez una red de anonimato y el navegador que la usa. Tu tráfico se envía cifrado a través de varios repetidores voluntarios, de modo que ni el sitio que visitas ni quien observe tu conexión pueden ver a la vez quién eres y qué haces. El Tor Browser viene ya configurado para no filtrar tu identidad.",
+        "legitimateUse": "Navegar o investigar sin revelar tu IP ni dejar un rastro fácil de correlacionar, por ejemplo al consultar fuentes sensibles."
+      },
+      "en": {
+        "summary": "It is both an anonymity network and the browser that uses it. Your traffic is sent encrypted through several volunteer relays, so neither the site you visit nor anyone watching your connection can see both who you are and what you are doing at once. Tor Browser comes preconfigured not to leak your identity.",
+        "legitimateUse": "Browse or research without revealing your IP or leaving an easily correlated trail, for example when consulting sensitive sources."
+      }
+    }
+  },
+  {
+    "id": "tails",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Tails",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://tails.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor"
+    ],
+    "tags": [
+      "live-os",
+      "amnesic",
+      "tor",
+      "anonymity",
+      "debian"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sistema operativo 'amnésico' que arrancas desde un USB y que no deja rastro en el ordenador: al apagarlo olvida todo. Obliga a que todo el tráfico salga por la red Tor y viene con herramientas de privacidad listas. Pensado para trabajar de forma anónima en un equipo que no es de confianza.",
+        "legitimateUse": "Trabajar con información sensible en un equipo prestado o ajeno sin dejar datos en el disco ni exponer tu identidad."
+      },
+      "en": {
+        "summary": "An 'amnesic' operating system you boot from a USB stick that leaves no trace on the computer: when you shut it down it forgets everything. It forces all traffic through the Tor network and ships with privacy tools ready. Designed to work anonymously on a machine you do not trust.",
+        "legitimateUse": "Work with sensitive information on a borrowed or untrusted machine without leaving data on the disk or exposing your identity."
+      }
+    }
+  },
+  {
+    "id": "onionshare",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "OnionShare",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://onionshare.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor"
+    ],
+    "tags": [
+      "file-sharing",
+      "tor",
+      "onion",
+      "anonymity",
+      "p2p"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para compartir archivos, alojar una web o chatear de forma anónima directamente desde tu equipo, sin servicios de terceros. Levanta un servicio .onion temporal en tu ordenador y genera una dirección imposible de adivinar; cuando terminas, el servicio desaparece. El otro extremo solo necesita el Tor Browser.",
+        "legitimateUse": "Enviar un archivo sensible a alguien sin subirlo a la nube: lo sirves tú mismo por Tor y la dirección caduca al acabar."
+      },
+      "en": {
+        "summary": "Used to share files, host a website or chat anonymously straight from your own computer, without third-party services. It spins up a temporary .onion service on your machine and generates an unguessable address; when you finish, the service disappears. The other end only needs Tor Browser.",
+        "legitimateUse": "Send a sensitive file to someone without uploading it to the cloud: you serve it yourself over Tor and the address expires when you are done."
+      }
+    }
+  },
+  {
+    "id": "mullvad-vpn",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Mullvad VPN",
+    "license": "paid",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://mullvad.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "tor",
+      "vopono"
+    ],
+    "tags": [
+      "vpn",
+      "privacy",
+      "no-logs",
+      "anonymous-payment",
+      "wireguard"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una VPN centrada en la privacidad: cifra tu conexión y oculta tu IP real haciéndola pasar por sus servidores. Lo distintivo es que no pide datos personales (te da un número de cuenta aleatorio), acepta pagos anónimos y tiene una política de no guardar registros auditada. Las apps son de código abierto.",
+        "legitimateUse": "Proteger tu tráfico en una red Wi-Fi pública y evitar que tu proveedor o la red vean los sitios que visitas.",
+        "price": "De pago, tarifa plana de 5 €/mes sin planes ni descuentos; no hay versión gratuita (sí 30 días de devolución). Consultar mullvad.net, nov 2026."
+      },
+      "en": {
+        "summary": "A privacy-focused VPN: it encrypts your connection and hides your real IP by routing it through its servers. What sets it apart is that it asks for no personal data (it gives you a random account number), accepts anonymous payments and has an audited no-logs policy. The apps are open source.",
+        "legitimateUse": "Protect your traffic on public Wi-Fi and stop your ISP or the network from seeing the sites you visit.",
+        "price": "Paid, flat €5/month with no tiers or discounts; there is no free version (but a 30-day refund). Check mullvad.net, Nov 2026."
+      }
+    }
+  },
+  {
+    "id": "vopono",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "vopono",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/jamesmcm/vopono",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "mullvad-vpn",
+      "tor"
+    ],
+    "tags": [
+      "vpn",
+      "network-namespace",
+      "kill-switch",
+      "rust",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para hacer pasar solo ciertas aplicaciones por una VPN o por Tor, en vez de toda tu conexión. Crea un 'espacio de red' temporal y aislado para la app que lances, con interruptor de corte (kill switch) incluido, mientras el resto del equipo sigue con la conexión normal. Escrito en Rust.",
+        "legitimateUse": "Aislar una herramienta concreta para que solo ella salga por la VPN, sin cambiar la conexión del resto de tu equipo."
+      },
+      "en": {
+        "summary": "Used to route only certain applications through a VPN or Tor, instead of your whole connection. It creates a temporary, isolated 'network namespace' for the app you launch, with a built-in kill switch, while the rest of the machine keeps its normal connection. Written in Rust.",
+        "legitimateUse": "Isolate a specific tool so only it exits through the VPN, without changing the rest of your machine's connection."
+      }
+    }
+  },
+  {
+    "id": "pi-hole",
+    "category": "privacy",
+    "subcategory": "anonymity",
+    "name": "Pi-hole",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://pi-hole.net",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "mullvad-vpn"
+    ],
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "tracker-blocking",
+      "network",
+      "self-hosted"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un 'agujero negro' para la publicidad y el rastreo que funciona a nivel de DNS para toda tu red. Lo instalas en un equipo o Raspberry Pi y lo pones como servidor DNS de tu router; a partir de ahí bloquea las peticiones a dominios de anuncios y rastreadores, protegiendo todos los dispositivos (incluidos móviles y smart TV) sin instalar nada en cada uno.",
+        "legitimateUse": "Reducir el rastreo y los anuncios en toda tu red doméstica desde un único punto, y de paso ver qué dominios consultan tus dispositivos."
+      },
+      "en": {
+        "summary": "A 'black hole' for ads and tracking that works at the DNS level for your whole network. You install it on a machine or Raspberry Pi and set it as your router's DNS server; from then on it blocks requests to ad and tracker domains, protecting every device (phones and smart TVs included) without installing anything on each one.",
+        "legitimateUse": "Reduce tracking and ads across your whole home network from a single point, and along the way see which domains your devices query."
+      }
+    }
   }
 ]
