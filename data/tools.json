@@ -1,51 +1,43 @@
 [
   {
-    "id": "overpass-turbo",
+    "id": "amass",
     "category": "osint",
-    "subcategory": "geolocation",
-    "name": "Overpass Turbo",
+    "subcategory": "domains",
+    "name": "OWASP Amass",
     "license": "free",
-    "platforms": ["web"],
+    "github": true,
+    "appliesTo": [
+      "organization",
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
     "level": "intermediate",
     "status": "active",
     "flagship": true,
     "osiLayer": null,
-    "url": "https://overpass-turbo.eu",
-    "related": ["shodan"],
-    "tags": ["geolocation", "osm", "verification", "map"],
+    "url": "https://github.com/owasp-amass/amass",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "shodan",
+      "theharvester"
+    ],
+    "tags": [
+      "dns",
+      "subdomains",
+      "attack surface",
+      "asset discovery",
+      "recon"
+    ],
     "i18n": {
       "es": {
-        "summary": "Interfaz web para consultar los datos de OpenStreetMap con el lenguaje Overpass QL y ver los resultados en un mapa.",
-        "legitimateUse": "Verificar dónde se tomó una foto buscando los lugares con una iglesia a menos de 100 m de un puente sobre un río."
+        "summary": "Sirve para descubrir todo lo que una organización (o cualquiera con un dominio propio) expone en internet. Partiendo solo de un nombre como ejemplo.com, encuentra subdominios, direcciones IP y servicios asociados, combinando fuentes públicas (DNS, certificados, buscadores) con sondeos activos. Suele sacar a la luz más de lo que la propia empresa cree tener expuesto.",
+        "legitimateUse": "Antes de una auditoría autorizada, inventariar los subdominios y servicios de tu propia organización para detectar los olvidados o mal configurados."
       },
       "en": {
-        "summary": "Web interface to query OpenStreetMap data with the Overpass QL language and see the results on a map.",
-        "legitimateUse": "Verify where a photo was taken by searching for places with a church within 100 m of a bridge over a river."
-      }
-    }
-  },
-  {
-    "id": "theharvester",
-    "category": "osint",
-    "subcategory": "people",
-    "name": "theHarvester",
-    "license": "free",
-    "platforms": ["cli"],
-    "level": "beginner",
-    "status": "active",
-    "flagship": true,
-    "osiLayer": null,
-    "url": "https://github.com/laramies/theHarvester",
-    "related": ["shodan"],
-    "tags": ["email", "subdomain", "recon", "footprinting"],
-    "i18n": {
-      "es": {
-        "summary": "Recopila correos, nombres, subdominios y hosts asociados a un dominio a partir de fuentes públicas.",
-        "legitimateUse": "Como paso de reconocimiento en una auditoría autorizada, para ver qué información de tu propia empresa es pública."
-      },
-      "en": {
-        "summary": "Gathers emails, names, subdomains and hosts linked to a domain from public sources.",
-        "legitimateUse": "As a reconnaissance step in an authorized audit, to see what information about your own company is public."
+        "summary": "Used to discover everything an organization (or anyone with their own domain) exposes online. Starting from just a name like example.com, it finds subdomains, IP addresses and related services by combining public sources (DNS, certificates, search engines) with active probing. It usually surfaces more than the company thinks it has exposed.",
+        "legitimateUse": "Before an authorized audit, inventory your own organization's subdomains and services to spot the ones that were forgotten or misconfigured."
       }
     }
   },
@@ -55,22 +47,1218 @@
     "subcategory": "domains",
     "name": "Shodan",
     "license": "freemium",
-    "platforms": ["web", "cli"],
+    "github": false,
+    "appliesTo": [
+      "organization",
+      "individual"
+    ],
+    "platforms": [
+      "web",
+      "cli"
+    ],
     "level": "beginner",
     "status": "active",
     "flagship": true,
     "osiLayer": null,
     "url": "https://www.shodan.io",
-    "related": ["theharvester"],
-    "tags": ["devices", "exposure", "iot", "recon"],
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "amass"
+    ],
+    "tags": [
+      "devices",
+      "exposure",
+      "iot",
+      "ports",
+      "banners",
+      "recon"
+    ],
     "i18n": {
       "es": {
-        "summary": "Buscador de dispositivos conectados a internet: servidores, cámaras, routers y sistemas industriales expuestos.",
-        "legitimateUse": "Comprobar qué servicios de tu propia organización están expuestos a internet sin que debieran estarlo."
+        "summary": "Es un buscador de dispositivos conectados a internet: servidores, cámaras, routers o sistemas industriales. Rastrea direcciones IP, apunta qué puertos tienen abiertos y qué programa responde en cada uno, y te deja buscar por esos criterios; por ejemplo, todas las cámaras de un modelo concreto expuestas en un país.",
+        "legitimateUse": "Comprobar qué servicios de tu propia empresa están expuestos a internet y que un atacante podría aprovechar.",
+        "price": "Hay cuenta gratuita con resultados limitados; las funciones avanzadas requieren pago (consultar precios en shodan.io, hay descuento académico)."
       },
       "en": {
-        "summary": "Search engine for internet-connected devices: exposed servers, cameras, routers and industrial systems.",
-        "legitimateUse": "Check which services of your own organization are exposed to the internet when they should not be."
+        "summary": "A search engine for internet-connected devices: servers, cameras, routers or industrial systems. It scans IP addresses, notes which ports are open and what software answers on each, and lets you search by those criteria; for example, every camera of a given model exposed in a country.",
+        "legitimateUse": "Check which of your own company's services are exposed to the internet and could be abused by an attacker.",
+        "price": "There is a free account with limited results; advanced features require payment (check prices at shodan.io; an academic discount is available)."
+      }
+    }
+  },
+  {
+    "id": "theharvester",
+    "category": "osint",
+    "subcategory": "people",
+    "name": "theHarvester",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/laramies/theHarvester",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "amass",
+      "shodan"
+    ],
+    "tags": [
+      "email",
+      "subdomain",
+      "names",
+      "footprinting",
+      "recon"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para reunir rápidamente la información pública asociada a un dominio. Busca en fuentes abiertas los correos, nombres de personas, subdominios y hosts vinculados a ese dominio y, en pocos minutos, arma una foto de la huella pública de una organización que a mano llevaría horas.",
+        "legitimateUse": "Ver qué correos y empleados de tu propia empresa aparecen expuestos, para medir el riesgo de phishing dirigido."
+      },
+      "en": {
+        "summary": "Used to quickly gather the public information tied to a domain. It searches open sources for the emails, people's names, subdomains and hosts linked to that domain and, in a few minutes, builds a picture of an organization's public footprint that would take hours by hand.",
+        "legitimateUse": "See which of your own company's emails and employees are exposed, to gauge the risk of targeted phishing."
+      }
+    }
+  },
+  {
+    "id": "exiftool",
+    "category": "osint",
+    "subcategory": "metadata",
+    "name": "ExifTool",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://exiftool.org",
+    "verifiedAt": "2026-11-11",
+    "related": [],
+    "tags": [
+      "metadata",
+      "exif",
+      "gps",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para ver y modificar los metadatos que un archivo guarda sin que se vean: la fecha, el modelo de cámara o móvil, el programa de edición y, a veces, las coordenadas GPS exactas de una foto. Puede mostrarlos, para investigar, o borrarlos, para proteger tu privacidad. Funciona con imágenes, vídeo, audio y PDF.",
+        "legitimateUse": "Antes de subir una foto a internet, borrar sus metadatos con 'exiftool -all= foto.jpg' para no revelar sin querer dónde vives o qué equipo usas."
+      },
+      "en": {
+        "summary": "Used to view and change the metadata a file stores out of sight: the date, the camera or phone model, the editing software and sometimes a photo's exact GPS coordinates. It can show them, to investigate, or erase them, to protect your privacy. It works with images, video, audio and PDF.",
+        "legitimateUse": "Before uploading a photo, strip its metadata with 'exiftool -all= photo.jpg' so you do not accidentally reveal where you live or what gear you use."
+      }
+    }
+  },
+  {
+    "id": "overpass-turbo",
+    "category": "osint",
+    "subcategory": "geolocation",
+    "name": "Overpass Turbo",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://overpass-turbo.eu",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "suncalc",
+      "google-earth-pro"
+    ],
+    "tags": [
+      "geolocation",
+      "osm",
+      "openstreetmap",
+      "verification",
+      "map"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para averiguar en qué lugar se tomó una foto cuando no sabes dónde es. En vez de buscar por el nombre del sitio, describes los elementos que ves en la imagen (por ejemplo, una iglesia, un puente y un río) y marca en el mapa todos los puntos donde esos elementos aparecen juntos. Usa los datos abiertos de OpenStreetMap.",
+        "legitimateUse": "Verificar si una foto de una noticia se tomó realmente donde se afirma, comprobando que los elementos del entorno existen en ese punto del mapa."
+      },
+      "en": {
+        "summary": "Used to work out where a photo was taken when you do not know the place. Instead of searching by the site's name, you describe the features you see in the image (for example, a church, a bridge and a river) and it marks on the map every spot where those features appear together. It uses OpenStreetMap's open data.",
+        "legitimateUse": "Verify whether a news photo was really taken where it claims, by checking that the surrounding features exist at that point on the map."
+      }
+    }
+  },
+  {
+    "id": "suncalc",
+    "category": "osint",
+    "subcategory": "geolocation",
+    "name": "SunCalc",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.suncalc.org",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "overpass-turbo"
+    ],
+    "tags": [
+      "geolocation",
+      "sun",
+      "shadows",
+      "verification",
+      "time"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para saber dónde está el sol en un lugar y una fecha concretos. Muestra sobre un mapa por dónde sale, dónde está a cada hora y por dónde se pone. En verificación de imágenes se usa al revés: por la dirección y el largo de las sombras de una foto se estima a qué hora y en qué época se tomó.",
+        "legitimateUse": "Comprobar si una foto que dicen ser de cierto lugar y día es coherente: las sombras deben coincidir con la posición del sol para esas coordenadas y esa fecha."
+      },
+      "en": {
+        "summary": "Used to find where the sun is at a given place and date. It shows on a map where it rises, where it sits at each hour and where it sets. In image verification it is used in reverse: the direction and length of a photo's shadows let you estimate the time of day and season it was taken.",
+        "legitimateUse": "Check whether a photo claimed to be from a certain place and day is consistent: the shadows should match the sun's position for those coordinates and date."
+      }
+    }
+  },
+  {
+    "id": "google-earth-pro",
+    "category": "osint",
+    "subcategory": "geolocation",
+    "name": "Google Earth Pro",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.google.com/earth/about/versions/",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "overpass-turbo",
+      "suncalc"
+    ],
+    "tags": [
+      "geolocation",
+      "satellite",
+      "imagery",
+      "historical",
+      "verification"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para explorar cualquier punto del planeta desde el ordenador con imágenes de satélite, relieve en 3D y Street View. Para verificación, lo más útil es su historial de imágenes: puedes ver el mismo lugar en distintas fechas y comprobar cómo ha cambiado, lo que ayuda a datar una foto.",
+        "legitimateUse": "Confirmar la fecha aproximada de una foto de un lugar: comparar los edificios o el terreno que se ven con las imágenes históricas del mismo punto hasta encontrar cuándo coinciden."
+      },
+      "en": {
+        "summary": "Used to explore anywhere on the planet from your computer with satellite imagery, 3D terrain and Street View. For verification, the most useful part is its historical imagery: you can see the same place on different dates and check how it changed, which helps date a photo.",
+        "legitimateUse": "Confirm the approximate date of a photo of a place: compare the buildings or terrain visible in it against historical imagery of the same spot until they match."
+      }
+    }
+  },
+  {
+    "id": "wireshark",
+    "category": "network-analysis",
+    "subcategory": "capture",
+    "name": "Wireshark",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "2–7",
+    "url": "https://www.wireshark.org",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "tcpdump",
+      "scapy"
+    ],
+    "tags": [
+      "pcap",
+      "sniffer",
+      "protocol analysis",
+      "packets",
+      "dissector"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para ver, uno a uno, todos los paquetes que circulan por una red y entender qué está pasando. Captura el tráfico de una interfaz y lo descompone capa por capa (Ethernet, IP, TCP, HTTP...), con una interfaz gráfica que colorea y filtra los paquetes para encontrar justo lo que buscas. Es el analizador de red de referencia.",
+        "legitimateUse": "Analizar la captura de tráfico de un equipo sospechoso para ver si está enviando datos a un servidor externo desconocido, señal de una posible infección o exfiltración."
+      },
+      "en": {
+        "summary": "Used to look at every packet travelling across a network, one by one, and understand what is going on. It captures an interface's traffic and breaks it down layer by layer (Ethernet, IP, TCP, HTTP...), with a GUI that colours and filters packets so you find exactly what you need. It is the reference network analyzer.",
+        "legitimateUse": "Analyze the traffic capture of a suspicious machine to see whether it is sending data to an unknown external server, a sign of a possible infection or exfiltration."
+      }
+    }
+  },
+  {
+    "id": "tcpdump",
+    "category": "network-analysis",
+    "subcategory": "capture",
+    "name": "tcpdump",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "2–7",
+    "url": "https://www.tcpdump.org",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "wireshark"
+    ],
+    "tags": [
+      "pcap",
+      "sniffer",
+      "cli",
+      "bpf",
+      "libpcap"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el equivalente a Wireshark pero en la terminal, sin interfaz gráfica. Captura el tráfico de una red y lo muestra o lo guarda en un archivo, filtrando con un lenguaje de reglas (BPF) para quedarte solo con lo que te interesa. Es ligero y está en casi cualquier sistema Unix, así que es lo que usas cuando trabajas en un servidor sin entorno gráfico.",
+        "legitimateUse": "Capturar tráfico en un servidor remoto y guardarlo en un archivo .pcap para después analizarlo con calma en Wireshark."
+      },
+      "en": {
+        "summary": "The command-line equivalent of Wireshark, with no GUI. It captures a network's traffic and prints it or saves it to a file, filtering with a rule language (BPF) so you keep only what matters. It is lightweight and present on almost any Unix system, so it is what you use on a server with no graphical environment.",
+        "legitimateUse": "Capture traffic on a remote server and save it to a .pcap file to analyze later, calmly, in Wireshark."
+      }
+    }
+  },
+  {
+    "id": "scapy",
+    "category": "network-analysis",
+    "subcategory": "packet-crafting",
+    "name": "Scapy",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "2–7",
+    "url": "https://scapy.net",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "wireshark"
+    ],
+    "tags": [
+      "python",
+      "packet crafting",
+      "injection",
+      "forging",
+      "library"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para construir paquetes de red a mano, campo por campo, en vez de solo mirar los que ya existen. Con unas pocas líneas de Python puedes fabricar un paquete con los valores exactos que quieras, enviarlo a la red y ver la respuesta. Se usa para probar cómo reacciona un sistema ante tráfico fuera de lo normal.",
+        "legitimateUse": "Comprobar si un firewall o un IDS de tu red detecta y bloquea paquetes manipulados, enviándoselos tú de forma controlada."
+      },
+      "en": {
+        "summary": "Used to build network packets by hand, field by field, instead of only looking at existing ones. With a few lines of Python you can craft a packet with the exact values you want, send it onto the network and see the reply. It is used to test how a system reacts to out-of-the-ordinary traffic.",
+        "legitimateUse": "Check whether a firewall or IDS on your network detects and blocks crafted packets, by sending them yourself in a controlled way."
+      }
+    }
+  },
+  {
+    "id": "responder",
+    "category": "network-analysis",
+    "subcategory": "mitm",
+    "name": "Responder",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "5–7",
+    "url": "https://github.com/lgandx/Responder",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "bettercap"
+    ],
+    "tags": [
+      "llmnr",
+      "nbt-ns",
+      "mdns",
+      "poisoning",
+      "credentials",
+      "windows"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Aprovecha una debilidad de las redes Windows: cuando un equipo no encuentra un nombre por DNS, lo pregunta a gritos a toda la red (por LLMNR y NBT-NS). Responder contesta a esas preguntas haciéndose pasar por el equipo buscado, y así captura las credenciales que la víctima envía. Demuestra por qué conviene desactivar esos protocolos.",
+        "legitimateUse": "En una auditoría autorizada, comprobar si tu red Windows es vulnerable a este robo de credenciales; la defensa es desactivar LLMNR y NBT-NS por GPO."
+      },
+      "en": {
+        "summary": "It exploits a weakness of Windows networks: when a machine cannot resolve a name via DNS, it shouts the question to the whole network (over LLMNR and NBT-NS). Responder answers those questions pretending to be the machine being looked for, and so captures the credentials the victim sends. It shows why those protocols should be disabled.",
+        "legitimateUse": "In an authorized audit, check whether your Windows network is vulnerable to this credential theft; the defense is to disable LLMNR and NBT-NS via GPO."
+      }
+    }
+  },
+  {
+    "id": "bettercap",
+    "category": "network-analysis",
+    "subcategory": "mitm",
+    "name": "Bettercap",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "2–7",
+    "url": "https://www.bettercap.org",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "responder"
+    ],
+    "tags": [
+      "mitm",
+      "arp spoofing",
+      "sniffer",
+      "wifi",
+      "ble",
+      "recon"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una navaja suiza para atacar y explorar redes, escrita en Go. Reúne en una sola herramienta el reconocimiento de equipos, los ataques de intermediario (ARP, DNS, DHCPv6 spoofing), la captura de credenciales y módulos para Wi-Fi y Bluetooth. Sustituye a varias herramientas clásicas más antiguas como Ettercap.",
+        "legitimateUse": "En un laboratorio o auditoría autorizada, demostrar cómo un atacante en la misma red puede interceptar el tráfico, para justificar el cifrado y la segmentación."
+      },
+      "en": {
+        "summary": "A Swiss army knife for attacking and exploring networks, written in Go. It brings host reconnaissance, man-in-the-middle attacks (ARP, DNS, DHCPv6 spoofing), credential capture and Wi-Fi and Bluetooth modules together in one tool. It replaces several older classics such as Ettercap.",
+        "legitimateUse": "In a lab or authorized audit, show how an attacker on the same network can intercept traffic, to justify encryption and segmentation."
+      }
+    }
+  },
+  {
+    "id": "mitmproxy",
+    "category": "network-analysis",
+    "subcategory": "mitm",
+    "name": "mitmproxy",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://mitmproxy.org",
+    "verifiedAt": "2026-11-11",
+    "related": [
+      "bettercap"
+    ],
+    "tags": [
+      "http",
+      "https",
+      "proxy",
+      "interception",
+      "tls",
+      "api"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para ver y modificar el tráfico HTTP y HTTPS entre una aplicación y su servidor. Se coloca en medio como proxy: la app habla con él creyendo que es el servidor, y tú ves cada petición y respuesta, e incluso puedes cambiarlas al vuelo. Es muy usado para inspeccionar qué envía por detrás una app de móvil.",
+        "legitimateUse": "Ver qué información envía al servidor una app —tuya o que estés auditando— y detectar datos que viajan sin cifrar o que no deberían salir del dispositivo."
+      },
+      "en": {
+        "summary": "Used to see and modify the HTTP and HTTPS traffic between an app and its server. It sits in the middle as a proxy: the app talks to it believing it is the server, and you see every request and response, and can even change them on the fly. It is widely used to inspect what a mobile app sends behind the scenes.",
+        "legitimateUse": "Review what data an app of yours, or one you are auditing, sends to the server, to spot information travelling unencrypted or that should not be sent at all."
+      }
+    }
+  },
+  {
+    "id": "subfinder",
+    "category": "osint",
+    "subcategory": "projectdiscovery",
+    "name": "Subfinder",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization",
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/projectdiscovery/subfinder",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "amass",
+      "httpx"
+    ],
+    "tags": [
+      "subdomains",
+      "dns",
+      "recon",
+      "passive",
+      "projectdiscovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para descubrir los subdominios de un dominio (correo.ejemplo.com, vpn.ejemplo.com...) usando solo fuentes públicas, sin tocar los servidores del objetivo. Le das ejemplo.com y te devuelve la lista de subdominios que encuentra. Suele ser el primer paso para ver cuánta superficie expone una organización.",
+        "legitimateUse": "Listar los subdominios de tu propia organización para encontrar servicios olvidados o de pruebas que siguen accesibles."
+      },
+      "en": {
+        "summary": "Used to discover a domain's subdomains (mail.example.com, vpn.example.com...) using only public sources, without touching the target's servers. You give it example.com and it returns the subdomains it finds. It is usually the first step to see how much surface an organization exposes.",
+        "legitimateUse": "List your own organization's subdomains to find forgotten or test services that are still reachable."
+      }
+    }
+  },
+  {
+    "id": "httpx",
+    "category": "osint",
+    "subcategory": "projectdiscovery",
+    "name": "httpx",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/projectdiscovery/httpx",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "subfinder",
+      "naabu"
+    ],
+    "tags": [
+      "http",
+      "probing",
+      "web",
+      "tech-detect",
+      "projectdiscovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Después de tener una lista de dominios o IPs, sirve para ver cuáles responden de verdad por web y cómo. Prueba cada uno y te dice el código de estado, el título de la página, la tecnología que usa y si tiene HTTPS. Así, de una lista enorme, te quedas con los objetivos vivos.",
+        "legitimateUse": "Comprobar rápidamente qué webs de tu organización están publicadas y con qué tecnologías, para tener un inventario al día."
+      },
+      "en": {
+        "summary": "Once you have a list of domains or IPs, it checks which ones actually respond over the web and how. It probes each and reports the status code, the page title, the technology in use and whether it has HTTPS. From a huge list, you keep the live targets.",
+        "legitimateUse": "Quickly check which of your organization's websites are published and with what technologies, to keep an up-to-date inventory."
+      }
+    }
+  },
+  {
+    "id": "naabu",
+    "category": "osint",
+    "subcategory": "projectdiscovery",
+    "name": "Naabu",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "4",
+    "url": "https://github.com/projectdiscovery/naabu",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "httpx",
+      "katana"
+    ],
+    "tags": [
+      "port scanner",
+      "ports",
+      "recon",
+      "projectdiscovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de puertos muy rápido: le das una IP o un rango y te dice qué puertos tiene abiertos, es decir, qué servicios están escuchando. Está pensado para encadenarse con otras herramientas, pasándole su resultado a la siguiente.",
+        "legitimateUse": "Ver qué puertos de tus propios servidores están abiertos a internet para cerrar los que no deberían estarlo."
+      },
+      "en": {
+        "summary": "A very fast port scanner: you give it an IP or a range and it tells you which ports are open, that is, which services are listening. It is designed to be chained with other tools, passing its output to the next one.",
+        "legitimateUse": "See which ports on your own servers are open to the internet so you can close the ones that should not be."
+      }
+    }
+  },
+  {
+    "id": "katana",
+    "category": "osint",
+    "subcategory": "projectdiscovery",
+    "name": "Katana",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/projectdiscovery/katana",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "httpx",
+      "nuclei"
+    ],
+    "tags": [
+      "crawler",
+      "spider",
+      "web",
+      "endpoints",
+      "projectdiscovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para recorrer una web entera de forma automática y sacar todas sus páginas, enlaces y formularios. En vez de ir clicando a mano, Katana explora el sitio solo y te deja un listado de todo lo que hay, que luego puedes revisar o pasar a un escáner.",
+        "legitimateUse": "Mapear todas las páginas de una web tuya antes de una revisión de seguridad, para no dejarte ninguna sin probar."
+      },
+      "en": {
+        "summary": "Used to automatically crawl a whole website and pull out all its pages, links and forms. Instead of clicking by hand, Katana explores the site on its own and leaves you a list of everything there, which you can then review or feed to a scanner.",
+        "legitimateUse": "Map all the pages of a website of yours before a security review, so you do not miss any."
+      }
+    }
+  },
+  {
+    "id": "nuclei",
+    "category": "osint",
+    "subcategory": "projectdiscovery",
+    "name": "Nuclei",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://github.com/projectdiscovery/nuclei",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "katana",
+      "amass"
+    ],
+    "tags": [
+      "vulnerability scanner",
+      "templates",
+      "cve",
+      "dast",
+      "projectdiscovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de vulnerabilidades basado en plantillas: cada plantilla describe un fallo concreto (un CVE, una configuración insegura, una contraseña por defecto) y Nuclei la comprueba contra tus objetivos. Al apoyarse en miles de plantillas mantenidas por la comunidad, detecta muchísimos problemas conocidos muy rápido.",
+        "legitimateUse": "Pasar las plantillas de Nuclei por tus propios servicios para detectar vulnerabilidades conocidas antes de que las encuentre un atacante."
+      },
+      "en": {
+        "summary": "A template-based vulnerability scanner: each template describes a specific issue (a CVE, an insecure setting, a default password) and Nuclei checks it against your targets. Backed by thousands of community-maintained templates, it detects a huge range of known problems very fast.",
+        "legitimateUse": "Run Nuclei's templates against your own services to detect known vulnerabilities before an attacker finds them."
+      }
+    }
+  },
+  {
+    "id": "sherlock",
+    "category": "osint",
+    "subcategory": "social",
+    "name": "Sherlock",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/sherlock-project/sherlock",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "holehe",
+      "theharvester"
+    ],
+    "tags": [
+      "username",
+      "socmint",
+      "accounts",
+      "footprint",
+      "osint"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para averiguar en qué redes sociales existe una cuenta con un nombre de usuario concreto. Le das un usuario (por ejemplo, el tuyo) y comprueba más de 400 plataformas, devolviéndote los enlaces a los perfiles que encuentra con ese nombre. Es la forma rápida de ver tu propia huella pública repartida por internet.",
+        "legitimateUse": "Buscar tu propio usuario para descubrir cuentas antiguas u olvidadas a tu nombre y cerrarlas o reforzarlas."
+      },
+      "en": {
+        "summary": "Used to find out on which social networks an account exists under a given username. You give it a username (for example, your own) and it checks over 400 platforms, returning links to the profiles it finds with that name. It is the quick way to see your own public footprint scattered across the internet.",
+        "legitimateUse": "Search your own username to find old or forgotten accounts in your name and close or secure them."
+      }
+    }
+  },
+  {
+    "id": "holehe",
+    "category": "osint",
+    "subcategory": "social",
+    "name": "Holehe",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/megadose/holehe",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "sherlock"
+    ],
+    "tags": [
+      "email",
+      "accounts",
+      "registration",
+      "footprint",
+      "osint"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para saber en qué servicios está registrado un correo electrónico. Prueba el correo contra más de 100 webs usando su función de 'he olvidado la contraseña', y lo hace sin enviar ningún aviso al dueño del correo. Así ves de un vistazo dónde se usó esa dirección.",
+        "legitimateUse": "Comprobar en qué sitios está registrado tu propio correo para cerrar cuentas que ya no usas y reducir tu exposición ante filtraciones."
+      },
+      "en": {
+        "summary": "Used to find out which services an email address is registered on. It tests the email against 100+ sites using their 'forgot password' feature, and does so without sending any alert to the email's owner. It shows at a glance where that address was used.",
+        "legitimateUse": "Check which sites your own email is registered on to close accounts you no longer use and reduce your exposure to breaches."
+      }
+    }
+  },
+  {
+    "id": "grayhat-warfare",
+    "category": "osint",
+    "subcategory": "cloud-exposure",
+    "name": "Grayhat Warfare",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://buckets.grayhatwarfare.com",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "shodan"
+    ],
+    "tags": [
+      "cloud",
+      "s3",
+      "buckets",
+      "exposure",
+      "data-leak"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un buscador de 'cubos' (buckets) de almacenamiento en la nube que han quedado abiertos al público por error, sobre todo de Amazon S3. Mantiene una base de datos ya rastreada, así que buscas por palabra clave o tipo de archivo y te muestra al instante los archivos expuestos que nadie protege. Pone en evidencia un fallo de configuración muy común.",
+        "legitimateUse": "Buscar el nombre o las palabras clave de tu propia organización para comprobar que no tienes ningún bucket de S3 abierto filtrando archivos.",
+        "price": "Búsqueda básica de archivos gratis; buscar por bucket requiere cuenta gratuita (con email) y el acceso completo es de pago (consultar precios en la web oficial, nov 2026)."
+      },
+      "en": {
+        "summary": "A search engine for cloud storage 'buckets' that have been left open to the public by mistake, mostly on Amazon S3. It keeps a pre-crawled database, so you search by keyword or file type and it instantly shows the exposed files nobody is protecting. It highlights a very common misconfiguration.",
+        "legitimateUse": "Search your own organization's name or keywords to confirm you have no open S3 bucket leaking files.",
+        "price": "Basic file search is free; searching by bucket needs a free account (email), and full access is paid (check prices on the official site, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "burp-suite",
+    "category": "web",
+    "subcategory": "proxies",
+    "name": "Burp Suite",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://portswigger.net/burp",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "zap",
+      "sqlmap"
+    ],
+    "tags": [
+      "proxy",
+      "web",
+      "http",
+      "interception",
+      "scanner"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la herramienta de referencia para probar la seguridad de una web. Se coloca entre tu navegador y el servidor como proxy, así que puedes ver, parar y modificar cada petición HTTP antes de que llegue. Alrededor de esa idea añade un repetidor de peticiones, un fuzzer y, en la versión de pago, un escáner automático de vulnerabilidades.",
+        "legitimateUse": "Interceptar las peticiones de una web propia o de un laboratorio autorizado para ver cómo maneja los datos y encontrar fallos antes que un atacante.",
+        "price": "Community gratis (proxy y herramientas manuales, Intruder limitado, sin guardar proyectos); Professional de pago, unos 449–499 USD/usuario/año (consultar precio oficial en portswigger.net, nov 2026); edición Enterprise/DAST aparte."
+      },
+      "en": {
+        "summary": "The reference tool for testing a website's security. It sits between your browser and the server as a proxy, so you can see, pause and modify every HTTP request before it is sent. Around that idea it adds a request repeater, a fuzzer and, in the paid version, an automatic vulnerability scanner.",
+        "legitimateUse": "Intercept the requests of your own site or an authorized lab to see how it handles data and find flaws before an attacker does.",
+        "price": "Community free (proxy and manual tools, limited Intruder, no saved projects); Professional is paid, around USD 449–499/user/year (check the official price at portswigger.net, Nov 2026); separate Enterprise/DAST edition."
+      }
+    }
+  },
+  {
+    "id": "zap",
+    "category": "web",
+    "subcategory": "proxies",
+    "name": "ZAP",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://www.zaproxy.org",
+    "verifiedAt": "2026-11-13",
+    "related": [
+      "burp-suite"
+    ],
+    "tags": [
+      "proxy",
+      "web",
+      "scanner",
+      "open-source",
+      "dast"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la alternativa libre y gratuita a Burp Suite para probar webs. También funciona como proxy entre el navegador y el servidor, pero incluye sin pagar un escáner automático de vulnerabilidades, pensado tanto para quien empieza como para integrarlo en procesos automáticos (CI/CD). Antes se llamaba OWASP ZAP.",
+        "legitimateUse": "Lanzar un escaneo automático contra una web propia o de un laboratorio para detectar vulnerabilidades habituales sin coste de licencia."
+      },
+      "en": {
+        "summary": "The free, open-source alternative to Burp Suite for testing websites. It also works as a proxy between the browser and the server, but it includes an automatic vulnerability scanner at no cost, aimed both at beginners and at integration into automated pipelines (CI/CD). It was formerly called OWASP ZAP.",
+        "legitimateUse": "Run an automated scan against your own site or a lab to detect common vulnerabilities with no license cost."
+      }
+    }
+  },
+  {
+    "id": "sqlmap",
+    "category": "web",
+    "subcategory": "injection",
+    "name": "sqlmap",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://sqlmap.org",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "commix",
+      "burp-suite"
+    ],
+    "tags": [
+      "sql-injection",
+      "database",
+      "exploitation",
+      "pentest",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Automatiza la detección y explotación de inyecciones SQL, el fallo que permite colar comandos en la base de datos de una web a través de sus parámetros. Le pasas una URL o una petición y prueba solo las distintas técnicas; si encuentra el fallo, puede llegar a listar las tablas, sacar los datos e incluso tomar el control del servidor de base de datos.",
+        "legitimateUse": "Probar los formularios y parámetros de una web propia o con permiso para confirmar que están protegidos frente a inyección SQL antes de salir a producción."
+      },
+      "en": {
+        "summary": "Automates the detection and exploitation of SQL injection, the flaw that lets commands be slipped into a website's database through its parameters. You give it a URL or a request and it tries the different techniques on its own; if it finds the flaw, it can go as far as listing tables, extracting the data and even taking over the database server.",
+        "legitimateUse": "Test the forms and parameters of a site you own or are authorized to test, to confirm they are protected against SQL injection before going to production."
+      }
+    }
+  },
+  {
+    "id": "commix",
+    "category": "web",
+    "subcategory": "injection",
+    "name": "Commix",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/commixproject/commix",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "sqlmap"
+    ],
+    "tags": [
+      "command-injection",
+      "os-command",
+      "exploitation",
+      "pentest",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Hace con las inyecciones de comandos del sistema lo que sqlmap hace con SQL: automatiza encontrar y explotar el fallo que permite ejecutar órdenes del sistema operativo a través de una web mal programada. Prueba distintas técnicas (directas y a ciegas) y, si funciona, te da una vía para ejecutar comandos en el servidor.",
+        "legitimateUse": "Comprobar en una web propia que los campos que acaban ejecutando comandos del sistema (pings, conversiones, etc.) están bien saneados y no permiten inyección."
+      },
+      "en": {
+        "summary": "Does for OS command injection what sqlmap does for SQL: it automates finding and exploiting the flaw that lets operating-system commands run through a badly coded web app. It tries different techniques (direct and blind) and, if it works, gives you a way to run commands on the server.",
+        "legitimateUse": "Check on your own site that fields which end up running system commands (pings, conversions, etc.) are properly sanitized and allow no injection."
+      }
+    }
+  },
+  {
+    "id": "gobuster",
+    "category": "web",
+    "subcategory": "content-discovery",
+    "name": "Gobuster",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://github.com/OJ/gobuster",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "ffuf",
+      "feroxbuster",
+      "httpx"
+    ],
+    "tags": [
+      "content-discovery",
+      "brute-force",
+      "directories",
+      "dns",
+      "vhost",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para descubrir páginas y carpetas de una web que no están enlazadas por ningún sitio pero siguen accesibles (paneles de admin, copias de seguridad, archivos de configuración...). Prueba una a una las palabras de una lista contra la web y te dice cuáles existen. También tiene modos para subdominios y hosts virtuales.",
+        "legitimateUse": "Pasar un diccionario por una web propia para encontrar rutas olvidadas (backups, entornos de pruebas) que no deberían ser accesibles desde fuera."
+      },
+      "en": {
+        "summary": "Used to discover pages and folders of a website that aren't linked anywhere but are still reachable (admin panels, backups, config files...). It tries the words from a list one by one against the site and tells you which ones exist. It also has modes for subdomains and virtual hosts.",
+        "legitimateUse": "Run a wordlist against your own site to find forgotten paths (backups, test environments) that should not be reachable from outside."
+      }
+    }
+  },
+  {
+    "id": "ffuf",
+    "category": "web",
+    "subcategory": "content-discovery",
+    "name": "ffuf",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/ffuf/ffuf",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "gobuster",
+      "feroxbuster",
+      "katana"
+    ],
+    "tags": [
+      "fuzzing",
+      "content-discovery",
+      "parameters",
+      "vhost",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un 'fuzzer' web muy rápido: pones la palabra FUZZ en cualquier parte de una petición (la URL, un parámetro, una cabecera) y la va sustituyendo por cada entrada de un diccionario para ver qué responde la web. Sirve tanto para encontrar rutas ocultas como para probar parámetros o hosts virtuales.",
+        "legitimateUse": "Descubrir en una web propia parámetros o rutas no documentados que podrían dar acceso a funciones que creías ocultas."
+      },
+      "en": {
+        "summary": "A very fast web 'fuzzer': you put the word FUZZ anywhere in a request (the URL, a parameter, a header) and it swaps it for each entry of a wordlist to see how the site responds. It works both to find hidden paths and to test parameters or virtual hosts.",
+        "legitimateUse": "Discover undocumented parameters or paths on your own site that could expose features you thought were hidden."
+      }
+    }
+  },
+  {
+    "id": "feroxbuster",
+    "category": "web",
+    "subcategory": "content-discovery",
+    "name": "feroxbuster",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/epi052/feroxbuster",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "gobuster",
+      "dirsearch"
+    ],
+    "tags": [
+      "content-discovery",
+      "recursive",
+      "brute-force",
+      "rust",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Hace lo mismo que Gobuster —buscar rutas y archivos ocultos— pero de forma recursiva: cuando encuentra una carpeta, entra y la vuelve a escanear por su cuenta, hasta mapear toda la estructura. Está escrito en Rust y va muy rápido.",
+        "legitimateUse": "Mapear en profundidad la estructura de carpetas de una web propia antes de una revisión, para no dejarte rutas anidadas sin comprobar."
+      },
+      "en": {
+        "summary": "Does the same as Gobuster —finding hidden paths and files— but recursively: when it finds a folder, it goes in and scans it again on its own, until it maps the whole structure. It is written in Rust and is very fast.",
+        "legitimateUse": "Deeply map the folder structure of your own site before a review, so you don't leave nested paths unchecked."
+      }
+    }
+  },
+  {
+    "id": "dirsearch",
+    "category": "web",
+    "subcategory": "content-discovery",
+    "name": "dirsearch",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/maurosoria/dirsearch",
+    "verifiedAt": "2026-11-14",
+    "related": [
+      "ffuf",
+      "feroxbuster"
+    ],
+    "tags": [
+      "content-discovery",
+      "brute-force",
+      "directories",
+      "python",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un buscador de rutas web en Python, muy popular por venir ya afinado para este trabajo: trae diccionarios pensados para ello, maneja bien las extensiones de archivo y filtra solo las páginas válidas. Buena opción para empezar con el descubrimiento de contenido.",
+        "legitimateUse": "Revisar una web propia en busca de archivos sensibles expuestos (.bak, .zip, paneles de acceso) usando sus diccionarios por defecto."
+      },
+      "en": {
+        "summary": "A Python web path scanner, popular for coming already tuned for the job: it ships with wordlists made for it, handles file extensions well and filters only valid pages. A good option to start with content discovery.",
+        "legitimateUse": "Check your own site for exposed sensitive files (.bak, .zip, login panels) using its default wordlists."
+      }
+    }
+  },
+  {
+    "id": "nikto",
+    "category": "web",
+    "subcategory": "web-scanners",
+    "name": "Nikto",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/sullo/nikto",
+    "verifiedAt": "2026-11-15",
+    "related": [
+      "whatweb",
+      "nuclei"
+    ],
+    "tags": [
+      "web-server",
+      "scanner",
+      "misconfiguration",
+      "cgi",
+      "vulnerabilities"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner clásico de servidores web: lanza miles de comprobaciones contra un servidor para detectar archivos peligrosos, versiones de software anticuadas y configuraciones inseguras. Es muy ruidoso (se nota mucho en los registros), pero da un primer vistazo rápido de los problemas evidentes de un servidor.",
+        "legitimateUse": "Pasar un primer escaneo a un servidor web propio para detectar de un vistazo ficheros olvidados, software desactualizado y cabeceras mal configuradas."
+      },
+      "en": {
+        "summary": "A classic web server scanner: it fires thousands of checks at a server to detect dangerous files, outdated software versions and insecure configurations. It is very noisy (very visible in the logs), but it gives a quick first look at a server's obvious problems.",
+        "legitimateUse": "Run a first scan against your own web server to spot, at a glance, leftover files, outdated software and misconfigured headers."
+      }
+    }
+  },
+  {
+    "id": "wpscan",
+    "category": "web",
+    "subcategory": "web-scanners",
+    "name": "WPScan",
+    "license": "freemium",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://wpscan.com",
+    "verifiedAt": "2026-11-15",
+    "related": [
+      "nikto",
+      "whatweb"
+    ],
+    "tags": [
+      "wordpress",
+      "cms",
+      "scanner",
+      "plugins",
+      "vulnerabilities"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el escáner de referencia para webs hechas con WordPress. Detecta la versión del núcleo, los plugins y los temas instalados, y los compara con una base de datos de vulnerabilidades conocidas para decirte qué es explotable. También puede enumerar usuarios y probar contraseñas.",
+        "legitimateUse": "Revisar tu propio WordPress para encontrar plugins o temas desactualizados con vulnerabilidades conocidas y actualizarlos antes de que los exploten.",
+        "price": "La herramienta de línea de comandos es gratuita; consultar la base de datos de vulnerabilidades necesita un token de API (plan gratuito de 25 peticiones al día, planes de pago para más y licencia comercial para uso comercial — consultar wpscan.com, nov 2026)."
+      },
+      "en": {
+        "summary": "The reference scanner for WordPress sites. It detects the core version and the installed plugins and themes, and compares them against a database of known vulnerabilities to tell you what is exploitable. It can also enumerate users and test passwords.",
+        "legitimateUse": "Check your own WordPress to find outdated plugins or themes with known vulnerabilities and update them before they are exploited.",
+        "price": "The command-line tool is free; querying the vulnerability database needs an API token (free plan of 25 requests/day, paid plans for more and a commercial license for commercial use — check wpscan.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "whatweb",
+    "category": "web",
+    "subcategory": "web-scanners",
+    "name": "WhatWeb",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/urbanadventurer/WhatWeb",
+    "verifiedAt": "2026-11-15",
+    "related": [
+      "nikto",
+      "wpscan"
+    ],
+    "tags": [
+      "fingerprinting",
+      "cms",
+      "technologies",
+      "recon",
+      "web"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para identificar con qué está hecha una web sin tener que mirar el código a mano. Con una sola petición reconoce el gestor de contenidos (WordPress, Joomla...), el servidor, las librerías de JavaScript y hasta dispositivos, apoyándose en más de 1800 plugins de detección. Es el primer paso para saber a qué te enfrentas.",
+        "legitimateUse": "Inventariar las tecnologías que expone tu propia web para saber qué tienes que mantener actualizado y qué versiones estás revelando de más."
+      },
+      "en": {
+        "summary": "Used to identify what a website is built with, without checking the source by hand. With a single request it recognizes the content manager (WordPress, Joomla...), the server, the JavaScript libraries and even devices, backed by over 1800 detection plugins. It is the first step to know what you are dealing with.",
+        "legitimateUse": "Inventory the technologies your own site exposes, to know what you must keep updated and which versions you are revealing unnecessarily."
       }
     }
   }
