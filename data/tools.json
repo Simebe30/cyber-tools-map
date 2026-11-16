@@ -1935,5 +1935,126 @@
         "legitimateUse": "Plant tokens in your own systems (a fake 'passwords.xlsx', for example) so an alarm fires if someone unauthorized snoops."
       }
     }
+  },
+  {
+    "id": "veracrypt",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "VeraCrypt",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.veracrypt.fr",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "keepassxc",
+      "nwipe"
+    ],
+    "tags": [
+      "encryption",
+      "disk",
+      "truecrypt",
+      "privacy",
+      "data-at-rest"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para cifrar datos de modo que, sin la contraseña, no se puedan leer. Crea un 'disco' cifrado dentro de un archivo (o cifra una partición o un USB entero) que se monta como una unidad normal mientras lo usas y se cifra y descifra al vuelo. Es el sucesor libre de TrueCrypt.",
+        "legitimateUse": "Cifrar un USB o una carpeta con datos sensibles tuyos para que, si lo pierdes o te lo roban, nadie pueda leer su contenido."
+      },
+      "en": {
+        "summary": "Used to encrypt data so that, without the password, it cannot be read. It creates an encrypted 'disk' inside a file (or encrypts a partition or a whole USB) that mounts as a normal drive while you use it and is encrypted and decrypted on the fly. It is the free successor to TrueCrypt.",
+        "legitimateUse": "Encrypt a USB stick or a folder of your own sensitive data so that, if you lose it or it is stolen, no one can read its contents."
+      }
+    }
+  },
+  {
+    "id": "keepassxc",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "KeePassXC",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://keepassxc.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "veracrypt"
+    ],
+    "tags": [
+      "password-manager",
+      "kdbx",
+      "credentials",
+      "privacy",
+      "offline"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un gestor de contraseñas que guarda todas tus credenciales en un único archivo cifrado en tu propio equipo, protegido por una contraseña maestra. Así puedes usar contraseñas largas y distintas en cada sitio sin memorizarlas y sin depender de un servicio en la nube.",
+        "legitimateUse": "Dejar de reutilizar contraseñas: guardar una distinta y fuerte para cada cuenta en tu propia base cifrada, reduciendo el impacto de una filtración."
+      },
+      "en": {
+        "summary": "A password manager that stores all your credentials in a single encrypted file on your own machine, protected by a master password. It lets you use long, unique passwords on every site without memorizing them, and without relying on a cloud service.",
+        "legitimateUse": "Stop reusing passwords: keep a unique, strong one for each account in your own encrypted vault, reducing the impact of a breach."
+      }
+    }
+  },
+  {
+    "id": "nwipe",
+    "category": "privacy",
+    "subcategory": "encryption",
+    "name": "nwipe",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/martijnvanbrummelen/nwipe",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "veracrypt"
+    ],
+    "tags": [
+      "secure-erase",
+      "data-wipe",
+      "disk",
+      "privacy",
+      "dban"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para borrar de forma segura el contenido de un disco, sobreescribiéndolo para que los datos no se puedan recuperar. A diferencia de un borrado normal (que solo quita la referencia al archivo), ofrece métodos de sobreescritura reconocidos. Es el motor que usa ShredOS y viene del dwipe de DBAN.",
+        "legitimateUse": "Borrar de forma segura un disco o un USB tuyo antes de venderlo, donarlo o tirarlo, para que nadie recupere tus datos."
+      },
+      "en": {
+        "summary": "Used to securely erase a disk's contents, overwriting them so the data cannot be recovered. Unlike a normal delete (which only removes the file's reference), it offers recognized overwrite methods. It is the engine behind ShredOS and comes from DBAN's dwipe.",
+        "legitimateUse": "Securely wipe a disk or USB of yours before selling, donating or discarding it, so no one can recover your data."
+      }
+    }
   }
 ]
