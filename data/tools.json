@@ -1261,5 +1261,312 @@
         "legitimateUse": "Inventory the technologies your own site exposes, to know what you must keep updated and which versions you are revealing unnecessarily."
       }
     }
+  },
+  {
+    "id": "marinetraffic",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "MarineTraffic",
+    "license": "freemium",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.marinetraffic.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "global-fishing-watch",
+      "adsb-exchange"
+    ],
+    "tags": [
+      "ais",
+      "ships",
+      "maritime",
+      "tracking",
+      "geolocation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa en tiempo casi real de los barcos del mundo. Se apoya en el sistema AIS que los buques emiten para posicionarse y muestra dónde está cada barco, su rumbo, su velocidad y sus datos (nombre, identificadores, tipo). Permite seguir un barco concreto o ver el tráfico de una zona o un puerto.",
+        "legitimateUse": "En una investigación OSINT, corroborar dónde estaba un barco en una fecha para verificar o desmentir una afirmación.",
+        "price": "Mapa básico gratuito tras registro; el seguimiento por satélite, el histórico y las funciones avanzadas son de pago (consultar precios en marinetraffic.com, nov 2026)."
+      },
+      "en": {
+        "summary": "A near-real-time map of the world's ships. It relies on the AIS signals vessels broadcast to position themselves and shows where each ship is, its course, speed and details (name, identifiers, type). You can follow a specific ship or see the traffic in an area or a port.",
+        "legitimateUse": "In an OSINT investigation, corroborate where a ship was on a given date to verify or disprove a claim.",
+        "price": "Basic map free after sign-up; satellite tracking, history and advanced features are paid (check pricing at marinetraffic.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "global-fishing-watch",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "Global Fishing Watch",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://globalfishingwatch.org",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "marinetraffic"
+    ],
+    "tags": [
+      "vessels",
+      "fishing",
+      "satellite",
+      "ais",
+      "transparency"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa abierto de la actividad de los barcos pesqueros en todo el mundo. Combina señales AIS, datos de los gobiernos e imágenes de satélite procesadas con aprendizaje automático para mostrar dónde y cuándo faena cada barco, los encuentros entre buques en alta mar y la presencia de embarcaciones.",
+        "legitimateUse": "Investigar patrones sospechosos en alta mar (como trasvases entre barcos) para apoyar una investigación de pesca ilegal o de cumplimiento."
+      },
+      "en": {
+        "summary": "An open map of fishing vessel activity worldwide. It combines AIS signals, government data and satellite imagery processed with machine learning to show where and when each vessel fishes, encounters between ships at sea and vessel presence.",
+        "legitimateUse": "Investigate suspicious patterns at sea (such as transshipments between ships) to support an illegal-fishing or compliance investigation."
+      }
+    }
+  },
+  {
+    "id": "adsb-exchange",
+    "category": "osint",
+    "subcategory": "transport",
+    "name": "ADS-B Exchange",
+    "license": "freemium",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.adsbexchange.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "marinetraffic"
+    ],
+    "tags": [
+      "adsb",
+      "aircraft",
+      "flight",
+      "tracking",
+      "unfiltered"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un mapa comunitario de aviones en vuelo que muestra el tráfico aéreo sin filtrar. A diferencia de otros servicios, no oculta aviones militares ni privados, porque se nutre de una red de receptores de aficionados. Permite ver qué aeronave está dónde, su ruta y su altitud en tiempo real.",
+        "legitimateUse": "En periodismo o investigación, documentar el movimiento de una aeronave de interés público a partir de datos que otros servicios filtran.",
+        "price": "El mapa en vivo es gratuito; el acceso a datos históricos y a la API, y el uso comercial, son de pago (consultar adsbexchange.com, nov 2026)."
+      },
+      "en": {
+        "summary": "A community map of aircraft in flight that shows air traffic unfiltered. Unlike other services, it does not hide military or private aircraft, because it is fed by a network of hobbyist receivers. You can see which aircraft is where, its route and altitude in real time.",
+        "legitimateUse": "In journalism or research, document the movement of an aircraft of public interest from data other services filter out.",
+        "price": "The live map is free; access to historical data and the API, and commercial use, are paid (check adsbexchange.com, Nov 2026)."
+      }
+    }
+  },
+  {
+    "id": "torbot",
+    "category": "osint",
+    "subcategory": "darkweb",
+    "name": "TorBot",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/DedSecInside/TorBot",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot"
+    ],
+    "tags": [
+      "dark-web",
+      "onion",
+      "crawler",
+      "tor",
+      "threat-intel"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta para explorar la web .onion (la red Tor) de forma automática. Partiendo de una dirección .onion, rastrea los enlaces que encuentra, comprueba si los sitios siguen vivos y recopila datos de las páginas, para mapear contenido de la dark web sin ir navegando a mano. Necesita Tor para funcionar.",
+        "legitimateUse": "En inteligencia de amenazas, rastrear foros o mercados .onion para detectar si se filtran datos o credenciales de tu organización."
+      },
+      "en": {
+        "summary": "A tool to automatically explore the .onion web (the Tor network). Starting from a .onion address, it crawls the links it finds, checks whether sites are still alive and collects data from pages, to map dark-web content without browsing by hand. It needs Tor to run.",
+        "legitimateUse": "In threat intelligence, crawl .onion forums or markets to detect whether your organization's data or credentials are being leaked."
+      }
+    }
+  },
+  {
+    "id": "spiderfoot",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "SpiderFoot",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web",
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/smicallef/spiderfoot",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "recon-ng",
+      "amass"
+    ],
+    "tags": [
+      "osint",
+      "automation",
+      "recon",
+      "attack-surface",
+      "framework"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework que automatiza la recogida de OSINT. Le das un objetivo (un dominio, una IP, un correo, un nombre…) y lanza más de 200 módulos que consultan fuentes públicas y relacionan los resultados entre sí, dibujando el mapa de la huella y la superficie de exposición de ese objetivo. Tiene interfaz web y de línea de comandos.",
+        "legitimateUse": "Lanzar un escaneo contra el dominio de tu propia organización para ver, de forma automática, toda la superficie que expone en internet."
+      },
+      "en": {
+        "summary": "A framework that automates OSINT collection. You give it a target (a domain, an IP, an email, a name…) and it runs 200+ modules that query public sources and correlate the results, drawing the footprint and exposure surface of that target. It has a web UI and a CLI.",
+        "legitimateUse": "Run a scan against your own organization's domain to automatically see the whole surface it exposes on the internet."
+      }
+    }
+  },
+  {
+    "id": "recon-ng",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "Recon-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/lanmaster53/recon-ng",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot",
+      "theharvester"
+    ],
+    "tags": [
+      "osint",
+      "recon",
+      "framework",
+      "modular",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework de reconocimiento OSINT con una interfaz y una lógica parecidas a las de Metasploit: trabajas por módulos, cada uno consulta una fuente o hace una tarea, y vas acumulando los resultados en un espacio de trabajo. Está pensado para automatizar el reconocimiento web de forma ordenada y repetible.",
+        "legitimateUse": "Organizar y automatizar el reconocimiento de la huella pública de tu propia organización en un flujo repetible para auditorías periódicas."
+      },
+      "en": {
+        "summary": "An OSINT reconnaissance framework with an interface and logic similar to Metasploit: you work through modules, each querying a source or doing a task, accumulating results in a workspace. It is designed to automate web reconnaissance in an orderly, repeatable way.",
+        "legitimateUse": "Organize and automate reconnaissance of your own organization's public footprint in a repeatable flow for periodic audits."
+      }
+    }
+  },
+  {
+    "id": "osint-framework",
+    "category": "osint",
+    "subcategory": "frameworks",
+    "name": "OSINT Framework",
+    "license": "free",
+    "github": true,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://osintframework.com",
+    "verifiedAt": "2026-11-16",
+    "related": [
+      "spiderfoot"
+    ],
+    "tags": [
+      "osint",
+      "directory",
+      "resources",
+      "reference"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "No es una herramienta que busque por ti, sino un directorio: una web que organiza cientos de herramientas de OSINT en un árbol desplegable por tipo de dato (usuario, correo, dominio, imagen…). Sirve de punto de partida para saber qué herramienta usar en cada paso de una investigación.",
+        "legitimateUse": "Usarlo como mapa para elegir con qué herramienta empezar al investigar la exposición pública de tu propia organización o cuenta."
+      },
+      "en": {
+        "summary": "Not a tool that searches for you, but a directory: a website that organizes hundreds of OSINT tools in an expandable tree by data type (username, email, domain, image…). It is a starting point to know which tool to use at each step of an investigation.",
+        "legitimateUse": "Use it as a map to choose which tool to start with when investigating the public exposure of your own organization or account."
+      }
+    }
+  },
+  {
+    "id": "contratacion-sector-publico",
+    "category": "osint",
+    "subcategory": "data-sources",
+    "name": "Plataforma de Contratación del Sector Público",
+    "license": "free",
+    "github": false,
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.contrataciondelestado.es",
+    "verifiedAt": "2026-11-16",
+    "related": [],
+    "tags": [
+      "procurement",
+      "spain",
+      "public-data",
+      "osint",
+      "source"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el portal oficial donde el sector público de España publica sus licitaciones y contratos. Como fuente OSINT, permite consultar qué compra la Administración, a qué empresas y por cuánto, lo que revela información sobre organismos, proveedores y proyectos públicos.",
+        "legitimateUse": "Investigar qué tecnología o servicios de seguridad contrata un organismo público para entender su superficie y sus proveedores (caso típico de OSINT sobre contratación)."
+      },
+      "en": {
+        "summary": "The official portal where Spain's public sector publishes its tenders and contracts. As an OSINT source, it lets you check what the public administration buys, from which companies and for how much, revealing information about agencies, suppliers and public projects.",
+        "legitimateUse": "Investigate what technology or security services a public body procures to understand its surface and suppliers (a typical procurement-OSINT case)."
+      }
+    }
   }
 ]
