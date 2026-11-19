@@ -3910,47 +3910,6 @@
     }
   },
   {
-    "id": "wireshark",
-    "category": "forensics",
-    "subcategory": "forensic-analysis",
-    "name": "Wireshark",
-    "license": "free",
-    "github": false,
-    "appliesTo": [
-      "individual",
-      "organization"
-    ],
-    "platforms": [
-      "desktop",
-      "cli"
-    ],
-    "level": "intermediate",
-    "status": "active",
-    "flagship": true,
-    "osiLayer": "2–7",
-    "url": "https://www.wireshark.org",
-    "verifiedAt": "2026-11-19",
-    "related": [
-      "zeek"
-    ],
-    "tags": [
-      "network-forensics",
-      "pcap",
-      "packet-analysis",
-      "protocols"
-    ],
-    "i18n": {
-      "es": {
-        "summary": "Es el analizador de tráfico de red por excelencia: captura los paquetes que circulan por una interfaz y los descompone protocolo a protocolo, para que puedas ver el contenido exacto de cada comunicación. En forense se usa sobre todo para examinar capturas (PCAP) y reconstruir qué pasó en la red: conexiones, transferencias de archivos, credenciales en claro o tráfico sospechoso. Incluye también una versión de terminal, tshark.",
-        "legitimateUse": "Analizar una captura de tu propia red para entender un problema o investigar actividad sospechosa, viendo con detalle qué protocolos y datos circularon."
-      },
-      "en": {
-        "summary": "The quintessential network traffic analyzer: it captures the packets flowing through an interface and breaks them down protocol by protocol, so you can see the exact content of each communication. In forensics it is used mainly to examine captures (PCAP) and reconstruct what happened on the network: connections, file transfers, cleartext credentials or suspicious traffic. It also includes a terminal version, tshark.",
-        "legitimateUse": "Analyze a capture of your own network to understand a problem or investigate suspicious activity, seeing in detail which protocols and data went across."
-      }
-    }
-  },
-  {
     "id": "plaso",
     "category": "forensics",
     "subcategory": "forensic-analysis",
@@ -4008,7 +3967,7 @@
     ],
     "level": "advanced",
     "status": "active",
-    "flagship": false,
+    "flagship": true,
     "osiLayer": null,
     "url": "https://github.com/Velocidex/velociraptor",
     "verifiedAt": "2026-11-19",
