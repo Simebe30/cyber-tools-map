@@ -3908,5 +3908,128 @@
         "price": "Free (Solo edition) for personal, educational, research, government or internal company use; commercial use or paid engagements require the (paid) Enterprise license. The policy changed on 2026-01-01. Official details at kroll.com, checked 2026-11-19."
       }
     }
+  },
+  {
+    "id": "wireshark",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Wireshark",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "desktop",
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "2–7",
+    "url": "https://www.wireshark.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "zeek"
+    ],
+    "tags": [
+      "network-forensics",
+      "pcap",
+      "packet-analysis",
+      "protocols"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el analizador de tráfico de red por excelencia: captura los paquetes que circulan por una interfaz y los descompone protocolo a protocolo, para que puedas ver el contenido exacto de cada comunicación. En forense se usa sobre todo para examinar capturas (PCAP) y reconstruir qué pasó en la red: conexiones, transferencias de archivos, credenciales en claro o tráfico sospechoso. Incluye también una versión de terminal, tshark.",
+        "legitimateUse": "Analizar una captura de tu propia red para entender un problema o investigar actividad sospechosa, viendo con detalle qué protocolos y datos circularon."
+      },
+      "en": {
+        "summary": "The quintessential network traffic analyzer: it captures the packets flowing through an interface and breaks them down protocol by protocol, so you can see the exact content of each communication. In forensics it is used mainly to examine captures (PCAP) and reconstruct what happened on the network: connections, file transfers, cleartext credentials or suspicious traffic. It also includes a terminal version, tshark.",
+        "legitimateUse": "Analyze a capture of your own network to understand a problem or investigate suspicious activity, seeing in detail which protocols and data went across."
+      }
+    }
+  },
+  {
+    "id": "plaso",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Plaso (log2timeline)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/log2timeline/plaso",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools",
+      "autopsy"
+    ],
+    "tags": [
+      "timeline",
+      "dfir",
+      "super-timeline",
+      "parsing"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el motor que hay detrás de log2timeline: recorre una imagen de disco o un conjunto de evidencias y extrae todas las marcas de tiempo que encuentra (sistema de archivos, registro, logs de eventos, navegador, etc.) para fusionarlas en una única 'super línea de tiempo'. Así puedes ver en orden cronológico todo lo que ocurrió en un sistema, que es clave para reconstruir un incidente.",
+        "legitimateUse": "Construir una línea de tiempo unificada de un equipo tuyo tras un incidente para ver, minuto a minuto, qué ocurrió y en qué orden."
+      },
+      "en": {
+        "summary": "The engine behind log2timeline: it goes through a disk image or a set of evidence and extracts every timestamp it finds (file system, registry, event logs, browser, etc.) to merge them into a single 'super timeline'. That lets you see, in chronological order, everything that happened on a system, which is key to reconstructing an incident.",
+        "legitimateUse": "Build a unified timeline of one of your own machines after an incident to see, minute by minute, what happened and in what order."
+      }
+    }
+  },
+  {
+    "id": "velociraptor",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Velociraptor",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "web"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/Velocidex/velociraptor",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools"
+    ],
+    "tags": [
+      "dfir",
+      "endpoint",
+      "threat-hunting",
+      "vql"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma de forense y respuesta a incidentes a escala: instala un agente ligero en cada equipo y, desde un servidor central con interfaz web, lanza consultas (en su lenguaje VQL) para recopilar artefactos, buscar indicadores de compromiso o cazar amenazas en cientos de endpoints a la vez. Pensada para investigar y responder en toda una red, no en una sola máquina.",
+        "legitimateUse": "Recoger evidencias y buscar actividad sospechosa en los equipos de tu propia organización de forma centralizada durante un incidente."
+      },
+      "en": {
+        "summary": "An incident-response and forensics platform at scale: it installs a lightweight agent on each machine and, from a central server with a web interface, runs queries (in its VQL language) to collect artifacts, search for indicators of compromise or hunt threats across hundreds of endpoints at once. Built to investigate and respond across a whole network, not a single machine.",
+        "legitimateUse": "Collect evidence and hunt for suspicious activity across your own organization's machines centrally during an incident."
+      }
+    }
   }
 ]
