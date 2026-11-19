@@ -117,5 +117,12 @@
       "es": "Contraseña en texto plano de SNMPv1/v2c que da acceso a la información del dispositivo; 'public' es la más común por defecto.",
       "en": "Plaintext SNMPv1/v2c password granting access to a device's information; 'public' is the most common default."
     }
+  },
+  {
+    "term": "CVE",
+    "i18n": {
+      "es": "Identificador público y único de una vulnerabilidad de seguridad concreta, con el formato CVE-AÑO-NÚMERO.",
+      "en": "Public, unique identifier for a specific security vulnerability, in the form CVE-YEAR-NUMBER."
+    }
   }
 ]
