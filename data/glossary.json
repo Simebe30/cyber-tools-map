@@ -145,5 +145,19 @@
       "es": "Master File Table de NTFS: índice que registra todos los archivos de un volumen y sus metadatos; clave en análisis forense.",
       "en": "NTFS Master File Table: an index recording every file on a volume and its metadata; key in forensic analysis."
     }
+  },
+  {
+    "term": "data broker",
+    "i18n": {
+      "es": "Empresa que recopila datos personales de muchas fuentes y los vende o cede a terceros.",
+      "en": "Company that collects personal data from many sources and sells or shares it with third parties."
+    }
+  },
+  {
+    "term": "2FA",
+    "i18n": {
+      "es": "Segundo factor de autenticación: un código o dispositivo adicional a la contraseña para entrar en una cuenta.",
+      "en": "Second authentication factor: a code or device required in addition to the password to access an account."
+    }
   }
 ]
