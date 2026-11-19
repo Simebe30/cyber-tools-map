@@ -4351,5 +4351,124 @@
         "legitimateUse": "Process your own photos before posting them to social media to make it harder for third parties to train facial recognition models on your face without permission."
       }
     }
+  },
+  {
+    "id": "thgtoa",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "The Hitchhiker's Guide to Online Anonymity",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://anonymousplanet.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "tor",
+      "tails"
+    ],
+    "tags": [
+      "guide",
+      "anonymity",
+      "opsec",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una guía técnica, extensa y mantenida, sobre cómo crear y mantener identidades realmente anónimas en internet: explica las técnicas de rastreo y verificación de identidad que existen y, paso a paso, cómo protegerse de ellas según tu modelo de amenaza. Está muy orientada a perfiles de alto riesgo (periodistas, activistas) pero sirve para entender a fondo privacidad y anonimato. No es una herramienta, es un documento de referencia.",
+        "legitimateUse": "Estudiar cómo funcionan el rastreo y el anonimato en internet para aplicar a tu propia situación las medidas adecuadas a tu nivel de riesgo."
+      },
+      "en": {
+        "summary": "An extensive, maintained technical guide on how to create and maintain truly anonymous online identities: it explains the tracking and ID-verification techniques that exist and, step by step, how to protect yourself from them according to your threat model. It is heavily geared toward high-risk profiles (journalists, activists) but is useful for understanding privacy and anonymity in depth. It is not a tool, it is a reference document.",
+        "legitimateUse": "Study how tracking and anonymity work online so you can apply the measures appropriate to your own risk level."
+      }
+    }
+  },
+  {
+    "id": "privacy-guides",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "Privacy Guides",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.privacyguides.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "eff-ssd",
+      "thgtoa"
+    ],
+    "tags": [
+      "guide",
+      "recommendations",
+      "privacy",
+      "best-practices"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sitio sin ánimo de lucro que recopila recomendaciones de herramientas y buenas prácticas de privacidad y seguridad, organizadas por categorías (navegadores, mensajería, correo, VPN…). Cada recomendación incluye los criterios que debe cumplir una herramienta para entrar en la lista, así que sirve tanto para elegir software como para aprender a valorarlo. Mantenido por una comunidad de voluntarios.",
+        "legitimateUse": "Elegir herramientas de privacidad para tu propio uso a partir de recomendaciones razonadas, en lugar de fiarte de listas sin criterio."
+      },
+      "en": {
+        "summary": "A non-profit site that collects privacy and security tool recommendations and best practices, organized by category (browsers, messaging, email, VPN…). Each recommendation includes the criteria a tool must meet to make the list, so it is useful both for choosing software and for learning how to judge it. Maintained by a community of volunteers.",
+        "legitimateUse": "Choose privacy tools for your own use based on reasoned recommendations, rather than trusting lists with no criteria."
+      }
+    }
+  },
+  {
+    "id": "eff-ssd",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "EFF Surveillance Self-Defense",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://ssd.eff.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "privacy-guides"
+    ],
+    "tags": [
+      "guide",
+      "surveillance",
+      "privacy",
+      "education"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la guía de autodefensa frente a la vigilancia de la Electronic Frontier Foundation: tutoriales y explicaciones para protegerte del espionaje electrónico, desde conceptos básicos (crear un plan de seguridad, contraseñas fuertes) hasta guías por tipo de usuario y herramienta. Está pensada para que entiendas el porqué de cada medida, no solo el cómo. Es un recurso educativo, no una herramienta.",
+        "legitimateUse": "Aprender a construir tu propio plan de seguridad y elegir medidas de protección según a qué o a quién necesitas proteger."
+      },
+      "en": {
+        "summary": "The Electronic Frontier Foundation's surveillance self-defense guide: tutorials and explanations to protect yourself from electronic spying, from basics (making a security plan, strong passwords) to guides by user type and tool. It is designed so you understand the why of each measure, not just the how. It is an educational resource, not a tool.",
+        "legitimateUse": "Learn to build your own security plan and choose protective measures based on what or whom you need to protect."
+      }
+    }
   }
 ]
