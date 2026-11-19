@@ -3014,5 +3014,169 @@
         "legitimateUse": "Sweep your own network to quickly find which machines expose SNMP with weak or default community strings, before someone else does."
       }
     }
+  },
+  {
+    "id": "openvas",
+    "category": "scanning",
+    "subcategory": "vulns",
+    "name": "OpenVAS / Greenbone",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "web"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "3–7",
+    "url": "https://github.com/greenbone/openvas-scanner",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "nuclei"
+    ],
+    "tags": [
+      "vulnerability-scanner",
+      "gvm",
+      "greenbone",
+      "cve"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de vulnerabilidades completo: revisa equipos y servicios de una red y los compara con una gran base de pruebas de vulnerabilidad que se actualiza a diario, informando de fallos conocidos y su gravedad. Forma el núcleo de la Greenbone Community Edition, que añade una interfaz web para lanzar escaneos, programarlos y revisar los informes.",
+        "legitimateUse": "Escanear periódicamente tus propios servidores y equipos de red para descubrir vulnerabilidades conocidas y priorizar los parches por gravedad."
+      },
+      "en": {
+        "summary": "A full-featured vulnerability scanner: it checks hosts and services on a network against a large, daily-updated feed of vulnerability tests, reporting known flaws and their severity. It is the core of the Greenbone Community Edition, which adds a web interface to launch scans, schedule them and review reports.",
+        "legitimateUse": "Regularly scan your own servers and network devices to find known vulnerabilities and prioritize patches by severity."
+      }
+    }
+  },
+  {
+    "id": "trivy",
+    "category": "scanning",
+    "subcategory": "vulns",
+    "name": "Trivy",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/aquasecurity/trivy",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "nuclei"
+    ],
+    "tags": [
+      "container-security",
+      "cve",
+      "misconfiguration",
+      "secrets",
+      "ci-cd"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de seguridad todo-en-uno centrado en el mundo cloud-native: analiza imágenes de contenedor, sistemas de archivos y repositorios de código en busca de vulnerabilidades conocidas (CVE), errores de configuración de infraestructura, secretos filtrados y licencias. Es rápido y fácil de integrar en una tubería de CI/CD, así que detecta los problemas antes de desplegar.",
+        "legitimateUse": "Escanear tus propias imágenes de contenedor y tu código en el pipeline para no desplegar dependencias vulnerables ni secretos filtrados."
+      },
+      "en": {
+        "summary": "An all-in-one security scanner focused on the cloud-native world: it analyzes container images, filesystems and code repositories for known vulnerabilities (CVEs), infrastructure misconfigurations, leaked secrets and licenses. It is fast and easy to wire into a CI/CD pipeline, so it catches problems before you deploy.",
+        "legitimateUse": "Scan your own container images and code in the pipeline so you do not ship vulnerable dependencies or leaked secrets."
+      }
+    }
+  },
+  {
+    "id": "vuls",
+    "category": "scanning",
+    "subcategory": "vulns",
+    "name": "Vuls",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/future-architect/vuls",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "openvas"
+    ],
+    "tags": [
+      "vulnerability-scanner",
+      "agentless",
+      "linux",
+      "cve"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de vulnerabilidades sin agente para Linux, FreeBSD y otros entornos: en vez de instalar nada en cada máquina, se conecta por SSH, lista el software instalado y lo coteja con varias bases de datos de vulnerabilidades (NVD, OVAL, avisos de la distribución). Está pensado para pasarse de forma programada y avisar de los CVE que afectan a tus servidores.",
+        "legitimateUse": "Vigilar de forma continua qué vulnerabilidades conocidas afectan al software de tus propios servidores, sin tener que instalar agentes en ellos."
+      },
+      "en": {
+        "summary": "An agentless vulnerability scanner for Linux, FreeBSD and other environments: instead of installing anything on each machine, it connects over SSH, lists the installed software and cross-checks it against several vulnerability databases (NVD, OVAL, distro advisories). It is built to run on a schedule and flag the CVEs affecting your servers.",
+        "legitimateUse": "Continuously watch which known vulnerabilities affect the software on your own servers, without installing agents on them."
+      }
+    }
+  },
+  {
+    "id": "nessus",
+    "category": "scanning",
+    "subcategory": "vulns",
+    "name": "Nessus",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "3–7",
+    "url": "https://www.tenable.com/products/nessus",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "openvas"
+    ],
+    "tags": [
+      "vulnerability-scanner",
+      "commercial",
+      "plugins",
+      "compliance"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es uno de los escáneres de vulnerabilidades comerciales más extendidos: evalúa equipos y servicios con una enorme biblioteca de comprobaciones (plugins) que se actualiza constantemente, e informa de vulnerabilidades, fallos de configuración y problemas de cumplimiento con su gravedad. Se maneja desde una interfaz web y es habitual verlo como estándar en auditorías profesionales.",
+        "legitimateUse": "Auditar tus propios equipos (hasta el límite de la edición gratuita) para detectar vulnerabilidades y malas configuraciones y priorizar su corrección.",
+        "price": "Nessus Essentials es gratis para hasta 16 direcciones IP; Essentials Plus cuesta unos 199 USD/año (uso personal o educativo) y Nessus Professional unos 4.790 USD/año. Precios oficiales en tenable.com, consultado 19-11-2026."
+      },
+      "en": {
+        "summary": "One of the most widely used commercial vulnerability scanners: it assesses hosts and services with a huge, constantly updated library of checks (plugins) and reports vulnerabilities, misconfigurations and compliance issues with their severity. It is driven from a web interface and is commonly treated as a standard in professional audits.",
+        "legitimateUse": "Audit your own hosts (up to the free edition's limit) to find vulnerabilities and misconfigurations and prioritize fixing them.",
+        "price": "Nessus Essentials is free for up to 16 IP addresses; Essentials Plus is about US$199/year (personal or educational use) and Nessus Professional about US$4,790/year. Official prices at tenable.com, checked 2026-11-19."
+      }
+    }
   }
 ]
