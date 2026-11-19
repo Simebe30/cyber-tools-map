@@ -124,5 +124,12 @@
       "es": "Identificador público y único de una vulnerabilidad de seguridad concreta, con el formato CVE-AÑO-NÚMERO.",
       "en": "Public, unique identifier for a specific security vulnerability, in the form CVE-YEAR-NUMBER."
     }
+  },
+  {
+    "term": "hash",
+    "i18n": {
+      "es": "Huella de longitud fija que resume un dato (por ejemplo una contraseña); es fácil de calcular pero muy difícil de revertir.",
+      "en": "Fixed-length fingerprint that summarizes data (e.g. a password); easy to compute but very hard to reverse."
+    }
   }
 ]
