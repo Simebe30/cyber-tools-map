@@ -3910,47 +3910,6 @@
     }
   },
   {
-    "id": "wireshark",
-    "category": "forensics",
-    "subcategory": "forensic-analysis",
-    "name": "Wireshark",
-    "license": "free",
-    "github": false,
-    "appliesTo": [
-      "individual",
-      "organization"
-    ],
-    "platforms": [
-      "desktop",
-      "cli"
-    ],
-    "level": "intermediate",
-    "status": "active",
-    "flagship": true,
-    "osiLayer": "2–7",
-    "url": "https://www.wireshark.org",
-    "verifiedAt": "2026-11-19",
-    "related": [
-      "zeek"
-    ],
-    "tags": [
-      "network-forensics",
-      "pcap",
-      "packet-analysis",
-      "protocols"
-    ],
-    "i18n": {
-      "es": {
-        "summary": "Es el analizador de tráfico de red por excelencia: captura los paquetes que circulan por una interfaz y los descompone protocolo a protocolo, para que puedas ver el contenido exacto de cada comunicación. En forense se usa sobre todo para examinar capturas (PCAP) y reconstruir qué pasó en la red: conexiones, transferencias de archivos, credenciales en claro o tráfico sospechoso. Incluye también una versión de terminal, tshark.",
-        "legitimateUse": "Analizar una captura de tu propia red para entender un problema o investigar actividad sospechosa, viendo con detalle qué protocolos y datos circularon."
-      },
-      "en": {
-        "summary": "The quintessential network traffic analyzer: it captures the packets flowing through an interface and breaks them down protocol by protocol, so you can see the exact content of each communication. In forensics it is used mainly to examine captures (PCAP) and reconstruct what happened on the network: connections, file transfers, cleartext credentials or suspicious traffic. It also includes a terminal version, tshark.",
-        "legitimateUse": "Analyze a capture of your own network to understand a problem or investigate suspicious activity, seeing in detail which protocols and data went across."
-      }
-    }
-  },
-  {
     "id": "plaso",
     "category": "forensics",
     "subcategory": "forensic-analysis",
@@ -4008,7 +3967,7 @@
     ],
     "level": "advanced",
     "status": "active",
-    "flagship": false,
+    "flagship": true,
     "osiLayer": null,
     "url": "https://github.com/Velocidex/velociraptor",
     "verifiedAt": "2026-11-19",
@@ -4349,6 +4308,125 @@
       "en": {
         "summary": "A tool that 'cloaks' your photos to protect you from facial recognition: it applies minimal, pixel-level changes to the image, imperceptible to the human eye, that make facial recognition models learn a wrong version of your face. So if someone trains a system on your public photos, they will not be able to identify you later in another image. It runs on your own machine.",
         "legitimateUse": "Process your own photos before posting them to social media to make it harder for third parties to train facial recognition models on your face without permission."
+      }
+    }
+  },
+  {
+    "id": "thgtoa",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "The Hitchhiker's Guide to Online Anonymity",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://anonymousplanet.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "tor",
+      "tails"
+    ],
+    "tags": [
+      "guide",
+      "anonymity",
+      "opsec",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una guía técnica, extensa y mantenida, sobre cómo crear y mantener identidades realmente anónimas en internet: explica las técnicas de rastreo y verificación de identidad que existen y, paso a paso, cómo protegerse de ellas según tu modelo de amenaza. Está muy orientada a perfiles de alto riesgo (periodistas, activistas) pero sirve para entender a fondo privacidad y anonimato. No es una herramienta, es un documento de referencia.",
+        "legitimateUse": "Estudiar cómo funcionan el rastreo y el anonimato en internet para aplicar a tu propia situación las medidas adecuadas a tu nivel de riesgo."
+      },
+      "en": {
+        "summary": "An extensive, maintained technical guide on how to create and maintain truly anonymous online identities: it explains the tracking and ID-verification techniques that exist and, step by step, how to protect yourself from them according to your threat model. It is heavily geared toward high-risk profiles (journalists, activists) but is useful for understanding privacy and anonymity in depth. It is not a tool, it is a reference document.",
+        "legitimateUse": "Study how tracking and anonymity work online so you can apply the measures appropriate to your own risk level."
+      }
+    }
+  },
+  {
+    "id": "privacy-guides",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "Privacy Guides",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.privacyguides.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "eff-ssd",
+      "thgtoa"
+    ],
+    "tags": [
+      "guide",
+      "recommendations",
+      "privacy",
+      "best-practices"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sitio sin ánimo de lucro que recopila recomendaciones de herramientas y buenas prácticas de privacidad y seguridad, organizadas por categorías (navegadores, mensajería, correo, VPN…). Cada recomendación incluye los criterios que debe cumplir una herramienta para entrar en la lista, así que sirve tanto para elegir software como para aprender a valorarlo. Mantenido por una comunidad de voluntarios.",
+        "legitimateUse": "Elegir herramientas de privacidad para tu propio uso a partir de recomendaciones razonadas, en lugar de fiarte de listas sin criterio."
+      },
+      "en": {
+        "summary": "A non-profit site that collects privacy and security tool recommendations and best practices, organized by category (browsers, messaging, email, VPN…). Each recommendation includes the criteria a tool must meet to make the list, so it is useful both for choosing software and for learning how to judge it. Maintained by a community of volunteers.",
+        "legitimateUse": "Choose privacy tools for your own use based on reasoned recommendations, rather than trusting lists with no criteria."
+      }
+    }
+  },
+  {
+    "id": "eff-ssd",
+    "category": "privacy",
+    "subcategory": "guides",
+    "name": "EFF Surveillance Self-Defense",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://ssd.eff.org/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "privacy-guides"
+    ],
+    "tags": [
+      "guide",
+      "surveillance",
+      "privacy",
+      "education"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la guía de autodefensa frente a la vigilancia de la Electronic Frontier Foundation: tutoriales y explicaciones para protegerte del espionaje electrónico, desde conceptos básicos (crear un plan de seguridad, contraseñas fuertes) hasta guías por tipo de usuario y herramienta. Está pensada para que entiendas el porqué de cada medida, no solo el cómo. Es un recurso educativo, no una herramienta.",
+        "legitimateUse": "Aprender a construir tu propio plan de seguridad y elegir medidas de protección según a qué o a quién necesitas proteger."
+      },
+      "en": {
+        "summary": "The Electronic Frontier Foundation's surveillance self-defense guide: tutorials and explanations to protect yourself from electronic spying, from basics (making a security plan, strong passwords) to guides by user type and tool. It is designed so you understand the why of each measure, not just the how. It is an educational resource, not a tool.",
+        "legitimateUse": "Learn to build your own security plan and choose protective measures based on what or whom you need to protect."
       }
     }
   }
