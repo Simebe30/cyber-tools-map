@@ -4230,5 +4230,87 @@
         "legitimateUse": "Set up your own machine to shut down if someone tampers with its ports while it is unattended, protecting an open session with sensitive data."
       }
     }
+  },
+  {
+    "id": "hibp",
+    "category": "privacy",
+    "subcategory": "self-audit",
+    "name": "Have I Been Pwned",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://haveibeenpwned.com",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "mozilla-monitor",
+      "cover-your-tracks"
+    ],
+    "tags": [
+      "breach-check",
+      "exposure",
+      "passwords",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un servicio web que te dice si tu correo, teléfono o contraseñas han aparecido en filtraciones de datos conocidas: introduces tu dirección y comprueba miles de brechas recopiladas, mostrándote en cuáles apareces y qué datos se expusieron. También avisa automáticamente si sales en brechas futuras y, por separado, permite comprobar si una contraseña concreta ya se ha filtrado.",
+        "legitimateUse": "Comprobar si tus propias cuentas están en alguna filtración para cambiar las contraseñas afectadas y activar el 2FA donde haga falta."
+      },
+      "en": {
+        "summary": "A web service that tells you whether your email, phone or passwords have appeared in known data breaches: you enter your address and it checks thousands of collected breaches, showing which ones you appear in and what data was exposed. It also notifies you automatically if you show up in future breaches and, separately, lets you check whether a specific password has already been leaked.",
+        "legitimateUse": "Check whether your own accounts are in any breach so you can change the affected passwords and turn on 2FA where needed."
+      }
+    }
+  },
+  {
+    "id": "mozilla-monitor",
+    "category": "privacy",
+    "subcategory": "self-audit",
+    "name": "Mozilla Monitor",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://monitor.mozilla.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "hibp"
+    ],
+    "tags": [
+      "breach-monitoring",
+      "data-broker",
+      "exposure",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un servicio de Mozilla que vigila si tu correo aparece en filtraciones y te avisa cuando ocurre, usando la base de datos de brechas de Have I Been Pwned. Además hace un escaneo de sitios de 'data brokers' (empresas que recopilan y venden tus datos personales) para mostrarte dónde estás expuesto. Es una forma cómoda de monitorizar tu exposición de forma continua.",
+        "legitimateUse": "Monitorizar de forma continua si tus datos personales aparecen en nuevas filtraciones o en sitios que los venden, para ir reduciéndolos.",
+        "price": "El servicio básico (escaneo y aviso de brechas, y un barrido inicial de data brokers) es gratuito; el plan Monitor Plus, de pago (unos 8,99 USD/mes en plan anual, solo EE. UU. por ahora), elimina de forma automática tus datos de más de 190 sitios de data brokers. Precios oficiales en mozilla.org, consultado 19-11-2026."
+      },
+      "en": {
+        "summary": "A Mozilla service that watches whether your email appears in breaches and alerts you when it does, using Have I Been Pwned's breach database. It also scans 'data broker' sites (companies that collect and sell your personal data) to show you where you are exposed. It is a convenient way to monitor your exposure continuously.",
+        "legitimateUse": "Continuously monitor whether your personal data shows up in new breaches or on sites that sell it, so you can gradually reduce it.",
+        "price": "The basic service (breach scan and alerts, plus an initial data-broker sweep) is free; the paid Monitor Plus plan (about US$8.99/month on the annual plan, US only for now) automatically removes your data from 190+ data-broker sites. Official prices at mozilla.org, checked 2026-11-19."
+      }
+    }
   }
 ]
