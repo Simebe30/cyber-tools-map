@@ -1,57 +1,121 @@
 [
-  { "term": "DNS",
+  {
+    "term": "DNS",
     "i18n": {
       "es": "Sistema que traduce nombres de web (ejemplo.com) a direcciones IP.",
-      "en": "System that translates website names (example.com) into IP addresses." } },
-  { "term": "LLMNR",
+      "en": "System that translates website names (example.com) into IP addresses."
+    }
+  },
+  {
+    "term": "LLMNR",
     "i18n": {
       "es": "Protocolo de Windows para resolver nombres en la red local cuando falla el DNS.",
-      "en": "Windows protocol to resolve names on the local network when DNS fails." } },
-  { "term": "NBT-NS",
+      "en": "Windows protocol to resolve names on the local network when DNS fails."
+    }
+  },
+  {
+    "term": "NBT-NS",
     "i18n": {
       "es": "Servicio antiguo de Windows para encontrar equipos por su nombre en la red local.",
-      "en": "Old Windows service to find machines by name on the local network." } },
-  { "term": "mDNS",
+      "en": "Old Windows service to find machines by name on the local network."
+    }
+  },
+  {
+    "term": "mDNS",
     "i18n": {
       "es": "Protocolo para encontrar dispositivos y servicios en la red local sin un servidor central (lo usan impresoras, Chromecast...).",
-      "en": "Protocol to find devices and services on the local network without a central server (used by printers, Chromecast...)." } },
-  { "term": "BPF",
+      "en": "Protocol to find devices and services on the local network without a central server (used by printers, Chromecast...)."
+    }
+  },
+  {
+    "term": "BPF",
     "i18n": {
       "es": "Lenguaje de filtros para quedarte solo con los paquetes de red que te interesan.",
-      "en": "Filter language to keep only the network packets you care about." } },
-  { "term": "ARP",
+      "en": "Filter language to keep only the network packets you care about."
+    }
+  },
+  {
+    "term": "ARP",
     "i18n": {
       "es": "Protocolo que relaciona una dirección IP con la dirección física (MAC) de un equipo en la red local.",
-      "en": "Protocol that maps an IP address to a machine's physical (MAC) address on the local network." } },
-  { "term": "DHCPv6",
+      "en": "Protocol that maps an IP address to a machine's physical (MAC) address on the local network."
+    }
+  },
+  {
+    "term": "DHCPv6",
     "i18n": {
       "es": "Servicio que reparte direcciones IP automáticamente a los equipos en redes IPv6.",
-      "en": "Service that automatically hands out IP addresses to machines on IPv6 networks." } },
-  { "term": "pcap",
+      "en": "Service that automatically hands out IP addresses to machines on IPv6 networks."
+    }
+  },
+  {
+    "term": "pcap",
     "i18n": {
       "es": "Formato de archivo donde se guardan los paquetes de red capturados.",
-      "en": "File format where captured network packets are stored." } },
-  { "term": "IDS",
+      "en": "File format where captured network packets are stored."
+    }
+  },
+  {
+    "term": "IDS",
     "i18n": {
       "es": "Sistema que vigila la red y avisa cuando detecta algo sospechoso (Intrusion Detection System).",
-      "en": "System that watches the network and alerts on suspicious activity (Intrusion Detection System)." } },
-  { "term": "GPO",
+      "en": "System that watches the network and alerts on suspicious activity (Intrusion Detection System)."
+    }
+  },
+  {
+    "term": "GPO",
     "i18n": {
       "es": "Ajustes centralizados que un administrador aplica a todos los equipos Windows de una organización (Group Policy).",
-      "en": "Centralized settings an administrator applies to every Windows machine in an organization (Group Policy)." } },
-  { "term": "OpenStreetMap",
+      "en": "Centralized settings an administrator applies to every Windows machine in an organization (Group Policy)."
+    }
+  },
+  {
+    "term": "OpenStreetMap",
     "i18n": {
       "es": "Mapa del mundo libre y colaborativo, como una Wikipedia de mapas.",
-      "en": "A free, collaborative map of the world, like a Wikipedia of maps." } },
-  { "term": "bucket",
+      "en": "A free, collaborative map of the world, like a Wikipedia of maps."
+    }
+  },
+  {
+    "term": "bucket",
     "i18n": {
       "es": "Espacio de almacenamiento en la nube (sobre todo en Amazon S3) donde se guardan archivos; si se configura mal, queda accesible para cualquiera.",
-      "en": "A cloud storage container (mostly on Amazon S3) that holds files; if misconfigured, it ends up accessible to anyone." } },
+      "en": "A cloud storage container (mostly on Amazon S3) that holds files; if misconfigured, it ends up accessible to anyone."
+    }
+  },
   {
     "term": "fingerprinting",
     "i18n": {
       "es": "Técnica que identifica un navegador combinando rasgos suyos (fuentes, resolución, canvas, extensiones…) para reconocerlo sin cookies.",
       "en": "A technique that identifies a browser by combining its traits (fonts, resolution, canvas, extensions…) to recognize it without cookies."
+    }
+  },
+  {
+    "term": "SMB",
+    "i18n": {
+      "es": "Protocolo de red de Windows para compartir archivos, impresoras y recursos entre equipos.",
+      "en": "Windows network protocol for sharing files, printers and resources between machines."
+    }
+  },
+  {
+    "term": "SNMP",
+    "i18n": {
+      "es": "Protocolo para consultar y gestionar dispositivos de red (routers, switches, servidores) de forma remota.",
+      "en": "Protocol to remotely query and manage network devices (routers, switches, servers)."
+    }
+  },
+  {
+    "term": "OID",
+    "i18n": {
+      "es": "Identificador numérico que señala un dato concreto dentro del árbol de información SNMP de un dispositivo.",
+      "en": "Numeric identifier pointing to a specific value within a device's SNMP information tree."
+    }
+  },
+  {
+    "term": "community string",
+    "i18n": {
+      "es": "Contraseña en texto plano de SNMPv1/v2c que da acceso a la información del dispositivo; 'public' es la más común por defecto.",
+      "en": "Plaintext SNMPv1/v2c password granting access to a device's information; 'public' is the most common default."
     }
   }
 ]
