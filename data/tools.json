@@ -2301,5 +2301,126 @@
         "legitimateUse": "Reduce tracking and ads across your whole home network from a single point, and along the way see which domains your devices query."
       }
     }
+  },
+  {
+    "id": "grapheneos",
+    "category": "privacy",
+    "subcategory": "mobile",
+    "name": "GrapheneOS",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "mobile"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://grapheneos.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "mvt"
+    ],
+    "tags": [
+      "android",
+      "mobile-os",
+      "hardening",
+      "privacy",
+      "pixel"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una versión de Android reforzada para privacidad y seguridad, para móviles Google Pixel. Parte del Android abierto (AOSP), le quita los servicios de Google por defecto y añade mejoras serias de seguridad (aislamiento de apps, permisos de red y sensores, arranque verificado). Puedes seguir usando apps de Android, con o sin los servicios de Google en un espacio aislado.",
+        "legitimateUse": "Endurecer tu propio móvil para reducir el rastreo y la superficie de ataque, manteniendo la compatibilidad con las apps que necesitas."
+      },
+      "en": {
+        "summary": "A privacy- and security-hardened version of Android for Google Pixel phones. Built on open Android (AOSP), it removes Google services by default and adds serious security improvements (app sandboxing, network and sensor permissions, verified boot). You can still use Android apps, with or without Google services in a sandboxed space.",
+        "legitimateUse": "Harden your own phone to reduce tracking and attack surface while keeping compatibility with the apps you need."
+      }
+    }
+  },
+  {
+    "id": "airguard",
+    "category": "privacy",
+    "subcategory": "mobile",
+    "name": "AirGuard",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/seemoo-lab/AirGuard",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "grapheneos"
+    ],
+    "tags": [
+      "anti-tracking",
+      "bluetooth",
+      "airtag",
+      "anti-stalking",
+      "mobile"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una app que te avisa si un rastreador Bluetooth ajeno (un AirTag, un Samsung SmartTag, un Tile...) te está siguiendo. Escanea el entorno y, si detecta que el mismo rastreador aparece contigo en varios sitios, te notifica para que puedas localizarlo. Nace para defender a quien no tiene el aviso nativo de Apple.",
+        "legitimateUse": "Comprobar si llevas encima un rastreador que alguien haya colocado sin tu permiso, un riesgo real de acoso (stalking)."
+      },
+      "en": {
+        "summary": "An app that warns you if someone else's Bluetooth tracker (an AirTag, a Samsung SmartTag, a Tile...) is following you. It scans the surroundings and, if it detects the same tracker appearing with you in several places, it notifies you so you can locate it. It was created to protect people without Apple's native alert.",
+        "legitimateUse": "Check whether you are carrying a tracker someone placed without your permission, a real stalking risk."
+      }
+    }
+  },
+  {
+    "id": "mvt",
+    "category": "privacy",
+    "subcategory": "mobile",
+    "name": "MVT (Mobile Verification Toolkit)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/mvt-project/mvt",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "airguard",
+      "grapheneos"
+    ],
+    "tags": [
+      "forensics",
+      "spyware",
+      "pegasus",
+      "incident-response",
+      "mobile"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta forense para buscar en un móvil señales de que haya sido infectado con spyware (como Pegasus). Analiza una copia de seguridad o un volcado del dispositivo y compara los artefactos con indicadores de compromiso conocidos. La desarrolló Amnistía Internacional y es para perfiles técnicos, no para autodiagnóstico casual.",
+        "legitimateUse": "Analizar la copia de seguridad de un móvil tuyo o que gestionas, con consentimiento, para buscar rastros de spyware tras una sospecha."
+      },
+      "en": {
+        "summary": "A forensic tool to search a phone for signs it has been infected with spyware (such as Pegasus). It analyzes a device backup or dump and compares the artifacts against known indicators of compromise. It was developed by Amnesty International and is for technical profiles, not casual self-diagnosis.",
+        "legitimateUse": "Analyze the backup of a phone you own or manage, with consent, to look for spyware traces after a suspicion."
+      }
+    }
   }
 ]
