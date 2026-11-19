@@ -2618,5 +2618,85 @@
         "legitimateUse": "Move a file between two of your own machines without routing it through third-party services, encrypting the transfer end-to-end."
       }
     }
+  },
+  {
+    "id": "mat2",
+    "category": "privacy",
+    "subcategory": "metadata",
+    "name": "mat2",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://0xacab.org/jvoisin/mat2",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "exiftool"
+    ],
+    "tags": [
+      "metadata",
+      "anonymization",
+      "privacy",
+      "exif"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para borrar los metadatos de un archivo antes de compartirlo: la fecha, el autor, el software usado o las coordenadas GPS que van ocultas dentro. En vez de modificar el original, genera una copia limpia. Admite muchos formatos —imágenes, PDF, documentos de oficina, audio o vídeo— y puede mostrarte primero qué metadatos detecta y luego quitarlos.",
+        "legitimateUse": "Antes de publicar un documento o una foto tuya, generar una copia sin metadatos para no revelar sin querer tu ubicación, tu equipo o tu nombre."
+      },
+      "en": {
+        "summary": "Removes a file's metadata before you share it: the date, the author, the software used or the GPS coordinates hidden inside. Instead of changing the original, it produces a clean copy. It supports many formats — images, PDF, office documents, audio or video — and can first show you which metadata it detects and then strip it.",
+        "legitimateUse": "Before publishing a document or photo of yours, make a metadata-free copy so you do not accidentally reveal your location, your gear or your name."
+      }
+    }
+  },
+  {
+    "id": "image-scrubber",
+    "category": "privacy",
+    "subcategory": "metadata",
+    "name": "Image Scrubber",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://everestpipkin.github.io/image-scrubber/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "exiftool",
+      "mat2"
+    ],
+    "tags": [
+      "metadata",
+      "exif",
+      "anonymization",
+      "face-blur",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta web para anonimizar fotos: borra los metadatos EXIF (incluidas la ubicación y el modelo de cámara) y permite difuminar o tapar con pincel las caras y otros datos identificativos. Todo el procesado ocurre en tu propio navegador, sin subir la imagen a ningún servidor, y funciona igual en móvil que en ordenador.",
+        "legitimateUse": "Limpiar los metadatos y tapar caras o matrículas en una foto tuya antes de publicarla, para no exponer tu ubicación ni a las personas que aparecen."
+      },
+      "en": {
+        "summary": "A web tool for anonymizing photos: it strips EXIF metadata (location and camera model included) and lets you blur or paint over faces and other identifying details with a brush. All processing happens in your own browser, with the image never uploaded to any server, and it works the same on phone or computer.",
+        "legitimateUse": "Clean the metadata and cover faces or license plates in a photo of yours before posting it, so you do not expose your location or the people in it."
+      }
+    }
   }
 ]
