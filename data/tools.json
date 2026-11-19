@@ -3380,5 +3380,126 @@
         "legitimateUse": "Check at scale whether your own network's services accept weak credentials, tuning the pace so you do not overwhelm the systems you audit."
       }
     }
+  },
+  {
+    "id": "seclists",
+    "category": "passwords",
+    "subcategory": "wordlists",
+    "name": "SecLists",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/danielmiessler/SecLists",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "hashcat",
+      "hydra"
+    ],
+    "tags": [
+      "wordlists",
+      "passwords",
+      "fuzzing",
+      "content-discovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una gran colección de listas para pruebas de seguridad reunidas en un solo sitio: nombres de usuario, contraseñas habituales, rutas y nombres de archivo para descubrir contenido web, subdominios, payloads de fuzzing y patrones de datos sensibles. No hace nada por sí sola; es la 'munición' que alimenta a otras herramientas (crackeadores, fuzzers, escáneres).",
+        "legitimateUse": "Tener a mano listas de referencia para auditar tus propios sistemas: por ejemplo, comprobar si tus usuarios usan contraseñas que aparecen en las listas de más comunes."
+      },
+      "en": {
+        "summary": "A large collection of lists for security testing gathered in one place: usernames, common passwords, paths and filenames for web content discovery, subdomains, fuzzing payloads and sensitive-data patterns. It does nothing on its own; it is the 'ammunition' that feeds other tools (crackers, fuzzers, scanners).",
+        "legitimateUse": "Keep reference lists at hand to audit your own systems: for example, checking whether your users pick passwords that appear in the most-common lists."
+      }
+    }
+  },
+  {
+    "id": "cewl",
+    "category": "passwords",
+    "subcategory": "wordlists",
+    "name": "CeWL",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/digininja/CeWL",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "seclists",
+      "crunch"
+    ],
+    "tags": [
+      "wordlists",
+      "web-spider",
+      "custom-dictionary",
+      "passwords"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un generador de diccionarios a medida: rastrea las páginas de un sitio web hasta la profundidad que le indiques y extrae las palabras que encuentra para construir una lista específica de ese objetivo. La idea es que las contraseñas suelen basarse en el vocabulario propio de una empresa o persona, así que una lista hecha a partir de su web es más eficaz que un diccionario genérico.",
+        "legitimateUse": "Generar un diccionario a partir de tu propia web para comprobar si tus contraseñas se parecen demasiado a tu vocabulario público y son fáciles de adivinar."
+      },
+      "en": {
+        "summary": "A custom wordlist generator: it crawls a website's pages to the depth you set and extracts the words it finds to build a list specific to that target. The idea is that passwords often draw on a company's or person's own vocabulary, so a list built from their site is more effective than a generic dictionary.",
+        "legitimateUse": "Generate a wordlist from your own website to check whether your passwords lean too much on your public vocabulary and are easy to guess."
+      }
+    }
+  },
+  {
+    "id": "crunch",
+    "category": "passwords",
+    "subcategory": "wordlists",
+    "name": "crunch",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://sourceforge.net/projects/crunch-wordlist/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "cewl",
+      "seclists"
+    ],
+    "tags": [
+      "wordlists",
+      "generator",
+      "brute-force",
+      "charset"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un generador de diccionarios por fuerza bruta: en vez de partir de palabras reales, crea todas las combinaciones posibles a partir de un juego de caracteres y un patrón que tú defines (longitud, posiciones fijas, símbolos…). Sirve cuando conoces el formato de una contraseña (por ejemplo, 8 caracteres que empiezan por una fecha) y quieres generar exactamente ese espacio de posibilidades.",
+        "legitimateUse": "Crear listas a medida para probar la resistencia de tus propias contraseñas cuando sabes qué formato siguen, sin descargar diccionarios enormes."
+      },
+      "en": {
+        "summary": "A brute-force wordlist generator: instead of starting from real words, it creates every possible combination from a character set and a pattern you define (length, fixed positions, symbols…). It is useful when you know a password's format (say, 8 characters starting with a date) and want to generate exactly that space of possibilities.",
+        "legitimateUse": "Build tailored lists to test the strength of your own passwords when you know the format they follow, without downloading huge dictionaries."
+      }
+    }
   }
 ]
