@@ -3580,5 +3580,85 @@
         "legitimateUse": "Quickly identify the type of a hash from a system of yours so you can then pick the right tool and audit mode."
       }
     }
+  },
+  {
+    "id": "volatility3",
+    "category": "forensics",
+    "subcategory": "memory",
+    "name": "Volatility 3",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/volatilityfoundation/volatility3",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "memprocfs"
+    ],
+    "tags": [
+      "memory-forensics",
+      "dfir",
+      "ram",
+      "malware-analysis"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el framework de referencia para analizar la memoria RAM de un equipo: a partir de un volcado de memoria extrae procesos en ejecución, conexiones de red, comandos, DLLs cargadas, credenciales y rastros de malware que no quedan en el disco. Funciona mediante plugins, uno por cada tipo de información que quieras recuperar, y es la pieza central de la mayoría de análisis forenses de memoria.",
+        "legitimateUse": "Analizar el volcado de RAM de un equipo tuyo tras un incidente para reconstruir qué estaba corriendo y detectar actividad maliciosa que no deja rastro en disco."
+      },
+      "en": {
+        "summary": "The reference framework for analyzing a machine's RAM: from a memory dump it extracts running processes, network connections, commands, loaded DLLs, credentials and traces of malware that never touch disk. It works through plugins, one per kind of information you want to recover, and is the centerpiece of most memory forensics work.",
+        "legitimateUse": "Analyze the RAM dump of one of your own machines after an incident to reconstruct what was running and spot malicious activity that leaves no trace on disk."
+      }
+    }
+  },
+  {
+    "id": "memprocfs",
+    "category": "forensics",
+    "subcategory": "memory",
+    "name": "MemProcFS",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/ufrisk/MemProcFS",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "volatility3"
+    ],
+    "tags": [
+      "memory-forensics",
+      "dfir",
+      "virtual-filesystem",
+      "triage"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de análisis de memoria que monta un volcado de RAM (o la memoria en vivo) como si fuera un sistema de archivos: en lugar de lanzar comandos, navegas por carpetas y archivos para ver procesos, conexiones, handles o DLLs, e incluye un modo forense que resalta hallazgos sospechosos. Ese enfoque visual lo hace más accesible que las herramientas puramente de línea de comandos.",
+        "legitimateUse": "Explorar el volcado de memoria de un equipo tuyo navegando por él como carpetas, una forma rápida de triar un incidente antes de un análisis más profundo."
+      },
+      "en": {
+        "summary": "A memory analysis tool that mounts a RAM dump (or live memory) as if it were a file system: instead of running commands, you browse folders and files to see processes, connections, handles or DLLs, and it includes a forensic mode that highlights suspicious findings. That visual approach makes it more accessible than purely command-line tools.",
+        "legitimateUse": "Explore the memory dump of one of your own machines by browsing it like folders, a quick way to triage an incident before a deeper analysis."
+      }
+    }
   }
 ]
