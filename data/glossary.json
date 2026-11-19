@@ -46,5 +46,12 @@
   { "term": "bucket",
     "i18n": {
       "es": "Espacio de almacenamiento en la nube (sobre todo en Amazon S3) donde se guardan archivos; si se configura mal, queda accesible para cualquiera.",
-      "en": "A cloud storage container (mostly on Amazon S3) that holds files; if misconfigured, it ends up accessible to anyone." } }
+      "en": "A cloud storage container (mostly on Amazon S3) that holds files; if misconfigured, it ends up accessible to anyone." } },
+  {
+    "term": "fingerprinting",
+    "i18n": {
+      "es": "Técnica que identifica un navegador combinando rasgos suyos (fuentes, resolución, canvas, extensiones…) para reconocerlo sin cookies.",
+      "en": "A technique that identifies a browser by combining its traits (fonts, resolution, canvas, extensions…) to recognize it without cookies."
+    }
+  }
 ]

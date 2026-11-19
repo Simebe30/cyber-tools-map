@@ -54,7 +54,8 @@
     "web": "Web",
     "cli": "Terminal",
     "desktop": "Escritorio",
-    "mobile": "Móvil"
+    "mobile": "Móvil",
+    "browser": "Navegador"
   },
   "na": "No aplica",
   "category": {
