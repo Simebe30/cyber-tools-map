@@ -2854,5 +2854,165 @@
         "legitimateUse": "Manually check whether a service on one of your own machines is reachable and responds as expected, without setting up heavy tooling."
       }
     }
+  },
+  {
+    "id": "enum4linux-ng",
+    "category": "scanning",
+    "subcategory": "service-enum",
+    "name": "enum4linux-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "7",
+    "url": "https://github.com/cddmp/enum4linux-ng",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "smbmap"
+    ],
+    "tags": [
+      "smb",
+      "samba",
+      "windows",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para enumerar un host Windows o Samba a través del protocolo SMB: saca usuarios, grupos, recursos compartidos, políticas de contraseñas y más, consultando los servicios que el equipo expone en red. Es la reescritura moderna del clásico enum4linux, con salida ordenada y exportación a JSON/YAML.",
+        "legitimateUse": "Enumerar tus propios servidores Windows/Samba para ver qué información (usuarios, shares, políticas) expones en la red interna y cerrar lo que no deba estar accesible."
+      },
+      "en": {
+        "summary": "Enumerates a Windows or Samba host over the SMB protocol: it pulls users, groups, shared resources, password policies and more by querying the services the machine exposes on the network. It is the modern rewrite of the classic enum4linux, with tidy output and JSON/YAML export.",
+        "legitimateUse": "Enumerate your own Windows/Samba servers to see what information (users, shares, policies) you expose on the internal network and lock down what should not be reachable."
+      }
+    }
+  },
+  {
+    "id": "smbmap",
+    "category": "scanning",
+    "subcategory": "service-enum",
+    "name": "SMBMap",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/ShawnDEvans/smbmap",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "enum4linux-ng"
+    ],
+    "tags": [
+      "smb",
+      "samba",
+      "shares",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para listar y recorrer los recursos compartidos (shares) de SMB de un host y ver qué permisos de lectura o escritura tienes sobre cada uno. Permite buscar archivos por nombre o contenido en esos recursos e incluso subir o descargar ficheros, lo que ayuda a detectar carpetas compartidas abiertas de más.",
+        "legitimateUse": "Revisar los permisos de los recursos compartidos de tus propios servidores para encontrar shares accesibles que estén exponiendo datos sin querer."
+      },
+      "en": {
+        "summary": "Lists and walks a host's SMB shared resources and shows what read or write permissions you have on each. It can search files by name or content across those shares and even upload or download files, which helps spot shared folders that are open too wide.",
+        "legitimateUse": "Review the share permissions on your own servers to find accessible shares that are inadvertently exposing data."
+      }
+    }
+  },
+  {
+    "id": "snmpwalk",
+    "category": "scanning",
+    "subcategory": "service-enum",
+    "name": "snmpwalk (Net-SNMP)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://www.net-snmp.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "onesixtyone"
+    ],
+    "tags": [
+      "snmp",
+      "enumeration",
+      "network-devices",
+      "oid"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la utilidad del conjunto Net-SNMP que recorre toda la información que un dispositivo publica por SNMP: descripción del sistema, interfaces de red, procesos, tablas de rutas y más. Va pidiendo un valor tras otro recorriendo el árbol de datos (los OID) del equipo, así que de una pasada obtienes un inventario muy completo de lo que expone.",
+        "legitimateUse": "Consultar por SNMP tus propios routers, switches o servidores para inventariar qué datos publican y detectar los que no deberían estar expuestos o usan community strings por defecto."
+      },
+      "en": {
+        "summary": "The Net-SNMP suite utility that walks all the information a device publishes over SNMP: system description, network interfaces, processes, routing tables and more. It requests one value after another across the device's data tree (the OIDs), so in a single pass you get a very complete inventory of what it exposes.",
+        "legitimateUse": "Query your own routers, switches or servers over SNMP to inventory what data they publish and spot anything that should not be exposed or that uses default community strings."
+      }
+    }
+  },
+  {
+    "id": "onesixtyone",
+    "category": "scanning",
+    "subcategory": "service-enum",
+    "name": "onesixtyone",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "7",
+    "url": "https://github.com/trailofbits/onesixtyone",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "snmpwalk"
+    ],
+    "tags": [
+      "snmp",
+      "scanner",
+      "community-string",
+      "network"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de SNMP muy rápido: en vez de analizar a fondo un equipo, rocía peticiones a muchas direcciones y community strings a la vez y anota cuáles responden. Sirve para localizar en segundos qué dispositivos de un rango tienen SNMP accesible (a menudo con community strings por defecto como 'public') para luego enumerarlos en detalle.",
+        "legitimateUse": "Barrer tu propia red para descubrir rápidamente qué equipos exponen SNMP con community strings débiles o por defecto, antes de que lo haga otro."
+      },
+      "en": {
+        "summary": "A very fast SNMP scanner: instead of analyzing one host in depth, it sprays requests at many addresses and community strings at once and records which ones answer. It is for locating in seconds which devices in a range have SNMP reachable (often with default community strings like 'public') so you can then enumerate them in detail.",
+        "legitimateUse": "Sweep your own network to quickly find which machines expose SNMP with weak or default community strings, before someone else does."
+      }
+    }
   }
 ]
