@@ -4031,5 +4031,124 @@
         "legitimateUse": "Collect evidence and hunt for suspicious activity across your own organization's machines centrally during an incident."
       }
     }
+  },
+  {
+    "id": "steghide",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "steghide",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://steghide.sourceforge.net/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "stegseek",
+      "zsteg"
+    ],
+    "tags": [
+      "steganography",
+      "hiding",
+      "images",
+      "audio"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un programa de esteganografía que oculta datos dentro de imágenes (JPEG, BMP) y audio (WAV, AU): incrusta un archivo cifrado en el 'ruido' del fichero portador sin cambiar su aspecto, de modo que a simple vista parece normal. El contenido se protege con una contraseña y resiste los tests estadísticos básicos, por eso aparece tanto en retos CTF de esteganografía.",
+        "legitimateUse": "Entender cómo se esconden datos en archivos para reconocerlo en una investigación, practicando a ocultar y recuperar un fichero tuyo de prueba."
+      },
+      "en": {
+        "summary": "A steganography program that hides data inside images (JPEG, BMP) and audio (WAV, AU): it embeds an encrypted file in the carrier's 'noise' without changing its appearance, so it looks normal to the eye. The content is protected with a password and resists basic statistical tests, which is why it shows up so often in steganography CTF challenges.",
+        "legitimateUse": "Understand how data is hidden in files so you can recognize it in an investigation, by practicing hiding and recovering a test file of your own."
+      }
+    }
+  },
+  {
+    "id": "zsteg",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "zsteg",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/zed-0xff/zsteg",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "steghide"
+    ],
+    "tags": [
+      "steganography",
+      "detection",
+      "png",
+      "lsb"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que detecta datos ocultos por esteganografía en imágenes PNG y BMP: prueba automáticamente muchas técnicas de ocultación (bits menos significativos, distintos canales y órdenes de bits) y señala lo que parece contenido escondido, pudiendo extraerlo. Es de las primeras opciones para analizar una imagen sospechosa de llevar algo dentro.",
+        "legitimateUse": "Examinar una imagen tuya para comprobar si lleva datos ocultos, o para entender qué deja al descubierto el análisis esteganográfico."
+      },
+      "en": {
+        "summary": "A tool that detects steganographically hidden data in PNG and BMP images: it automatically tries many hiding techniques (least-significant bits, different channels and bit orders) and flags what looks like hidden content, which it can extract. It is one of the first choices for analyzing an image suspected of carrying something inside.",
+        "legitimateUse": "Examine an image of yours to check whether it carries hidden data, or to understand what steganographic analysis reveals."
+      }
+    }
+  },
+  {
+    "id": "stegseek",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "Stegseek",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/RickdeJager/stegseek",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "steghide",
+      "seclists"
+    ],
+    "tags": [
+      "steganography",
+      "cracking",
+      "steghide",
+      "ctf"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un crackeador de steghide extremadamente rápido: prueba un diccionario de contraseñas contra un archivo creado con steghide para recuperar el contenido oculto, recorriendo listas enormes como rockyou en segundos. También puede, sin contraseña, comprobar si un fichero contiene datos de steghide y extraer sus metadatos.",
+        "legitimateUse": "Comprobar si un archivo tuyo oculto con steghide usa una contraseña débil, recuperándolo con un diccionario para medir su resistencia."
+      },
+      "en": {
+        "summary": "An extremely fast steghide cracker: it tries a password dictionary against a file created with steghide to recover the hidden content, running through huge lists like rockyou in seconds. Without a password it can also check whether a file contains steghide data and extract its metadata.",
+        "legitimateUse": "Check whether a file of yours hidden with steghide uses a weak password, recovering it with a dictionary to measure its strength."
+      }
+    }
   }
 ]
