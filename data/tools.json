@@ -2500,5 +2500,123 @@
         "legitimateUse": "Check your own browser's fingerprint before and after hardening its settings or installing extensions, to see whether you actually reduce how trackable you are."
       }
     }
+  },
+  {
+    "id": "signal",
+    "category": "privacy",
+    "subcategory": "comms",
+    "name": "Signal",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "mobile",
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://signal.org",
+    "verifiedAt": "2026-11-19",
+    "related": [],
+    "tags": [
+      "messaging",
+      "e2e-encryption",
+      "voip",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una app de mensajería cifrada de extremo a extremo para mensajes, llamadas y videollamadas. El contenido viaja cifrado de modo que ni quien opera el servicio puede leerlo, y el sistema guarda los mínimos metadatos posibles sobre quién habla con quién. Usa tu número de teléfono —o, si prefieres, un nombre de usuario— para encontrar contactos.",
+        "legitimateUse": "Pasar tus conversaciones sensibles a un canal cifrado de extremo a extremo en lugar de SMS o apps que pueden leer el contenido."
+      },
+      "en": {
+        "summary": "An end-to-end encrypted messaging app for texts, calls and video calls. Content travels encrypted so that not even whoever runs the service can read it, and the system keeps the least possible metadata about who talks to whom. It uses your phone number — or a username, if you prefer — to find contacts.",
+        "legitimateUse": "Move your sensitive conversations onto an end-to-end encrypted channel instead of SMS or apps that can read the content."
+      }
+    }
+  },
+  {
+    "id": "simplelogin",
+    "category": "privacy",
+    "subcategory": "comms",
+    "name": "SimpleLogin",
+    "license": "freemium",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web",
+      "browser",
+      "mobile"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://simplelogin.io",
+    "verifiedAt": "2026-11-19",
+    "related": [],
+    "tags": [
+      "email-alias",
+      "anti-spam",
+      "privacy",
+      "self-hostable"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para no dar tu correo real al registrarte en sitios web. Crea alias —direcciones que reenvían todo a tu buzón de siempre— y, cuando un alias empieza a recibir spam o se filtra en una brecha, lo desactivas sin tocar tu dirección principal. Puedes responder desde el alias, así que el destinatario nunca ve tu correo real.",
+        "legitimateUse": "Usar un alias distinto por servicio para que, si uno aparece en una brecha de datos, sepas qué empresa te filtró y puedas cortarlo sin cambiar de correo.",
+        "price": "Plan gratuito con 10 alias y un buzón; plan Premium de pago con alias ilimitados y dominios propios. Consulta precios en la web oficial (consultado 19-11-2026)."
+      },
+      "en": {
+        "summary": "Keeps you from handing out your real email when signing up for websites. It creates aliases — addresses that forward everything to your usual inbox — and when an alias starts getting spam or shows up in a breach, you disable it without touching your main address. You can reply from the alias, so the recipient never sees your real email.",
+        "legitimateUse": "Use a different alias per service so that, if one turns up in a data breach, you know which company leaked it and can cut it off without changing your email.",
+        "price": "Free plan with 10 aliases and one mailbox; paid Premium plan with unlimited aliases and custom domains. Check prices on the official site (checked 2026-11-19)."
+      }
+    }
+  },
+  {
+    "id": "croc",
+    "category": "privacy",
+    "subcategory": "comms",
+    "name": "croc",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/schollz/croc",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "onionshare"
+    ],
+    "tags": [
+      "file-transfer",
+      "e2e-encryption",
+      "p2p",
+      "cli"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Sirve para enviar archivos o carpetas de un ordenador a otro de forma directa y cifrada, sin subirlos a la nube. El emisor ejecuta un comando y obtiene una frase-código; el receptor la introduce y la transferencia va cifrada de extremo a extremo entre ambos, a través de un relay cuando no pueden conectarse directamente.",
+        "legitimateUse": "Mover un archivo entre dos equipos tuyos sin pasarlo por servicios de terceros, cifrando la transferencia de extremo a extremo."
+      },
+      "en": {
+        "summary": "Sends files or folders straight from one computer to another, encrypted, without uploading them to the cloud. The sender runs a command and gets a code phrase; the receiver types it in and the transfer runs end-to-end encrypted between the two, through a relay when they cannot connect directly.",
+        "legitimateUse": "Move a file between two of your own machines without routing it through third-party services, encrypting the transfer end-to-end."
+      }
+    }
   }
 ]
