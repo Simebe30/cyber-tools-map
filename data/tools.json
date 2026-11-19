@@ -3908,5 +3908,247 @@
         "price": "Free (Solo edition) for personal, educational, research, government or internal company use; commercial use or paid engagements require the (paid) Enterprise license. The policy changed on 2026-01-01. Official details at kroll.com, checked 2026-11-19."
       }
     }
+  },
+  {
+    "id": "wireshark",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Wireshark",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "desktop",
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "2–7",
+    "url": "https://www.wireshark.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "zeek"
+    ],
+    "tags": [
+      "network-forensics",
+      "pcap",
+      "packet-analysis",
+      "protocols"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el analizador de tráfico de red por excelencia: captura los paquetes que circulan por una interfaz y los descompone protocolo a protocolo, para que puedas ver el contenido exacto de cada comunicación. En forense se usa sobre todo para examinar capturas (PCAP) y reconstruir qué pasó en la red: conexiones, transferencias de archivos, credenciales en claro o tráfico sospechoso. Incluye también una versión de terminal, tshark.",
+        "legitimateUse": "Analizar una captura de tu propia red para entender un problema o investigar actividad sospechosa, viendo con detalle qué protocolos y datos circularon."
+      },
+      "en": {
+        "summary": "The quintessential network traffic analyzer: it captures the packets flowing through an interface and breaks them down protocol by protocol, so you can see the exact content of each communication. In forensics it is used mainly to examine captures (PCAP) and reconstruct what happened on the network: connections, file transfers, cleartext credentials or suspicious traffic. It also includes a terminal version, tshark.",
+        "legitimateUse": "Analyze a capture of your own network to understand a problem or investigate suspicious activity, seeing in detail which protocols and data went across."
+      }
+    }
+  },
+  {
+    "id": "plaso",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Plaso (log2timeline)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/log2timeline/plaso",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools",
+      "autopsy"
+    ],
+    "tags": [
+      "timeline",
+      "dfir",
+      "super-timeline",
+      "parsing"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el motor que hay detrás de log2timeline: recorre una imagen de disco o un conjunto de evidencias y extrae todas las marcas de tiempo que encuentra (sistema de archivos, registro, logs de eventos, navegador, etc.) para fusionarlas en una única 'super línea de tiempo'. Así puedes ver en orden cronológico todo lo que ocurrió en un sistema, que es clave para reconstruir un incidente.",
+        "legitimateUse": "Construir una línea de tiempo unificada de un equipo tuyo tras un incidente para ver, minuto a minuto, qué ocurrió y en qué orden."
+      },
+      "en": {
+        "summary": "The engine behind log2timeline: it goes through a disk image or a set of evidence and extracts every timestamp it finds (file system, registry, event logs, browser, etc.) to merge them into a single 'super timeline'. That lets you see, in chronological order, everything that happened on a system, which is key to reconstructing an incident.",
+        "legitimateUse": "Build a unified timeline of one of your own machines after an incident to see, minute by minute, what happened and in what order."
+      }
+    }
+  },
+  {
+    "id": "velociraptor",
+    "category": "forensics",
+    "subcategory": "forensic-analysis",
+    "name": "Velociraptor",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "web"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/Velocidex/velociraptor",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools"
+    ],
+    "tags": [
+      "dfir",
+      "endpoint",
+      "threat-hunting",
+      "vql"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma de forense y respuesta a incidentes a escala: instala un agente ligero en cada equipo y, desde un servidor central con interfaz web, lanza consultas (en su lenguaje VQL) para recopilar artefactos, buscar indicadores de compromiso o cazar amenazas en cientos de endpoints a la vez. Pensada para investigar y responder en toda una red, no en una sola máquina.",
+        "legitimateUse": "Recoger evidencias y buscar actividad sospechosa en los equipos de tu propia organización de forma centralizada durante un incidente."
+      },
+      "en": {
+        "summary": "An incident-response and forensics platform at scale: it installs a lightweight agent on each machine and, from a central server with a web interface, runs queries (in its VQL language) to collect artifacts, search for indicators of compromise or hunt threats across hundreds of endpoints at once. Built to investigate and respond across a whole network, not a single machine.",
+        "legitimateUse": "Collect evidence and hunt for suspicious activity across your own organization's machines centrally during an incident."
+      }
+    }
+  },
+  {
+    "id": "steghide",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "steghide",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://steghide.sourceforge.net/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "stegseek",
+      "zsteg"
+    ],
+    "tags": [
+      "steganography",
+      "hiding",
+      "images",
+      "audio"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un programa de esteganografía que oculta datos dentro de imágenes (JPEG, BMP) y audio (WAV, AU): incrusta un archivo cifrado en el 'ruido' del fichero portador sin cambiar su aspecto, de modo que a simple vista parece normal. El contenido se protege con una contraseña y resiste los tests estadísticos básicos, por eso aparece tanto en retos CTF de esteganografía.",
+        "legitimateUse": "Entender cómo se esconden datos en archivos para reconocerlo en una investigación, practicando a ocultar y recuperar un fichero tuyo de prueba."
+      },
+      "en": {
+        "summary": "A steganography program that hides data inside images (JPEG, BMP) and audio (WAV, AU): it embeds an encrypted file in the carrier's 'noise' without changing its appearance, so it looks normal to the eye. The content is protected with a password and resists basic statistical tests, which is why it shows up so often in steganography CTF challenges.",
+        "legitimateUse": "Understand how data is hidden in files so you can recognize it in an investigation, by practicing hiding and recovering a test file of your own."
+      }
+    }
+  },
+  {
+    "id": "zsteg",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "zsteg",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/zed-0xff/zsteg",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "steghide"
+    ],
+    "tags": [
+      "steganography",
+      "detection",
+      "png",
+      "lsb"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que detecta datos ocultos por esteganografía en imágenes PNG y BMP: prueba automáticamente muchas técnicas de ocultación (bits menos significativos, distintos canales y órdenes de bits) y señala lo que parece contenido escondido, pudiendo extraerlo. Es de las primeras opciones para analizar una imagen sospechosa de llevar algo dentro.",
+        "legitimateUse": "Examinar una imagen tuya para comprobar si lleva datos ocultos, o para entender qué deja al descubierto el análisis esteganográfico."
+      },
+      "en": {
+        "summary": "A tool that detects steganographically hidden data in PNG and BMP images: it automatically tries many hiding techniques (least-significant bits, different channels and bit orders) and flags what looks like hidden content, which it can extract. It is one of the first choices for analyzing an image suspected of carrying something inside.",
+        "legitimateUse": "Examine an image of yours to check whether it carries hidden data, or to understand what steganographic analysis reveals."
+      }
+    }
+  },
+  {
+    "id": "stegseek",
+    "category": "forensics",
+    "subcategory": "steganography",
+    "name": "Stegseek",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/RickdeJager/stegseek",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "steghide",
+      "seclists"
+    ],
+    "tags": [
+      "steganography",
+      "cracking",
+      "steghide",
+      "ctf"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un crackeador de steghide extremadamente rápido: prueba un diccionario de contraseñas contra un archivo creado con steghide para recuperar el contenido oculto, recorriendo listas enormes como rockyou en segundos. También puede, sin contraseña, comprobar si un fichero contiene datos de steghide y extraer sus metadatos.",
+        "legitimateUse": "Comprobar si un archivo tuyo oculto con steghide usa una contraseña débil, recuperándolo con un diccionario para medir su resistencia."
+      },
+      "en": {
+        "summary": "An extremely fast steghide cracker: it tries a password dictionary against a file created with steghide to recover the hidden content, running through huge lists like rockyou in seconds. Without a password it can also check whether a file contains steghide data and extract its metadata.",
+        "legitimateUse": "Check whether a file of yours hidden with steghide uses a weak password, recovering it with a dictionary to measure its strength."
+      }
+    }
   }
 ]
