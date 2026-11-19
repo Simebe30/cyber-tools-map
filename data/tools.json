@@ -3501,5 +3501,84 @@
         "legitimateUse": "Build tailored lists to test the strength of your own passwords when you know the format they follow, without downloading huge dictionaries."
       }
     }
+  },
+  {
+    "id": "hashid",
+    "category": "passwords",
+    "subcategory": "hash-id",
+    "name": "hashID",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "historical",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/psypanda/hashID",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "name-that-hash"
+    ],
+    "tags": [
+      "hash",
+      "identification",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una utilidad que, a partir de un hash que no sabes de dónde viene, te dice de qué tipo probablemente sea (MD5, SHA-256, bcrypt, hashes de WordPress…). Lo compara con más de 200 patrones mediante expresiones regulares y lista los candidatos, un paso previo útil antes de intentar crackearlo, porque necesitas saber el tipo para elegir el modo correcto.",
+        "legitimateUse": "Averiguar el tipo de un hash obtenido de un sistema tuyo para saber con qué algoritmo está protegido antes de auditarlo."
+      },
+      "en": {
+        "summary": "A utility that, from a hash you cannot place, tells you what type it probably is (MD5, SHA-256, bcrypt, WordPress hashes…). It matches it against 200+ patterns using regular expressions and lists the candidates, a useful step before trying to crack it, since you need the type to pick the right mode.",
+        "legitimateUse": "Work out the type of a hash taken from a system of yours so you know which algorithm protects it before auditing it."
+      }
+    }
+  },
+  {
+    "id": "name-that-hash",
+    "category": "passwords",
+    "subcategory": "hash-id",
+    "name": "Name-That-Hash",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/HashPals/Name-That-Hash",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "hashid",
+      "hashcat"
+    ],
+    "tags": [
+      "hash",
+      "identification",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un identificador de hashes moderno: le pasas un hash y te dice de qué tipo es, entre más de 300 formatos, ordenando los resultados por popularidad para que el candidato más probable salga primero. Añade resúmenes de cada tipo y una salida clara con colores, y existe también como app web, lo que lo hace más cómodo que las herramientas clásicas.",
+        "legitimateUse": "Identificar rápidamente el tipo de un hash de un sistema tuyo para elegir después la herramienta y el modo de auditoría adecuados."
+      },
+      "en": {
+        "summary": "A modern hash identifier: you give it a hash and it tells you what type it is, among 300+ formats, ranking results by popularity so the most likely candidate comes first. It adds per-type summaries and clear, colorized output, and also exists as a web app, which makes it handier than the classic tools.",
+        "legitimateUse": "Quickly identify the type of a hash from a system of yours so you can then pick the right tool and audit mode."
+      }
+    }
   }
 ]
