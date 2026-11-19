@@ -3178,5 +3178,85 @@
         "price": "Nessus Essentials is free for up to 16 IP addresses; Essentials Plus is about US$199/year (personal or educational use) and Nessus Professional about US$4,790/year. Official prices at tenable.com, checked 2026-11-19."
       }
     }
+  },
+  {
+    "id": "hashcat",
+    "category": "passwords",
+    "subcategory": "cracking",
+    "name": "Hashcat",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://hashcat.net/hashcat/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "john"
+    ],
+    "tags": [
+      "password-cracking",
+      "hash",
+      "gpu",
+      "dictionary-attack"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el crackeador de contraseñas más rápido y conocido: toma hashes (las huellas cifradas de las contraseñas) e intenta recuperar la contraseña original probando candidatos a gran velocidad, aprovechando la GPU. Soporta cientos de tipos de hash y varios modos de ataque (diccionario, reglas, fuerza bruta, máscaras), lo que lo hace idóneo para medir cómo de resistente es una contraseña.",
+        "legitimateUse": "Auditar la fortaleza de tus propias contraseñas o las de tu organización (con permiso) crackeando sus hashes para detectar las débiles y forzar su cambio."
+      },
+      "en": {
+        "summary": "The fastest and best-known password cracker: it takes hashes (the encrypted fingerprints of passwords) and tries to recover the original password by testing candidates at high speed, using the GPU. It supports hundreds of hash types and several attack modes (dictionary, rules, brute force, masks), which makes it ideal for measuring how resistant a password is.",
+        "legitimateUse": "Audit the strength of your own passwords or your organization's (with permission) by cracking their hashes to find the weak ones and force a change."
+      }
+    }
+  },
+  {
+    "id": "john",
+    "category": "passwords",
+    "subcategory": "cracking",
+    "name": "John the Ripper",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.openwall.com/john/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "hashcat"
+    ],
+    "tags": [
+      "password-cracking",
+      "hash",
+      "dictionary-attack",
+      "rules"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un crackeador de contraseñas veterano y muy versátil: detecta automáticamente el tipo de hash y prueba candidatos combinando diccionarios, reglas de transformación y fuerza bruta. Su versión 'jumbo' mantenida por la comunidad añade soporte para cientos de formatos (ficheros de sistema, documentos protegidos, ZIP, claves…), lo que lo hace muy útil para auditar credenciales de todo tipo.",
+        "legitimateUse": "Comprobar la robustez de las contraseñas de tus propios sistemas detectando las que son fáciles de romper, para corregirlas antes de que lo haga un atacante."
+      },
+      "en": {
+        "summary": "A veteran, highly versatile password cracker: it automatically detects the hash type and tests candidates combining dictionaries, transformation rules and brute force. Its community-maintained 'jumbo' version adds support for hundreds of formats (system files, protected documents, ZIP, keys…), which makes it very useful for auditing credentials of all kinds.",
+        "legitimateUse": "Check the strength of your own systems' passwords by finding the ones that are easy to crack, so you can fix them before an attacker does."
+      }
+    }
   }
 ]
