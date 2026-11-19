@@ -4312,5 +4312,44 @@
         "price": "The basic service (breach scan and alerts, plus an initial data-broker sweep) is free; the paid Monitor Plus plan (about US$8.99/month on the annual plan, US only for now) automatically removes your data from 190+ data-broker sites. Official prices at mozilla.org, checked 2026-11-19."
       }
     }
+  },
+  {
+    "id": "fawkes",
+    "category": "privacy",
+    "subcategory": "anti-facial",
+    "name": "Fawkes",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://sandlab.cs.uchicago.edu/fawkes/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "image-scrubber"
+    ],
+    "tags": [
+      "facial-recognition",
+      "image-cloaking",
+      "privacy",
+      "adversarial"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que 'encubre' tus fotos para protegerte del reconocimiento facial: aplica a la imagen cambios mínimos a nivel de píxel, imperceptibles para el ojo humano, pero que hacen que los modelos de reconocimiento facial aprendan una versión equivocada de tu cara. Así, si alguien entrena un sistema con tus fotos públicas, no podrá identificarte después en otra imagen. Se ejecuta en tu propio equipo.",
+        "legitimateUse": "Procesar tus propias fotos antes de subirlas a redes para dificultar que terceros entrenen modelos de reconocimiento facial con tu cara sin permiso."
+      },
+      "en": {
+        "summary": "A tool that 'cloaks' your photos to protect you from facial recognition: it applies minimal, pixel-level changes to the image, imperceptible to the human eye, that make facial recognition models learn a wrong version of your face. So if someone trains a system on your public photos, they will not be able to identify you later in another image. It runs on your own machine.",
+        "legitimateUse": "Process your own photos before posting them to social media to make it harder for third parties to train facial recognition models on your face without permission."
+      }
+    }
   }
 ]
