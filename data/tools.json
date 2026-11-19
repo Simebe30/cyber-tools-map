@@ -2422,5 +2422,83 @@
         "legitimateUse": "Analyze the backup of a phone you own or manage, with consent, to look for spyware traces after a suspicion."
       }
     }
+  },
+  {
+    "id": "ublock-origin",
+    "category": "privacy",
+    "subcategory": "browser",
+    "name": "uBlock Origin",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/gorhill/uBlock",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "pi-hole"
+    ],
+    "tags": [
+      "ad-blocking",
+      "tracker-blocking",
+      "browser-extension",
+      "content-filtering"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un bloqueador de contenidos para el navegador que corta de raíz anuncios, rastreadores y scripts no deseados antes de que lleguen a cargarse. Funciona con listas de filtros que se pueden ampliar y, a diferencia de un bloqueador de anuncios normal, deja ver y decidir regla a regla qué recursos carga cada web y cuáles se bloquean.",
+        "legitimateUse": "Reducir el rastreo y la superficie de scripts de terceros en tu propio navegador, y revisar en el panel qué dominios intenta cargar cada web que visitas."
+      },
+      "en": {
+        "summary": "A content blocker for the browser that stops ads, trackers and unwanted scripts before they even load. It works from filter lists you can extend and, unlike an ordinary ad blocker, it lets you see and decide rule by rule which resources each site loads and which get blocked.",
+        "legitimateUse": "Cut tracking and third-party script surface in your own browser, and use the panel to review which domains each site you visit tries to load."
+      }
+    }
+  },
+  {
+    "id": "cover-your-tracks",
+    "category": "privacy",
+    "subcategory": "browser",
+    "name": "Cover Your Tracks",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://coveryourtracks.eff.org",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ublock-origin"
+    ],
+    "tags": [
+      "fingerprinting",
+      "tracker-test",
+      "privacy",
+      "browser"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una web de prueba que mide hasta qué punto tu navegador es único y, por tanto, rastreable. Hace una batería de comprobaciones —cookies, huella de canvas y WebGL, cabecera Do Not Track, etc.— y resume si destacas frente a otros usuarios y si tu navegador frena anuncios y rastreadores. Sirve para entender el fingerprinting más que para bloquearlo.",
+        "legitimateUse": "Comprobar la huella de tu propio navegador antes y después de endurecer su configuración o instalar extensiones, para ver si de verdad reduces tu rastreabilidad."
+      },
+      "en": {
+        "summary": "A testing website that measures how unique — and therefore trackable — your browser is. It runs a battery of checks — cookies, canvas and WebGL fingerprint, Do Not Track header and more — and summarizes whether you stand out from other users and whether your browser curbs ads and trackers. It is for understanding fingerprinting rather than blocking it.",
+        "legitimateUse": "Check your own browser's fingerprint before and after hardening its settings or installing extensions, to see whether you actually reduce how trackable you are."
+      }
+    }
   }
 ]

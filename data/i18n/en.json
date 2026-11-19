@@ -54,7 +54,8 @@
     "web": "Web",
     "cli": "CLI",
     "desktop": "Desktop",
-    "mobile": "Mobile"
+    "mobile": "Mobile",
+    "browser": "Browser"
   },
   "na": "N/A",
   "category": {
