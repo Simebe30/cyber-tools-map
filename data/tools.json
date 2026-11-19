@@ -4150,5 +4150,85 @@
         "legitimateUse": "Check whether a file of yours hidden with steghide uses a weak password, recovering it with a dictionary to measure its strength."
       }
     }
+  },
+  {
+    "id": "buskill",
+    "category": "privacy",
+    "subcategory": "physical-opsec",
+    "name": "BusKill",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.buskill.in",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "usbkill",
+      "veracrypt"
+    ],
+    "tags": [
+      "dead-man-switch",
+      "anti-theft",
+      "physical-security",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un 'interruptor de hombre muerto' por hardware para el portátil: un cable magnético une tu equipo a tu cuerpo o a un punto fijo y, si alguien te lo arranca y el imán se separa, dispara una acción configurable (bloquear la sesión, apagar o, con cifrado de disco, borrar las claves). Pensado para proteger datos sensibles frente a un robo físico en un sitio público.",
+        "legitimateUse": "Proteger tu propio portátil en un espacio público: que se bloquee o apague solo si te lo arrancan, para que nadie acceda a una sesión abierta."
+      },
+      "en": {
+        "summary": "A hardware 'dead man's switch' for your laptop: a magnetic cable tethers your machine to your body or a fixed point and, if someone yanks it away and the magnet separates, it triggers a configurable action (lock the session, shut down or, with disk encryption, wipe the keys). Built to protect sensitive data against a physical snatch-and-grab in a public place.",
+        "legitimateUse": "Protect your own laptop in a public space: have it lock or shut down by itself if it is snatched, so nobody reaches an open session."
+      }
+    }
+  },
+  {
+    "id": "usbkill",
+    "category": "privacy",
+    "subcategory": "physical-opsec",
+    "name": "usbkill",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "historical",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/hephaest0s/usbkill",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "buskill",
+      "veracrypt"
+    ],
+    "tags": [
+      "anti-forensics",
+      "usb",
+      "kill-switch",
+      "privacy"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un script anti-forense que vigila los puertos USB y apaga el equipo en cuanto detecta un cambio (que se conecte o desconecte un dispositivo). La idea es que, si te roban o incautan el portátil estando encendido, se apague al instante para que —combinado con cifrado de disco— no se pueda analizar su contenido ni la memoria. Es una herramienta pensada para situaciones de alto riesgo físico.",
+        "legitimateUse": "Configurar tu propio equipo para que se apague si alguien manipula sus puertos mientras está desatendido, protegiendo una sesión abierta con datos sensibles."
+      },
+      "en": {
+        "summary": "An anti-forensic script that watches the USB ports and shuts the machine down as soon as it detects a change (a device being plugged in or unplugged). The idea is that, if your laptop is stolen or seized while powered on, it shuts down instantly so that — combined with disk encryption — its contents and memory cannot be analyzed. It is a tool meant for high physical-risk situations.",
+        "legitimateUse": "Set up your own machine to shut down if someone tampers with its ports while it is unattended, protecting an open session with sensitive data."
+      }
+    }
   }
 ]
