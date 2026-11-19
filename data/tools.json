@@ -3660,5 +3660,128 @@
         "legitimateUse": "Explore the memory dump of one of your own machines by browsing it like folders, a quick way to triage an incident before a deeper analysis."
       }
     }
+  },
+  {
+    "id": "autopsy",
+    "category": "forensics",
+    "subcategory": "disk",
+    "name": "Autopsy",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.sleuthkit.org/autopsy/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "sleuthkit",
+      "ftk-imager"
+    ],
+    "tags": [
+      "disk-forensics",
+      "dfir",
+      "file-recovery",
+      "timeline"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma forense con interfaz gráfica que se apoya en The Sleuth Kit para analizar imágenes de disco: recupera archivos borrados, construye líneas de tiempo, busca por palabras clave, extrae artefactos del navegador y del sistema, y organiza todo por casos. Pensada para que un examinador lleve una investigación de principio a fin sin pelearse con la línea de comandos.",
+        "legitimateUse": "Analizar la imagen de disco de un equipo tuyo tras un incidente para recuperar archivos y reconstruir qué pasó, documentándolo por casos."
+      },
+      "en": {
+        "summary": "A forensic platform with a graphical interface, built on The Sleuth Kit, for analyzing disk images: it recovers deleted files, builds timelines, searches by keyword, extracts browser and system artifacts, and organizes everything into cases. Designed so an examiner can run an investigation end to end without wrestling with the command line.",
+        "legitimateUse": "Analyze the disk image of one of your own machines after an incident to recover files and reconstruct what happened, documenting it by case."
+      }
+    }
+  },
+  {
+    "id": "sleuthkit",
+    "category": "forensics",
+    "subcategory": "disk",
+    "name": "The Sleuth Kit",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.sleuthkit.org/sleuthkit/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "autopsy"
+    ],
+    "tags": [
+      "disk-forensics",
+      "filesystem",
+      "cli",
+      "file-recovery"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la biblioteca y el conjunto de herramientas de línea de comandos sobre el que se construye Autopsy: permite examinar a bajo nivel volúmenes y sistemas de archivos de una imagen de disco (DOS, BSD, Mac, GPT; NTFS, FAT, ext…), listar archivos, recuperar borrados y analizar la estructura del sistema de archivos. Al ser de línea de comandos, encaja en scripts y flujos automatizados.",
+        "legitimateUse": "Examinar en detalle el sistema de archivos de una imagen de disco tuya, o automatizar ese análisis en scripts, cuando necesitas más control que el de una interfaz gráfica."
+      },
+      "en": {
+        "summary": "The library and set of command-line tools Autopsy is built on: it lets you examine the volumes and file systems of a disk image at a low level (DOS, BSD, Mac, GPT; NTFS, FAT, ext…), list files, recover deleted ones and analyze the file system structure. Being command-line, it fits into scripts and automated workflows.",
+        "legitimateUse": "Examine the file system of one of your own disk images in detail, or automate that analysis in scripts, when you need more control than a graphical interface offers."
+      }
+    }
+  },
+  {
+    "id": "ftk-imager",
+    "category": "forensics",
+    "subcategory": "disk",
+    "name": "FTK Imager",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.exterro.com/ftk-imager",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "autopsy"
+    ],
+    "tags": [
+      "disk-imaging",
+      "acquisition",
+      "evidence",
+      "hashing"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de adquisición y previsualización de evidencias: crea copias bit a bit (imágenes) de discos, unidades USB o memoria, calculando hashes para demostrar que la copia es idéntica al original y no se ha alterado. También deja previsualizar el contenido y montar imágenes en solo lectura, por lo que suele ser el primer paso de una investigación: capturar la evidencia sin modificarla.",
+        "legitimateUse": "Crear una imagen forense de un disco tuyo preservando su integridad con hashes, antes de analizarlo con otra herramienta, para no trabajar nunca sobre el original.",
+        "price": "La versión estándar de FTK Imager es gratuita; existe FTK Imager Pro de pago (suscripción anual ≈499 USD/usuario) con funciones añadidas (móvil, descifrado). Precios oficiales en exterro.com, consultado 19-11-2026."
+      },
+      "en": {
+        "summary": "An evidence acquisition and preview tool: it creates bit-for-bit copies (images) of disks, USB drives or memory, computing hashes to prove the copy is identical to the original and has not been altered. It also previews content and mounts images read-only, so it is usually the first step of an investigation: capturing the evidence without changing it.",
+        "legitimateUse": "Create a forensic image of one of your own disks, preserving its integrity with hashes, before analyzing it with another tool, so you never work on the original.",
+        "price": "The standard FTK Imager is free; a paid FTK Imager Pro exists (annual subscription ≈US$499/user) with added features (mobile, decryption). Official prices at exterro.com, checked 2026-11-19."
+      }
+    }
   }
 ]
