@@ -131,5 +131,19 @@
       "es": "Huella de longitud fija que resume un dato (por ejemplo una contraseña); es fácil de calcular pero muy difícil de revertir.",
       "en": "Fixed-length fingerprint that summarizes data (e.g. a password); easy to compute but very hard to reverse."
     }
+  },
+  {
+    "term": "hive",
+    "i18n": {
+      "es": "Archivo que almacena una rama del registro de Windows (por ejemplo SYSTEM, SOFTWARE o el NTUSER.DAT de cada usuario).",
+      "en": "File that stores a branch of the Windows registry (e.g. SYSTEM, SOFTWARE or each user's NTUSER.DAT)."
+    }
+  },
+  {
+    "term": "MFT",
+    "i18n": {
+      "es": "Master File Table de NTFS: índice que registra todos los archivos de un volumen y sus metadatos; clave en análisis forense.",
+      "en": "NTFS Master File Table: an index recording every file on a volume and its metadata; key in forensic analysis."
+    }
   }
 ]

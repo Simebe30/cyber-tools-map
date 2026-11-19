@@ -3783,5 +3783,130 @@
         "price": "The standard FTK Imager is free; a paid FTK Imager Pro exists (annual subscription ≈US$499/user) with added features (mobile, decryption). Official prices at exterro.com, checked 2026-11-19."
       }
     }
+  },
+  {
+    "id": "ez-tools",
+    "category": "forensics",
+    "subcategory": "win-artifacts",
+    "name": "Eric Zimmerman's Tools",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://ericzimmerman.github.io/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "kape",
+      "regripper"
+    ],
+    "tags": [
+      "windows-forensics",
+      "dfir",
+      "registry",
+      "artifacts"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un conjunto de herramientas forenses para Windows muy usado en DFIR: incluye programas especializados en cada artefacto (Registry Explorer para el registro, EvtxECmd para los registros de eventos, PECmd para Prefetch, MFTECmd para la MFT, etc.), con versiones de línea de comandos y gráficas. Juntas permiten extraer y analizar casi cualquier rastro que deja la actividad en un sistema Windows.",
+        "legitimateUse": "Analizar los artefactos de un equipo Windows tuyo tras un incidente para reconstruir qué programas se ejecutaron, qué se abrió y cuándo."
+      },
+      "en": {
+        "summary": "A widely used set of Windows forensic tools in DFIR: it includes programs specialized in each artifact (Registry Explorer for the registry, EvtxECmd for event logs, PECmd for Prefetch, MFTECmd for the MFT, etc.), with both command-line and graphical versions. Together they let you extract and analyze almost any trace left by activity on a Windows system.",
+        "legitimateUse": "Analyze the artifacts of one of your own Windows machines after an incident to reconstruct what programs ran, what was opened and when."
+      }
+    }
+  },
+  {
+    "id": "regripper",
+    "category": "forensics",
+    "subcategory": "win-artifacts",
+    "name": "RegRipper",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/keydet89/RegRipper3.0",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools"
+    ],
+    "tags": [
+      "windows-forensics",
+      "registry",
+      "hive",
+      "dfir"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta para extraer información del registro de Windows de forma rápida: a partir de un hive (SYSTEM, SOFTWARE, SAM, NTUSER.DAT…) ejecuta plugins que sacan datos concretos y relevantes para una investigación (programas ejecutados, dispositivos USB conectados, cuentas de usuario, claves de arranque…). Su arquitectura de plugins hace fácil ampliarla con nuevas comprobaciones.",
+        "legitimateUse": "Extraer del registro de un equipo tuyo los rastros de uso (USB conectados, programas ejecutados, cuentas) para investigar qué ocurrió sin revisar el registro a mano."
+      },
+      "en": {
+        "summary": "A tool to quickly extract information from the Windows registry: from a hive (SYSTEM, SOFTWARE, SAM, NTUSER.DAT…) it runs plugins that pull out specific, investigation-relevant data (programs run, USB devices connected, user accounts, boot keys…). Its plugin architecture makes it easy to extend with new checks.",
+        "legitimateUse": "Extract usage traces (connected USBs, programs run, accounts) from the registry of one of your own machines to investigate what happened without reviewing the registry by hand."
+      }
+    }
+  },
+  {
+    "id": "kape",
+    "category": "forensics",
+    "subcategory": "win-artifacts",
+    "name": "KAPE",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://www.kroll.com/kape",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "ez-tools"
+    ],
+    "tags": [
+      "windows-forensics",
+      "triage",
+      "dfir",
+      "artifacts"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de triaje forense que recopila y procesa en minutos los artefactos más relevantes de un sistema Windows: en vez de imaginar el disco entero, apunta a las ubicaciones clave (registro, logs de eventos, MFT, rastros de ejecución…), las copia y las parsea con módulos (muchos basados en las Eric Zimmerman's Tools). Pensada para los primeros minutos de un incidente, cuando la velocidad importa.",
+        "legitimateUse": "Recoger rápido los artefactos clave de un equipo tuyo al inicio de un incidente para empezar a investigar sin esperar a una imagen completa del disco.",
+        "price": "Gratuita (edición Solo) para uso personal, educativo, de investigación, gubernamental o interno de una empresa; el uso comercial o en encargos de pago requiere la licencia Enterprise (de pago). La política cambió el 1 de enero de 2026. Detalles oficiales en kroll.com, consultado 19-11-2026."
+      },
+      "en": {
+        "summary": "A forensic triage tool that collects and processes a Windows system's most relevant artifacts in minutes: instead of imaging the whole disk, it targets the key locations (registry, event logs, MFT, execution traces…), copies them and parses them with modules (many based on the Eric Zimmerman's Tools). Built for the first minutes of an incident, when speed matters.",
+        "legitimateUse": "Quickly collect the key artifacts of one of your own machines at the start of an incident so you can begin investigating without waiting for a full disk image.",
+        "price": "Free (Solo edition) for personal, educational, research, government or internal company use; commercial use or paid engagements require the (paid) Enterprise license. The policy changed on 2026-01-01. Official details at kroll.com, checked 2026-11-19."
+      }
+    }
   }
 ]
