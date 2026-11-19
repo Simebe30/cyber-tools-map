@@ -2698,5 +2698,161 @@
         "legitimateUse": "Clean the metadata and cover faces or license plates in a photo of yours before posting it, so you do not expose your location or the people in it."
       }
     }
+  },
+  {
+    "id": "nmap",
+    "category": "scanning",
+    "subcategory": "hosts-ports",
+    "name": "Nmap",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli",
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": "3–7",
+    "url": "https://nmap.org",
+    "verifiedAt": "2026-11-19",
+    "related": [],
+    "tags": [
+      "port-scanning",
+      "host-discovery",
+      "service-detection",
+      "nse"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el escáner de red de referencia: descubre qué equipos están vivos en una red y qué puertos y servicios tienen abiertos. Envía paquetes a medida y, por cómo responden, deduce puertos abiertos, versiones de servicio e incluso el sistema operativo probable. Incluye un motor de scripts (NSE) para comprobaciones más avanzadas.",
+        "legitimateUse": "Inventariar tu propia red y detectar puertos o servicios abiertos que no deberían estarlo, antes de que lo haga otro."
+      },
+      "en": {
+        "summary": "The reference network scanner: it finds which hosts are alive on a network and which ports and services they have open. It sends crafted packets and, from how they respond, infers open ports, service versions and even the likely operating system. It includes a scripting engine (NSE) for more advanced checks.",
+        "legitimateUse": "Inventory your own network and spot open ports or services that should not be there, before someone else does."
+      }
+    }
+  },
+  {
+    "id": "rustscan",
+    "category": "scanning",
+    "subcategory": "hosts-ports",
+    "name": "RustScan",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "4",
+    "url": "https://github.com/bee-san/RustScan",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "nmap"
+    ],
+    "tags": [
+      "port-scanning",
+      "fast",
+      "rust",
+      "nmap-integration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de puertos escrito en Rust centrado en la velocidad: revisa los 65 535 puertos de un host en segundos y luego pasa automáticamente los que encuentra abiertos a Nmap para el análisis en profundidad. Pensado para acortar la fase inicial de reconocimiento sin perder el detalle de Nmap.",
+        "legitimateUse": "Hacer un primer barrido rápido de puertos en tus propios hosts y encadenarlo con Nmap para el análisis detallado."
+      },
+      "en": {
+        "summary": "A port scanner written in Rust focused on speed: it checks all 65,535 ports of a host in seconds and then automatically hands the open ones to Nmap for in-depth analysis. Built to shorten the initial recon phase without losing Nmap's detail.",
+        "legitimateUse": "Run a fast first sweep of ports on your own hosts and chain it into Nmap for the detailed analysis."
+      }
+    }
+  },
+  {
+    "id": "masscan",
+    "category": "scanning",
+    "subcategory": "hosts-ports",
+    "name": "masscan",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "4",
+    "url": "https://github.com/robertdavidgraham/masscan",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "nmap"
+    ],
+    "tags": [
+      "port-scanning",
+      "mass-scan",
+      "asynchronous",
+      "network"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un escáner de puertos asíncrono capaz de barrer rangos de direcciones enormes a gran velocidad: usa su propia pila TCP/IP y envía los paquetes sin esperar respuesta, lo que le permite recorrer redes muy grandes en poco tiempo. A cambio da menos detalle que Nmap, así que suele usarse para localizar objetivos y luego analizarlos con otra herramienta.",
+        "legitimateUse": "Mapear rápidamente qué hay expuesto en un rango de IP propio o de tu organización antes de auditarlo en detalle."
+      },
+      "en": {
+        "summary": "An asynchronous port scanner able to sweep huge address ranges at high speed: it uses its own TCP/IP stack and fires packets without waiting for replies, which lets it cover very large networks quickly. In exchange it gives less detail than Nmap, so it is usually used to locate targets and then analyze them with another tool.",
+        "legitimateUse": "Quickly map what is exposed across an IP range you own or your organization's before auditing it in detail."
+      }
+    }
+  },
+  {
+    "id": "netcat",
+    "category": "scanning",
+    "subcategory": "hosts-ports",
+    "name": "Netcat",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": "4",
+    "url": "https://nmap.org/ncat/",
+    "verifiedAt": "2026-11-19",
+    "related": [
+      "nmap"
+    ],
+    "tags": [
+      "tcp",
+      "udp",
+      "networking",
+      "swiss-army-knife"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la 'navaja suiza' de las redes: abre, lee y escribe conexiones TCP y UDP a mano desde la terminal. Sirve para comprobar si un puerto responde, hablar directamente con un servicio, mover un archivo entre dos equipos o montar un pequeño servidor de pruebas. Hoy convive en varias versiones (la clásica, la de OpenBSD 'nc' y Ncat, del proyecto Nmap); el enlace apunta a Ncat, la más mantenida y con cifrado TLS.",
+        "legitimateUse": "Comprobar a mano si un servicio de un equipo tuyo está accesible y responde como esperas, sin montar herramientas pesadas."
+      },
+      "en": {
+        "summary": "The 'Swiss Army knife' of networking: it opens, reads and writes TCP and UDP connections by hand from the terminal. Use it to check whether a port responds, talk directly to a service, move a file between two machines or spin up a small test server. Today it lives in several versions (the classic one, OpenBSD's 'nc' and Ncat from the Nmap project); the link points to Ncat, the most maintained one and with TLS encryption.",
+        "legitimateUse": "Manually check whether a service on one of your own machines is reachable and responds as expected, without setting up heavy tooling."
+      }
+    }
   }
 ]
