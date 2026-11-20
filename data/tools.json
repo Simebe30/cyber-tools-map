@@ -4553,5 +4553,129 @@
         "legitimateUse": "Practice and test your defensive team's detection in a lab or authorized exercise, with a C2 that mimics real attacker techniques."
       }
     }
+  },
+  {
+    "id": "exploit-db",
+    "category": "exploitation",
+    "subcategory": "exploit-search",
+    "name": "Exploit-DB",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://www.exploit-db.com",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "searchsploit",
+      "metasploit"
+    ],
+    "tags": [
+      "exploits",
+      "database",
+      "cve",
+      "proof-of-concept"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el mayor archivo público de exploits y pruebas de concepto, mantenido por Offensive Security: una base de datos navegable donde cada entrada enlaza el código del exploit con la vulnerabilidad (CVE) que aprovecha, el software afectado y su autor. Es la referencia para comprobar si existe un exploit conocido de una vulnerabilidad concreta y estudiar cómo funciona.",
+        "legitimateUse": "Comprobar si una vulnerabilidad que afecta a tus sistemas tiene ya un exploit público, para medir el riesgo real y priorizar el parcheo."
+      },
+      "en": {
+        "summary": "The largest public archive of exploits and proofs of concept, maintained by Offensive Security: a browsable database where each entry links the exploit code to the vulnerability (CVE) it leverages, the affected software and its author. It is the reference for checking whether a known exploit exists for a specific vulnerability and studying how it works.",
+        "legitimateUse": "Check whether a vulnerability affecting your systems already has a public exploit, to gauge the real risk and prioritize patching."
+      }
+    }
+  },
+  {
+    "id": "searchsploit",
+    "category": "exploitation",
+    "subcategory": "exploit-search",
+    "name": "SearchSploit",
+    "license": "free",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://gitlab.com/exploit-database/exploitdb",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "exploit-db"
+    ],
+    "tags": [
+      "exploits",
+      "cli",
+      "offline",
+      "search"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la utilidad de línea de comandos que acompaña a Exploit-DB: permite buscar en una copia local de toda la base de datos de exploits por términos, CVE o software, sin necesidad de conexión. Es muy cómoda durante una auditoría para encontrar al instante si hay exploits conocidos para los servicios y versiones que has detectado.",
+        "legitimateUse": "Cruzar los servicios y versiones que has inventariado en tus propios sistemas con exploits conocidos, de forma rápida y sin conexión."
+      },
+      "en": {
+        "summary": "The command-line utility that comes with Exploit-DB: it lets you search a local copy of the whole exploit database by terms, CVE or software, with no connection needed. It is very handy during an audit to instantly find whether known exploits exist for the services and versions you have detected.",
+        "legitimateUse": "Cross-reference the services and versions you have inventoried on your own systems with known exploits, quickly and offline."
+      }
+    }
+  },
+  {
+    "id": "vulners",
+    "category": "exploitation",
+    "subcategory": "exploit-search",
+    "name": "Vulners",
+    "license": "freemium",
+    "github": false,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://vulners.com",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "exploit-db",
+      "openvas"
+    ],
+    "tags": [
+      "vulnerability-intelligence",
+      "search-engine",
+      "cve",
+      "exploits"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un buscador de inteligencia de vulnerabilidades: agrega en una sola base consultable datos de cientos de fuentes (CVE, avisos de fabricantes, exploits, parches, puntuaciones de riesgo) y permite buscarlos como en un motor web, por producto, versión o CVE. Enlaza cada vulnerabilidad con sus exploits y contexto, útil tanto para priorizar parches como para investigar.",
+        "legitimateUse": "Consultar el contexto completo de una vulnerabilidad que te afecta (gravedad, exploits disponibles, parches) para decidir qué corregir primero.",
+        "price": "La consulta en la web y un nivel gratuito de API (100 créditos al mes) son gratis; los planes de pago (Basic/Pro, desde unos 600 USD/mes) amplían el acceso a la API y a colecciones premium. Precios oficiales en vulners.com, consultado 20-11-2026."
+      },
+      "en": {
+        "summary": "A vulnerability intelligence search engine: it aggregates data from hundreds of sources (CVEs, vendor advisories, exploits, patches, risk scores) into a single queryable database and lets you search it like a web engine, by product, version or CVE. It links each vulnerability to its exploits and context, useful both for prioritizing patches and for research.",
+        "legitimateUse": "Look up the full context of a vulnerability affecting you (severity, available exploits, patches) to decide what to fix first.",
+        "price": "Web search and a free API tier (100 credits/month) are free; paid plans (Basic/Pro, from about US$600/month) expand API access and premium collections. Official prices at vulners.com, checked 2026-11-20."
+      }
+    }
   }
 ]
