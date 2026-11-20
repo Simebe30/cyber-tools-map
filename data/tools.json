@@ -4677,5 +4677,128 @@
         "price": "Web search and a free API tier (100 credits/month) are free; paid plans (Basic/Pro, from about US$600/month) expand API access and premium collections. Official prices at vulners.com, checked 2026-11-20."
       }
     }
+  },
+  {
+    "id": "revshells",
+    "category": "exploitation",
+    "subcategory": "shells",
+    "name": "Reverse Shell Generator (revshells.com)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://revshells.com",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "pwncat",
+      "penelope"
+    ],
+    "tags": [
+      "reverse-shell",
+      "generator",
+      "ctf",
+      "payloads"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un generador web de 'reverse shells': eliges el tipo de shell (bash, python, PowerShell…), tu IP y tu puerto, y te devuelve el comando listo para copiar, además del comando del 'listener' que debes poner a la escucha. Reúne en una sola página las variantes más habituales y bien conocidas, con codificación y un generador estilo msfvenom. Es una referencia muy usada en CTF y para aprender.",
+        "legitimateUse": "Preparar rápidamente el comando correcto para recuperar una shell en una máquina de tu propio laboratorio o en un ejercicio autorizado, sin memorizar cada variante."
+      },
+      "en": {
+        "summary": "A web generator of reverse shells: you pick the shell type (bash, python, PowerShell…), your IP and your port, and it returns the ready-to-copy command plus the listener command you need to set up. It gathers the most common, well-known variants on a single page, with encoding and an msfvenom-style generator. It is a widely used reference in CTFs and for learning.",
+        "legitimateUse": "Quickly prepare the right command to get a shell on a machine in your own lab or an authorized exercise, without memorizing every variant."
+      }
+    }
+  },
+  {
+    "id": "pwncat",
+    "category": "exploitation",
+    "subcategory": "shells",
+    "name": "pwncat",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/calebstewart/pwncat",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "revshells",
+      "penelope"
+    ],
+    "tags": [
+      "reverse-shell",
+      "post-exploitation",
+      "linux",
+      "pty"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma de post-explotación para objetivos Linux que mejora las shells básicas: cuando recibe una conexión de reverse o bind shell, la 'estabiliza' automáticamente (PTY completo, historial, edición de línea) y añade módulos para enumerar el sistema, buscar vías de escalada de privilegios y mantener persistencia. Convierte una shell precaria en un entorno de trabajo cómodo.",
+        "legitimateUse": "Trabajar de forma estable con una shell en una máquina de tu propio laboratorio o de un pentest autorizado, automatizando la enumeración posterior."
+      },
+      "en": {
+        "summary": "A post-exploitation platform for Linux targets that upgrades basic shells: when it receives a reverse or bind shell connection, it automatically stabilizes it (full PTY, history, line editing) and adds modules to enumerate the system, look for privilege-escalation paths and keep persistence. It turns a flimsy shell into a comfortable working environment.",
+        "legitimateUse": "Work stably with a shell on a machine in your own lab or an authorized pentest, automating the follow-up enumeration."
+      }
+    }
+  },
+  {
+    "id": "penelope",
+    "category": "exploitation",
+    "subcategory": "shells",
+    "name": "Penelope",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/brightio/penelope",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "pwncat",
+      "metasploit"
+    ],
+    "tags": [
+      "shell-handler",
+      "reverse-shell",
+      "pty",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un 'manejador de shells' moderno pensado para sustituir a netcat al explotar vulnerabilidades de ejecución de código: recibe la conexión y la mejora al instante (PTY automático), gestiona varias sesiones a la vez, registra toda la actividad para el informe y facilita la transferencia de archivos y módulos de ayuda. Está orientado a pruebas de seguridad autorizadas y a CTF.",
+        "legitimateUse": "Gestionar de forma ordenada las shells de un pentest autorizado o un CTF, con registro de sesión para documentar lo que hiciste."
+      },
+      "en": {
+        "summary": "A modern 'shell handler' meant to replace netcat when exploiting code-execution vulnerabilities: it receives the connection and upgrades it instantly (automatic PTY), manages several sessions at once, logs all activity for the report and makes file transfers and helper modules easy. It is aimed at authorized security testing and CTFs.",
+        "legitimateUse": "Manage the shells of an authorized pentest or CTF in an orderly way, with session logging to document what you did."
+      }
+    }
   }
 ]
