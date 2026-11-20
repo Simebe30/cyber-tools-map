@@ -4800,5 +4800,127 @@
         "legitimateUse": "Manage the shells of an authorized pentest or CTF in an orderly way, with session logging to document what you did."
       }
     }
+  },
+  {
+    "id": "linpeas",
+    "category": "post-exploitation",
+    "subcategory": "priv-linux",
+    "name": "LinPEAS (PEASS-ng)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/peass-ng/PEASS-ng",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "linux-exploit-suggester",
+      "gtfobins"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "enumeration",
+      "linux",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un script de enumeración que, una vez tienes acceso a un sistema Linux, Unix o macOS, busca automáticamente vías para escalar privilegios: permisos mal configurados, binarios SUID peligrosos, credenciales en ficheros, tareas programadas abusables y decenas de comprobaciones más. Se ejecuta en el equipo objetivo y resalta por colores los hallazgos según su probabilidad de ser explotables, de modo que ves de un vistazo por dónde empezar. Forma parte de la suite PEASS-ng, que incluye equivalentes para Windows (WinPEAS) y macOS.",
+        "legitimateUse": "Auditar la configuración de tus propias máquinas o de sistemas con permiso explícito para detectar y corregir rutas de escalada de privilegios antes de que las use un atacante."
+      },
+      "en": {
+        "summary": "An enumeration script that, once you have access to a Linux, Unix or macOS system, automatically looks for privilege escalation paths: misconfigured permissions, dangerous SUID binaries, credentials left in files, abusable scheduled tasks and dozens of other checks. It runs on the target host and colour-codes findings by how likely they are to be exploitable, so you can see at a glance where to start. It is part of the PEASS-ng suite, which includes Windows (WinPEAS) and macOS equivalents.",
+        "legitimateUse": "Audit the configuration of your own machines or of systems you have explicit permission to test, to find and fix privilege-escalation paths before an attacker uses them."
+      }
+    }
+  },
+  {
+    "id": "linux-exploit-suggester",
+    "category": "post-exploitation",
+    "subcategory": "priv-linux",
+    "name": "linux-exploit-suggester",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/The-Z-Labs/linux-exploit-suggester",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "linpeas",
+      "exploit-db"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "kernel",
+      "cve",
+      "linux"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un script que compara la versión y la configuración del kernel de una máquina Linux con una base de datos de exploits públicos conocidos y te indica a qué fallos de escalada de privilegios podría ser vulnerable ese sistema. En lugar de probar cada exploit a ciegas, usa heurísticas sobre la versión del kernel para ordenar los candidatos más probables, y puede además mostrar el estado de las protecciones de seguridad del equipo. Es un buen complemento a una enumeración general cuando sospechas de un kernel antiguo.",
+        "legitimateUse": "Comprobar en tus propios servidores o en sistemas con permiso explícito si el kernel está expuesto a exploits conocidos, para priorizar parches y actualizaciones."
+      },
+      "en": {
+        "summary": "A script that compares a Linux machine's kernel version and configuration against a database of known public exploits and tells you which privilege-escalation flaws that system might be vulnerable to. Instead of trying every exploit blindly, it uses heuristics on the kernel version to rank the most likely candidates, and it can also report the state of the host's security protections. It is a good complement to general enumeration when you suspect an old kernel.",
+        "legitimateUse": "Check on your own servers, or on systems you have explicit permission to test, whether the kernel is exposed to known exploits, to prioritise patching and updates."
+      }
+    }
+  },
+  {
+    "id": "gtfobins",
+    "category": "post-exploitation",
+    "subcategory": "priv-linux",
+    "name": "GTFOBins",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://gtfobins.github.io",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "linpeas"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "unix-binaries",
+      "reference",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un catálogo de referencia de binarios legítimos de Unix y Linux que, cuando están mal configurados (por ejemplo con permisos SUID o ejecutables vía sudo), pueden usarse para saltarse restricciones locales: leer ficheros protegidos, abrir una shell o escalar privilegios. Para cada binario documenta exactamente qué función abusar y con qué comando, clasificado por el tipo de restricción que permite esquivar. Se consulta como una web buscadora, y es la primera parada para entender por qué un binario aparentemente inofensivo es peligroso en un sistema mal endurecido.",
+        "legitimateUse": "Revisar qué binarios con permisos especiales existen en tus propios sistemas, o en sistemas con permiso explícito, para entender el riesgo y endurecer su configuración."
+      },
+      "en": {
+        "summary": "A reference catalogue of legitimate Unix and Linux binaries that, when misconfigured (for example with SUID permissions or runnable via sudo), can be used to bypass local restrictions: read protected files, open a shell or escalate privileges. For each binary it documents exactly which feature to abuse and with which command, classified by the kind of restriction it lets you get around. It is consulted as a searchable website, and it is the first stop for understanding why a seemingly harmless binary is dangerous on a poorly hardened system.",
+        "legitimateUse": "Review which binaries with special permissions exist on your own systems, or on systems you have explicit permission to test, to understand the risk and harden their configuration."
+      }
+    }
   }
 ]
