@@ -159,5 +159,19 @@
       "es": "Segundo factor de autenticación: un código o dispositivo adicional a la contraseña para entrar en una cuenta.",
       "en": "Second authentication factor: a code or device required in addition to the password to access an account."
     }
+  },
+  {
+    "term": "C2",
+    "i18n": {
+      "es": "Command and Control: la infraestructura con la que un atacante (o un ejercicio de red team) controla los equipos comprometidos.",
+      "en": "Command and Control: the infrastructure an attacker (or a red team exercise) uses to control compromised machines."
+    }
+  },
+  {
+    "term": "payload",
+    "i18n": {
+      "es": "Código que se ejecuta en el sistema objetivo tras explotar una vulnerabilidad (por ejemplo, abrir una shell).",
+      "en": "Code that runs on the target system after a vulnerability is exploited (for example, opening a shell)."
+    }
   }
 ]
