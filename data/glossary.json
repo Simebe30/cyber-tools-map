@@ -173,5 +173,19 @@
       "es": "Código que se ejecuta en el sistema objetivo tras explotar una vulnerabilidad (por ejemplo, abrir una shell).",
       "en": "Code that runs on the target system after a vulnerability is exploited (for example, opening a shell)."
     }
+  },
+  {
+    "term": "reverse shell",
+    "i18n": {
+      "es": "Técnica en la que el equipo objetivo inicia la conexión de vuelta hacia el atacante, dándole una línea de comandos; sortea cortafuegos que bloquean conexiones entrantes.",
+      "en": "A technique where the target machine initiates the connection back to the attacker, giving them a command line; it bypasses firewalls that block inbound connections."
+    }
+  },
+  {
+    "term": "PTY",
+    "i18n": {
+      "es": "Pseudoterminal: hace que una shell remota se comporte como una terminal completa (historial, edición, programas interactivos).",
+      "en": "Pseudo-terminal: makes a remote shell behave like a full terminal (history, editing, interactive programs)."
+    }
   }
 ]
