@@ -4429,5 +4429,129 @@
         "legitimateUse": "Learn to build your own security plan and choose protective measures based on what or whom you need to protect."
       }
     }
+  },
+  {
+    "id": "metasploit",
+    "category": "exploitation",
+    "subcategory": "frameworks",
+    "name": "Metasploit Framework",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/rapid7/metasploit-framework",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "sliver",
+      "havoc"
+    ],
+    "tags": [
+      "exploitation",
+      "framework",
+      "payloads",
+      "pentest"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el framework de explotación de referencia: reúne en un solo entorno miles de módulos (exploits, payloads, módulos auxiliares y de post-explotación) para probar de forma sistemática si un sistema es vulnerable y qué impacto tendría. Desde su consola seleccionas un objetivo, eliges un módulo y lanzas la prueba, lo que lo convierte en la herramienta estándar para aprender y ejecutar pentests. La edición Framework es de código abierto; Rapid7 ofrece aparte ediciones Pro de pago.",
+        "legitimateUse": "Verificar en tu propio laboratorio o en sistemas con permiso explícito si una vulnerabilidad es realmente explotable, para priorizar su corrección."
+      },
+      "en": {
+        "summary": "The reference exploitation framework: it brings together thousands of modules (exploits, payloads, auxiliary and post-exploitation modules) in a single environment to systematically test whether a system is vulnerable and what the impact would be. From its console you select a target, pick a module and launch the test, which makes it the standard tool for learning and running pentests. The Framework edition is open source; Rapid7 separately offers paid Pro editions.",
+        "legitimateUse": "Verify in your own lab or on systems with explicit permission whether a vulnerability is actually exploitable, to prioritize fixing it."
+      }
+    }
+  },
+  {
+    "id": "sliver",
+    "category": "exploitation",
+    "subcategory": "frameworks",
+    "name": "Sliver",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/BishopFox/sliver",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "metasploit",
+      "havoc"
+    ],
+    "tags": [
+      "c2",
+      "adversary-emulation",
+      "red-team",
+      "framework"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework de emulación de adversario (C2) de código abierto: genera 'implants' (agentes) que, una vez desplegados en un equipo de prueba, se comunican con un servidor central por canales cifrados (mTLS, HTTP(S), DNS, WireGuard) para simular las acciones de un atacante tras la intrusión. Sirve a los equipos de red team para reproducir ataques realistas y a los de blue team para practicar su detección.",
+        "legitimateUse": "Emular el comportamiento de un atacante en tu propio laboratorio o en un ejercicio autorizado, para medir qué detecta tu equipo de defensa."
+      },
+      "en": {
+        "summary": "An open-source adversary emulation (C2) framework: it generates 'implants' (agents) that, once deployed on a test machine, talk to a central server over encrypted channels (mTLS, HTTP(S), DNS, WireGuard) to simulate an attacker's post-intrusion actions. It helps red teams reproduce realistic attacks and blue teams practice detecting them.",
+        "legitimateUse": "Emulate an attacker's behavior in your own lab or an authorized exercise, to measure what your defensive team detects."
+      }
+    }
+  },
+  {
+    "id": "havoc",
+    "category": "exploitation",
+    "subcategory": "frameworks",
+    "name": "Havoc",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli",
+      "desktop"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/HavocFramework/Havoc",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "sliver",
+      "metasploit"
+    ],
+    "tags": [
+      "c2",
+      "post-exploitation",
+      "red-team",
+      "framework"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework de post-explotación y C2 moderno y de código abierto: desde una consola gráfica gestiona agentes ('Demon') desplegados en equipos de prueba, con técnicas pensadas para evadir detección (ofuscación en memoria, llamadas al sistema indirectas). Es una alternativa libre a herramientas comerciales como Cobalt Strike, muy usada en ejercicios de red team.",
+        "legitimateUse": "Practicar y poner a prueba la detección de tu equipo de defensa en un laboratorio o ejercicio autorizado, con un C2 que imita técnicas de atacantes reales."
+      },
+      "en": {
+        "summary": "A modern, open-source post-exploitation and C2 framework: from a graphical console it manages agents ('Demon') deployed on test machines, with techniques designed to evade detection (in-memory obfuscation, indirect syscalls). It is a free alternative to commercial tools like Cobalt Strike, widely used in red team exercises.",
+        "legitimateUse": "Practice and test your defensive team's detection in a lab or authorized exercise, with a C2 that mimics real attacker techniques."
+      }
+    }
   }
 ]
