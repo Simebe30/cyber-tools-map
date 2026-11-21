@@ -5290,5 +5290,127 @@
         "legitimateUse": "Route your traffic to an internal network through a server of your own or one you have explicit permission to use, for example for remote administration or testing, without setting up a full VPN."
       }
     }
+  },
+  {
+    "id": "bloodhound",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "BloodHound CE",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/SpecterOps/BloodHound",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "sharphound",
+      "ldapdomaindump"
+    ],
+    "tags": [
+      "active-directory",
+      "attack-paths",
+      "graph",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que representa un dominio de Active Directory (o de Entra ID) como un grafo y revela los caminos de ataque: cadenas de relaciones y permisos que, encadenadas, permitirían a un usuario sin privilegios acabar controlando el dominio. En lugar de revisar objetos uno a uno, cargas los datos recolectados y consultas visualmente quién puede llegar hasta dónde, lo que hace evidentes configuraciones peligrosas que pasarían desapercibidas. Se ejecuta como un servidor con interfaz web y se alimenta de recolectores como SharpHound.",
+        "legitimateUse": "Analizar el directorio de tu propia organización, o con permiso explícito, para encontrar y cortar caminos de ataque hacia cuentas privilegiadas antes de que los use un atacante."
+      },
+      "en": {
+        "summary": "A tool that represents an Active Directory (or Entra ID) domain as a graph and reveals attack paths: chains of relationships and permissions that, linked together, would let an unprivileged user end up controlling the domain. Instead of reviewing objects one by one, you load the collected data and visually query who can reach what, which makes dangerous configurations that would otherwise go unnoticed obvious. It runs as a server with a web interface and is fed by collectors such as SharpHound.",
+        "legitimateUse": "Analyse your own organisation's directory, or one you have explicit permission to test, to find and cut attack paths toward privileged accounts before an attacker uses them."
+      }
+    }
+  },
+  {
+    "id": "sharphound",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "SharpHound",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/SpecterOps/SharpHound",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bloodhound"
+    ],
+    "tags": [
+      "active-directory",
+      "collector",
+      "enumeration",
+      "ldap"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el recolector de datos oficial de BloodHound: ejecutado desde un equipo unido al dominio, interroga a los controladores de dominio mediante LDAP y las API de Windows para reunir usuarios, grupos, equipos, sesiones y permisos. El resultado es un conjunto de ficheros que después se importan en BloodHound para construir el grafo y analizar los caminos de ataque. Separar la recolección (SharpHound) del análisis (BloodHound) permite capturar los datos en el entorno real y estudiarlos tranquilamente fuera de él.",
+        "legitimateUse": "Recolectar la información del directorio de tu propia organización, o con permiso explícito, para auditarla después con BloodHound y reducir su superficie de ataque."
+      },
+      "en": {
+        "summary": "The official BloodHound data collector: run from a domain-joined machine, it queries domain controllers through LDAP and Windows APIs to gather users, groups, computers, sessions and permissions. The result is a set of files that are then imported into BloodHound to build the graph and analyse attack paths. Separating collection (SharpHound) from analysis (BloodHound) lets you capture the data in the real environment and study it calmly outside it.",
+        "legitimateUse": "Collect the directory information of your own organisation, or one you have explicit permission to test, to later audit it with BloodHound and reduce its attack surface."
+      }
+    }
+  },
+  {
+    "id": "ldapdomaindump",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "ldapdomaindump",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/dirkjanm/ldapdomaindump",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bloodhound",
+      "sharphound"
+    ],
+    "tags": [
+      "active-directory",
+      "ldap",
+      "enumeration",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta en Python que, con unas credenciales de dominio cualesquiera, vuelca a través de LDAP la información del Active Directory: usuarios, grupos, equipos, políticas y relaciones de confianza. Genera informes legibles en HTML, JSON y formato greppable, y puede convertir su salida para alimentar BloodHound. Es ligera y rápida como primera foto del dominio cuando quieres un inventario claro sin desplegar nada pesado.",
+        "legitimateUse": "Inventariar el directorio de tu propia organización, o con permiso explícito, para revisar cuentas, grupos y confianzas y detectar configuraciones de más."
+      },
+      "en": {
+        "summary": "A Python tool that, with any domain credentials, dumps Active Directory information over LDAP: users, groups, computers, policies and trust relationships. It produces readable reports in HTML, JSON and greppable format, and can convert its output to feed BloodHound. It is light and fast as a first snapshot of the domain when you want a clear inventory without deploying anything heavy.",
+        "legitimateUse": "Inventory your own organisation's directory, or one you have explicit permission to test, to review accounts, groups and trusts and spot over-permissive configurations."
+      }
+    }
   }
 ]

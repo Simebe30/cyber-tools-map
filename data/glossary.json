@@ -257,5 +257,19 @@
       "es": "Interfaz de red virtual a nivel de IP que permite encaminar tráfico de una red a través de un túnel.",
       "en": "Virtual network interface at the IP level that lets traffic be routed through a tunnel."
     }
+  },
+  {
+    "term": "LDAP",
+    "i18n": {
+      "es": "Protocolo para consultar y modificar servicios de directorio como Active Directory.",
+      "en": "Protocol for querying and modifying directory services such as Active Directory."
+    }
+  },
+  {
+    "term": "camino de ataque",
+    "i18n": {
+      "es": "Secuencia de relaciones y permisos que un atacante puede encadenar para pasar de un acceso limitado al control del dominio.",
+      "en": "Sequence of relationships and permissions an attacker can chain to go from limited access to domain control."
+    }
   }
 ]
