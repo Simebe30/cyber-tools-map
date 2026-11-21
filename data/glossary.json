@@ -341,5 +341,19 @@
       "es": "Bluetooth clásico (Basic Rate/Enhanced Data Rate), frente al de bajo consumo (LE).",
       "en": "Classic Bluetooth (Basic Rate/Enhanced Data Rate), as opposed to Low Energy (LE)."
     }
+  },
+  {
+    "term": "phishing",
+    "i18n": {
+      "es": "Ataque que suplanta a una entidad de confianza para engañar a una persona y robar datos o credenciales.",
+      "en": "Attack that impersonates a trusted entity to trick a person into giving up data or credentials."
+    }
+  },
+  {
+    "term": "spear phishing",
+    "i18n": {
+      "es": "Phishing dirigido y personalizado contra una persona u organización concreta.",
+      "en": "Targeted, personalised phishing aimed at a specific person or organisation."
+    }
   }
 ]
