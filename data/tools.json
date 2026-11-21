@@ -4922,5 +4922,129 @@
         "legitimateUse": "Review which binaries with special permissions exist on your own systems, or on systems you have explicit permission to test, to understand the risk and harden their configuration."
       }
     }
+  },
+  {
+    "id": "winpeas",
+    "category": "post-exploitation",
+    "subcategory": "priv-windows",
+    "name": "WinPEAS (PEASS-ng)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "privesccheck",
+      "powerup",
+      "linpeas"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "enumeration",
+      "windows",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el equivalente a LinPEAS para Windows: una vez tienes acceso a un equipo, enumera automáticamente posibles vías de escalada de privilegios como servicios mal configurados, permisos débiles en el registro o en ficheros, credenciales guardadas y tareas programadas abusables. Ejecutándose en la máquina objetivo, resalta por colores los hallazgos según su probabilidad de ser aprovechables, de modo que ves enseguida los puntos débiles. Forma parte de la suite PEASS-ng y se distribuye tanto como ejecutable precompilado como en versiones para distintos escenarios.",
+        "legitimateUse": "Auditar la configuración de tus propios equipos Windows o de sistemas con permiso explícito para detectar y corregir rutas de escalada antes de que las aproveche un atacante."
+      },
+      "en": {
+        "summary": "The Windows counterpart to LinPEAS: once you have access to a machine, it automatically enumerates possible privilege-escalation paths such as misconfigured services, weak registry or file permissions, stored credentials and abusable scheduled tasks. Running on the target host, it colour-codes findings by how likely they are to be exploitable, so weak points stand out immediately. It is part of the PEASS-ng suite and ships both as a precompiled executable and in variants for different scenarios.",
+        "legitimateUse": "Audit the configuration of your own Windows machines, or of systems you have explicit permission to test, to find and fix escalation paths before an attacker uses them."
+      }
+    }
+  },
+  {
+    "id": "privesccheck",
+    "category": "post-exploitation",
+    "subcategory": "priv-windows",
+    "name": "PrivescCheck",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/itm4n/PrivescCheck",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "winpeas",
+      "powerup"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "enumeration",
+      "windows",
+      "powershell"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un script de PowerShell que, en un equipo Windows comprometido, comprueba de forma ordenada las malas configuraciones más habituales que permiten escalar privilegios: servicios modificables, rutas de servicio sin comillas, permisos peligrosos, credenciales expuestas y opciones de instalación elevada. Genera un informe claro (texto, CSV o HTML) con el nivel de riesgo de cada hallazgo, y muchas comprobaciones funcionan incluso sin ser administrador. Es ligero y portable, lo que lo hace cómodo como primera pasada antes de profundizar.",
+        "legitimateUse": "Revisar en tus propios equipos Windows, o en sistemas con permiso explícito, qué configuraciones permitirían una escalada, para corregirlas y documentar el riesgo."
+      },
+      "en": {
+        "summary": "A PowerShell script that, on a compromised Windows host, methodically checks the most common misconfigurations that allow privilege escalation: modifiable services, unquoted service paths, dangerous permissions, exposed credentials and elevated-install options. It produces a clear report (text, CSV or HTML) with a risk level for each finding, and many checks work even without administrator rights. It is light and portable, which makes it handy as a first pass before digging deeper.",
+        "legitimateUse": "Review on your own Windows machines, or on systems you have explicit permission to test, which configurations would allow escalation, to fix them and document the risk."
+      }
+    }
+  },
+  {
+    "id": "powerup",
+    "category": "post-exploitation",
+    "subcategory": "priv-windows",
+    "name": "PowerUp (PowerSploit)",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "historical",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc",
+    "verifiedAt": "2026-11-20",
+    "related": [
+      "privesccheck",
+      "winpeas"
+    ],
+    "tags": [
+      "privilege-escalation",
+      "windows",
+      "powershell",
+      "services"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un módulo de PowerShell centrado en las vías de escalada de privilegios en Windows que dependen de malas configuraciones, con especial foco en servicios: rutas sin comillas, servicios y binarios modificables, permisos de registro débiles o la opción AlwaysInstallElevated. Con un solo comando ejecuta todas las comprobaciones y, además de detectarlas, incluye funciones para demostrar el abuso de cada fallo. Forma parte del conjunto PowerSploit; este repositorio está archivado y sin mantenimiento, pero sus comprobaciones siguen siendo una referencia clásica.",
+        "legitimateUse": "Comprobar en tus propios equipos Windows, o en sistemas con permiso explícito, si hay servicios y permisos mal configurados que permitan escalar, para endurecerlos."
+      },
+      "en": {
+        "summary": "A PowerShell module focused on Windows privilege-escalation paths that rely on misconfigurations, with a particular emphasis on services: unquoted paths, modifiable services and binaries, weak registry permissions or the AlwaysInstallElevated option. With a single command it runs all the checks and, beyond detecting them, includes functions to demonstrate the abuse of each flaw. It is part of the PowerSploit set; this repository is archived and unmaintained, but its checks remain a classic reference.",
+        "legitimateUse": "Check on your own Windows machines, or on systems you have explicit permission to test, whether there are misconfigured services and permissions that allow escalation, in order to harden them."
+      }
+    }
   }
 ]

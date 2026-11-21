@@ -208,5 +208,19 @@
       "es": "Núcleo del sistema operativo que gestiona el hardware y los procesos; un fallo en él puede permitir escalar privilegios.",
       "en": "Core of the operating system that manages hardware and processes; a flaw in it can allow privilege escalation."
     }
+  },
+  {
+    "term": "ruta de servicio sin comillas",
+    "i18n": {
+      "es": "Servicio de Windows cuyo ejecutable tiene una ruta con espacios y sin comillas, lo que puede permitir ejecutar un binario propio con privilegios del servicio.",
+      "en": "Windows service whose executable path contains spaces and no quotes, which can let an attacker run their own binary with the service's privileges."
+    }
+  },
+  {
+    "term": "AlwaysInstallElevated",
+    "i18n": {
+      "es": "Opción de Windows que, si está activada, instala paquetes MSI con privilegios de SYSTEM; es una vía directa de escalada.",
+      "en": "Windows setting that, when enabled, installs MSI packages with SYSTEM privileges; a direct escalation path."
+    }
   }
 ]
