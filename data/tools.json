@@ -5412,5 +5412,128 @@
         "legitimateUse": "Inventory your own organisation's directory, or one you have explicit permission to test, to review accounts, groups and trusts and spot over-permissive configurations."
       }
     }
+  },
+  {
+    "id": "rubeus",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Rubeus",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/GhostPack/Rubeus",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "impacket",
+      "kerbrute"
+    ],
+    "tags": [
+      "active-directory",
+      "kerberos",
+      "tickets",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un conjunto de herramientas en C# para interactuar directamente con Kerberos, el protocolo de autenticación de Active Directory, y abusar de sus debilidades. Permite solicitar, exportar e inyectar tickets, y automatiza ataques clásicos del dominio como el Kerberoasting (pedir tickets de servicio para intentar descifrar luego sus contraseñas) o el AS-REP roasting. Es una de las piezas de referencia en la fase de ataque a dominios Windows, y por eso conviene conocerla también para defenderse de ella.",
+        "legitimateUse": "Comprobar en el dominio de tu propia organización, o con permiso explícito, si existen cuentas de servicio débiles o mal configuradas frente a Kerberos, para endurecerlas."
+      },
+      "en": {
+        "summary": "A C# toolset for interacting directly with Kerberos, the Active Directory authentication protocol, and abusing its weaknesses. It can request, export and inject tickets, and it automates classic domain attacks such as Kerberoasting (requesting service tickets to then try to crack their passwords) or AS-REP roasting. It is one of the reference pieces in the Windows-domain attack phase, which is exactly why it is worth knowing in order to defend against it.",
+        "legitimateUse": "Check in your own organisation's domain, or one you have explicit permission to test, whether there are weak or misconfigured service accounts exposed to Kerberos attacks, in order to harden them."
+      }
+    }
+  },
+  {
+    "id": "impacket",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Impacket",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/fortra/impacket",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "rubeus",
+      "kerbrute"
+    ],
+    "tags": [
+      "active-directory",
+      "network-protocols",
+      "kerberos",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una colección de clases de Python para trabajar a bajo nivel con protocolos de red de Windows como SMB, MSRPC o Kerberos, acompañada de muchos scripts de ejemplo listos para usar. Esos scripts cubren tareas muy habituales en auditorías de dominio: ejecutar comandos en remoto, extraer hashes de la base de datos de cuentas, pedir tickets de servicio para Kerberoasting o volcar secretos. Al estar en Python y ser multiplataforma, es la navaja suiza que aparece una y otra vez en el trabajo con Active Directory.",
+        "legitimateUse": "Probar contra sistemas de tu propia organización, o con permiso explícito, cómo se pueden abusar protocolos como SMB o Kerberos, para verificar configuraciones y detectar exposiciones."
+      },
+      "en": {
+        "summary": "A collection of Python classes for working at a low level with Windows network protocols such as SMB, MSRPC or Kerberos, together with many ready-to-use example scripts. Those scripts cover very common domain-assessment tasks: running commands remotely, extracting hashes from the accounts database, requesting service tickets for Kerberoasting or dumping secrets. Being in Python and cross-platform, it is the swiss-army knife that shows up again and again in Active Directory work.",
+        "legitimateUse": "Test against systems in your own organisation, or ones you have explicit permission to test, how protocols such as SMB or Kerberos can be abused, to verify configurations and spot exposures."
+      }
+    }
+  },
+  {
+    "id": "kerbrute",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Kerbrute",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/ropnop/kerbrute",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "rubeus",
+      "impacket"
+    ],
+    "tags": [
+      "active-directory",
+      "kerberos",
+      "user-enumeration",
+      "password-spraying"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta rápida que abusa de la preautenticación de Kerberos para dos cosas: comprobar qué nombres de usuario existen realmente en un dominio y probar contraseñas contra muchas cuentas a la vez (password spraying) sin bloquearlas tan fácilmente como por otros medios. Al validar usuarios antes de atacar, evita ruido innecesario y acelera el reconocimiento del dominio. Está escrita en Go y trae binarios para Windows, Linux y macOS.",
+        "legitimateUse": "Verificar en el dominio de tu propia organización, o con permiso explícito, qué cuentas existen y si resisten contraseñas débiles, para mejorar políticas y detección."
+      },
+      "en": {
+        "summary": "A fast tool that abuses Kerberos pre-authentication for two things: checking which usernames actually exist in a domain and trying passwords against many accounts at once (password spraying) without locking them out as easily as by other means. By validating users before attacking, it avoids unnecessary noise and speeds up domain reconnaissance. It is written in Go and ships binaries for Windows, Linux and macOS.",
+        "legitimateUse": "Verify in your own organisation's domain, or one you have explicit permission to test, which accounts exist and whether they resist weak passwords, to improve policy and detection."
+      }
+    }
   }
 ]
