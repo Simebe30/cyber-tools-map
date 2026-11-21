@@ -187,5 +187,54 @@
       "es": "Pseudoterminal: hace que una shell remota se comporte como una terminal completa (historial, edición, programas interactivos).",
       "en": "Pseudo-terminal: makes a remote shell behave like a full terminal (history, editing, interactive programs)."
     }
+  },
+  {
+    "term": "escalada de privilegios",
+    "i18n": {
+      "es": "Técnica para pasar de un acceso limitado a permisos de administrador/root en un sistema.",
+      "en": "Technique to go from limited access to administrator/root permissions on a system."
+    }
+  },
+  {
+    "term": "SUID",
+    "i18n": {
+      "es": "Permiso de Unix que hace que un ejecutable corra con los privilegios de su propietario (a menudo root), no los del usuario que lo lanza.",
+      "en": "Unix permission that makes an executable run with its owner's privileges (often root), not those of the user launching it."
+    }
+  },
+  {
+    "term": "kernel",
+    "i18n": {
+      "es": "Núcleo del sistema operativo que gestiona el hardware y los procesos; un fallo en él puede permitir escalar privilegios.",
+      "en": "Core of the operating system that manages hardware and processes; a flaw in it can allow privilege escalation."
+    }
+  },
+  {
+    "term": "ruta de servicio sin comillas",
+    "i18n": {
+      "es": "Servicio de Windows cuyo ejecutable tiene una ruta con espacios y sin comillas, lo que puede permitir ejecutar un binario propio con privilegios del servicio.",
+      "en": "Windows service whose executable path contains spaces and no quotes, which can let an attacker run their own binary with the service's privileges."
+    }
+  },
+  {
+    "term": "AlwaysInstallElevated",
+    "i18n": {
+      "es": "Opción de Windows que, si está activada, instala paquetes MSI con privilegios de SYSTEM; es una vía directa de escalada.",
+      "en": "Windows setting that, when enabled, installs MSI packages with SYSTEM privileges; a direct escalation path."
+    }
+  },
+  {
+    "term": "LSASS",
+    "i18n": {
+      "es": "Proceso de Windows que gestiona la autenticación y guarda en memoria credenciales y tickets; objetivo habitual para robarlas.",
+      "en": "Windows process that handles authentication and holds credentials and tickets in memory; a common target for stealing them."
+    }
+  },
+  {
+    "term": "pass-the-hash",
+    "i18n": {
+      "es": "Técnica que usa el hash de una contraseña para autenticarse sin conocer la contraseña en claro.",
+      "en": "Technique that uses a password's hash to authenticate without knowing the cleartext password."
+    }
   }
 ]
