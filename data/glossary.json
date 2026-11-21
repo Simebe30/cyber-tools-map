@@ -236,5 +236,26 @@
       "es": "Técnica que usa el hash de una contraseña para autenticarse sin conocer la contraseña en claro.",
       "en": "Technique that uses a password's hash to authenticate without knowing the cleartext password."
     }
+  },
+  {
+    "term": "pivoting",
+    "i18n": {
+      "es": "Usar una máquina ya comprometida como punto de salto para alcanzar otras redes o equipos internos no accesibles directamente.",
+      "en": "Using an already-compromised machine as a jump point to reach other networks or internal hosts not directly accessible."
+    }
+  },
+  {
+    "term": "SOCKS",
+    "i18n": {
+      "es": "Protocolo de proxy que reenvía conexiones de red arbitrarias a través de un intermediario.",
+      "en": "Proxy protocol that forwards arbitrary network connections through an intermediary."
+    }
+  },
+  {
+    "term": "TUN",
+    "i18n": {
+      "es": "Interfaz de red virtual a nivel de IP que permite encaminar tráfico de una red a través de un túnel.",
+      "en": "Virtual network interface at the IP level that lets traffic be routed through a tunnel."
+    }
   }
 ]

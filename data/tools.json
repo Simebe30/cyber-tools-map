@@ -5167,5 +5167,128 @@
         "legitimateUse": "Analyse memory dumps in your own lab, or with explicit permission, to understand which credentials would be exposed, without running tools on the affected system."
       }
     }
+  },
+  {
+    "id": "chisel",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "Chisel",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/jpillora/chisel",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "ligolo-ng",
+      "sshuttle"
+    ],
+    "tags": [
+      "pivoting",
+      "tunneling",
+      "socks",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un túnel TCP/UDP rápido que viaja sobre HTTP y va cifrado mediante SSH, pensado para alcanzar servicios de una red interna a los que no llegas de forma directa. Un único ejecutable hace de servidor o de cliente, y permite reenvío de puertos y un proxy SOCKS, lo que lo convierte en una pieza habitual para pivotar tras comprometer una máquina. Al camuflarse como tráfico HTTP, suele funcionar incluso cuando solo ese protocolo está permitido de salida.",
+        "legitimateUse": "Crear túneles de acceso a servicios internos en tu propia red o en entornos con permiso explícito, por ejemplo durante una auditoría, para probar la segmentación y los controles de salida."
+      },
+      "en": {
+        "summary": "A fast TCP/UDP tunnel that travels over HTTP and is encrypted via SSH, meant to reach services on an internal network you cannot access directly. A single executable acts as either server or client, and it supports port forwarding and a SOCKS proxy, which makes it a common building block for pivoting after compromising a machine. Because it blends in as HTTP traffic, it often works even when only that protocol is allowed outbound.",
+        "legitimateUse": "Create access tunnels to internal services on your own network or in environments with explicit permission, for example during an assessment, to test segmentation and egress controls."
+      }
+    }
+  },
+  {
+    "id": "ligolo-ng",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "Ligolo-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/nicocha30/ligolo-ng",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "chisel",
+      "sshuttle"
+    ],
+    "tags": [
+      "pivoting",
+      "tunneling",
+      "tun-interface",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de pivotaje que, en lugar de montar un proxy SOCKS, crea en tu máquina una interfaz de red virtual (TUN) por la que accedes a la red interna remota casi como si tuvieras una VPN hacia ella. Eso simplifica mucho el uso: una vez levantado el túnel, añades una ruta y tus herramientas habituales (escáneres, navegadores) trabajan contra la red remota sin configuración especial. Funciona en varios sistemas, no requiere privilegios altos en el equipo comprometido y en versiones recientes incorpora interfaz web.",
+        "legitimateUse": "Acceder de forma ordenada a segmentos internos durante una auditoría en tu propia red o con permiso explícito, para evaluar hasta dónde permite moverse una posición comprometida."
+      },
+      "en": {
+        "summary": "A pivoting tool that, instead of setting up a SOCKS proxy, creates a virtual network interface (TUN) on your machine through which you reach the remote internal network almost as if you had a VPN into it. That greatly simplifies use: once the tunnel is up, you add a route and your usual tools (scanners, browsers) work against the remote network with no special configuration. It runs on several systems, does not require high privileges on the compromised host, and recent versions add a web interface.",
+        "legitimateUse": "Reach internal segments in an orderly way during an assessment on your own network or with explicit permission, to evaluate how far a compromised position allows movement."
+      }
+    }
+  },
+  {
+    "id": "sshuttle",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "sshuttle",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/sshuttle/sshuttle",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "chisel",
+      "ligolo-ng"
+    ],
+    "tags": [
+      "pivoting",
+      "ssh",
+      "vpn",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un proxy transparente que funciona como una VPN sencilla aprovechando una conexión SSH que ya tengas hacia un servidor: reenvía por ese túnel el tráfico hacia las redes que indiques, incluidas las consultas DNS. No necesita privilegios de administrador en el servidor remoto ni software especial allí, solo acceso SSH y Python, lo que lo hace muy cómodo para alcanzar redes internas detrás de una máquina accesible. Está pensado para Linux y macOS.",
+        "legitimateUse": "Encaminar tu tráfico hacia una red interna a través de un servidor propio o con permiso explícito, por ejemplo para administración remota o pruebas, sin montar una VPN completa."
+      },
+      "en": {
+        "summary": "A transparent proxy that works like a simple VPN by leveraging an SSH connection you already have to a server: it forwards traffic to the networks you specify through that tunnel, including DNS queries. It needs no administrator privileges on the remote server and no special software there, just SSH access and Python, which makes it very handy for reaching internal networks behind an accessible machine. It is aimed at Linux and macOS.",
+        "legitimateUse": "Route your traffic to an internal network through a server of your own or one you have explicit permission to use, for example for remote administration or testing, without setting up a full VPN."
+      }
+    }
   }
 ]
