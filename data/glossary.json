@@ -355,5 +355,26 @@
       "es": "Phishing dirigido y personalizado contra una persona u organización concreta.",
       "en": "Targeted, personalised phishing aimed at a specific person or organisation."
     }
+  },
+  {
+    "term": "AITM",
+    "i18n": {
+      "es": "Adversary-in-the-middle: ataque que se interpone entre la víctima y el servicio real para capturar credenciales y sesión.",
+      "en": "Adversary-in-the-middle: attack that sits between the victim and the real service to capture credentials and session."
+    }
+  },
+  {
+    "term": "cookie de sesión",
+    "i18n": {
+      "es": "Token que un servicio entrega tras iniciar sesión; si se roba, permite suplantar al usuario sin la contraseña ni el 2FA.",
+      "en": "Token a service issues after login; if stolen, it lets an attacker impersonate the user without the password or 2FA."
+    }
+  },
+  {
+    "term": "FIDO2",
+    "i18n": {
+      "es": "Estándar de autenticación resistente al phishing basado en claves criptográficas (passkeys) ligadas al dominio.",
+      "en": "Phishing-resistant authentication standard based on cryptographic keys (passkeys) bound to the domain."
+    }
   }
 ]
