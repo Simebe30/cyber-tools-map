@@ -5656,5 +5656,128 @@
         "legitimateUse": "Inventory and monitor the wireless networks of your own environment, or one you have explicit permission to test, to detect rogue access points and suspicious activity."
       }
     }
+  },
+  {
+    "id": "bluing",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "Bluing",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/fO-000/bluing",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "btlejack",
+      "sniffle"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "recon",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de recogida de información sobre Bluetooth (antes llamada bluescan) que ayuda a entender y enumerar dispositivos tanto clásicos (BR/EDR) como de bajo consumo (LE). Permite inventariar dispositivos cercanos y consultar sus características, servicios SDP/GATT y funciones del protocolo, dando una foto clara de su estructura interna. Funciona sobre la pila BlueZ de Linux y algunas funciones avanzadas requieren hardware adicional. Es un buen punto de partida para aprender cómo se expone un dispositivo Bluetooth.",
+        "legitimateUse": "Enumerar tus propios dispositivos Bluetooth, o con permiso explícito, para ver qué información y servicios exponen y reducir lo innecesario."
+      },
+      "en": {
+        "summary": "A Bluetooth intelligence-gathering tool (formerly called bluescan) that helps understand and enumerate both classic (BR/EDR) and low-energy (LE) devices. It can inventory nearby devices and query their characteristics, SDP/GATT services and protocol features, giving a clear picture of their internal structure. It runs on Linux's BlueZ stack and some advanced features require additional hardware. It is a good starting point for learning how a Bluetooth device exposes itself.",
+        "legitimateUse": "Enumerate your own Bluetooth devices, or ones you have explicit permission to test, to see what information and services they expose and trim what is unnecessary."
+      }
+    }
+  },
+  {
+    "id": "btlejack",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "btlejack",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/virtualabs/btlejack",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bluing",
+      "sniffle"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "sniffing",
+      "research"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una navaja suiza para Bluetooth de bajo consumo (BLE) orientada a estudiar conexiones: puede capturar el tráfico de una conexión existente o nueva, exportarlo a formatos PCAP para analizarlo, y en escenarios de laboratorio incluso interferir o tomar el control de una conexión. Detecta de forma automática el algoritmo de salto de canal, lo que simplifica mucho la captura. Depende de una o varias placas BBC micro:bit con un firmware propio, así que requiere ese hardware para funcionar.",
+        "legitimateUse": "Analizar en laboratorio o con permiso explícito el tráfico BLE de tus propios dispositivos para entender su seguridad y detectar comunicaciones sin cifrar."
+      },
+      "en": {
+        "summary": "A swiss-army knife for Bluetooth Low Energy (BLE) aimed at studying connections: it can capture the traffic of an existing or new connection, export it to PCAP formats for analysis and, in lab scenarios, even jam or take over a connection. It automatically detects the channel-hopping algorithm, which greatly simplifies capture. It relies on one or more BBC micro:bit boards running dedicated firmware, so it requires that hardware to work.",
+        "legitimateUse": "Analyse, in a lab or with explicit permission, the BLE traffic of your own devices to understand their security and detect unencrypted communications."
+      }
+    }
+  },
+  {
+    "id": "sniffle",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "Sniffle",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/nccgroup/Sniffle",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "btlejack",
+      "bluing"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "sniffer",
+      "research"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sniffer de Bluetooth de bajo consumo (BLE 5 y 4.x) formado por un firmware para ciertos chips de Texas Instruments y una herramienta de recepción en el PC. Captura anuncios y conexiones BLE con buena fiabilidad y soporta funciones modernas del estándar, y su salida se puede volcar a Wireshark para analizarla en detalle. Al basarse en un firmware concreto, necesita el hardware compatible (dongles con chips CC1352/CC26x2). Es una referencia para desarrollo, depuración y análisis de seguridad de dispositivos BLE.",
+        "legitimateUse": "Capturar y analizar en laboratorio o con permiso explícito el tráfico BLE de tus propios dispositivos para depurar y auditar su seguridad."
+      },
+      "en": {
+        "summary": "A Bluetooth Low Energy sniffer (BLE 5 and 4.x) made up of firmware for certain Texas Instruments chips and a receiver tool on the PC. It captures BLE advertisements and connections reliably and supports modern features of the standard, and its output can be fed into Wireshark for detailed analysis. Because it relies on specific firmware, it needs compatible hardware (dongles with CC1352/CC26x2 chips). It is a reference for development, debugging and security analysis of BLE devices.",
+        "legitimateUse": "Capture and analyse, in a lab or with explicit permission, the BLE traffic of your own devices to debug and audit their security."
+      }
+    }
   }
 ]

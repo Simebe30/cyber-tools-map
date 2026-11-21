@@ -320,5 +320,26 @@
       "es": "Mecanismo de configuración rápida de Wi-Fi históricamente vulnerable a ataques de PIN.",
       "en": "Wi-Fi quick-setup mechanism historically vulnerable to PIN attacks."
     }
+  },
+  {
+    "term": "BLE",
+    "i18n": {
+      "es": "Bluetooth Low Energy: variante de Bluetooth de bajo consumo usada por wearables, sensores y dispositivos IoT.",
+      "en": "Bluetooth Low Energy: the low-power variant of Bluetooth used by wearables, sensors and IoT devices."
+    }
+  },
+  {
+    "term": "GATT",
+    "i18n": {
+      "es": "Perfil que define cómo un dispositivo BLE expone sus servicios y características de datos.",
+      "en": "Profile defining how a BLE device exposes its services and data characteristics."
+    }
+  },
+  {
+    "term": "BR/EDR",
+    "i18n": {
+      "es": "Bluetooth clásico (Basic Rate/Enhanced Data Rate), frente al de bajo consumo (LE).",
+      "en": "Classic Bluetooth (Basic Rate/Enhanced Data Rate), as opposed to Low Energy (LE)."
+    }
   }
 ]
