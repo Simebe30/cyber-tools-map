@@ -271,5 +271,33 @@
       "es": "Secuencia de relaciones y permisos que un atacante puede encadenar para pasar de un acceso limitado al control del dominio.",
       "en": "Sequence of relationships and permissions an attacker can chain to go from limited access to domain control."
     }
+  },
+  {
+    "term": "Kerberos",
+    "i18n": {
+      "es": "Protocolo de autenticación basado en tickets usado por Active Directory.",
+      "en": "Ticket-based authentication protocol used by Active Directory."
+    }
+  },
+  {
+    "term": "Kerberoasting",
+    "i18n": {
+      "es": "Ataque que pide tickets de servicio Kerberos para descifrar offline la contraseña de cuentas de servicio.",
+      "en": "Attack that requests Kerberos service tickets to crack service-account passwords offline."
+    }
+  },
+  {
+    "term": "AS-REP roasting",
+    "i18n": {
+      "es": "Ataque contra cuentas sin preautenticación Kerberos para obtener material cifrado y descifrar su contraseña offline.",
+      "en": "Attack against accounts without Kerberos pre-authentication to obtain encrypted material and crack their password offline."
+    }
+  },
+  {
+    "term": "password spraying",
+    "i18n": {
+      "es": "Probar una o pocas contraseñas comunes contra muchas cuentas para evitar bloqueos.",
+      "en": "Trying one or a few common passwords against many accounts to avoid lockouts."
+    }
   }
 ]
