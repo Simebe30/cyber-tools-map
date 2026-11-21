@@ -5167,5 +5167,617 @@
         "legitimateUse": "Analyse memory dumps in your own lab, or with explicit permission, to understand which credentials would be exposed, without running tools on the affected system."
       }
     }
+  },
+  {
+    "id": "chisel",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "Chisel",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/jpillora/chisel",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "ligolo-ng",
+      "sshuttle"
+    ],
+    "tags": [
+      "pivoting",
+      "tunneling",
+      "socks",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un túnel TCP/UDP rápido que viaja sobre HTTP y va cifrado mediante SSH, pensado para alcanzar servicios de una red interna a los que no llegas de forma directa. Un único ejecutable hace de servidor o de cliente, y permite reenvío de puertos y un proxy SOCKS, lo que lo convierte en una pieza habitual para pivotar tras comprometer una máquina. Al camuflarse como tráfico HTTP, suele funcionar incluso cuando solo ese protocolo está permitido de salida.",
+        "legitimateUse": "Crear túneles de acceso a servicios internos en tu propia red o en entornos con permiso explícito, por ejemplo durante una auditoría, para probar la segmentación y los controles de salida."
+      },
+      "en": {
+        "summary": "A fast TCP/UDP tunnel that travels over HTTP and is encrypted via SSH, meant to reach services on an internal network you cannot access directly. A single executable acts as either server or client, and it supports port forwarding and a SOCKS proxy, which makes it a common building block for pivoting after compromising a machine. Because it blends in as HTTP traffic, it often works even when only that protocol is allowed outbound.",
+        "legitimateUse": "Create access tunnels to internal services on your own network or in environments with explicit permission, for example during an assessment, to test segmentation and egress controls."
+      }
+    }
+  },
+  {
+    "id": "ligolo-ng",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "Ligolo-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/nicocha30/ligolo-ng",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "chisel",
+      "sshuttle"
+    ],
+    "tags": [
+      "pivoting",
+      "tunneling",
+      "tun-interface",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de pivotaje que, en lugar de montar un proxy SOCKS, crea en tu máquina una interfaz de red virtual (TUN) por la que accedes a la red interna remota casi como si tuvieras una VPN hacia ella. Eso simplifica mucho el uso: una vez levantado el túnel, añades una ruta y tus herramientas habituales (escáneres, navegadores) trabajan contra la red remota sin configuración especial. Funciona en varios sistemas, no requiere privilegios altos en el equipo comprometido y en versiones recientes incorpora interfaz web.",
+        "legitimateUse": "Acceder de forma ordenada a segmentos internos durante una auditoría en tu propia red o con permiso explícito, para evaluar hasta dónde permite moverse una posición comprometida."
+      },
+      "en": {
+        "summary": "A pivoting tool that, instead of setting up a SOCKS proxy, creates a virtual network interface (TUN) on your machine through which you reach the remote internal network almost as if you had a VPN into it. That greatly simplifies use: once the tunnel is up, you add a route and your usual tools (scanners, browsers) work against the remote network with no special configuration. It runs on several systems, does not require high privileges on the compromised host, and recent versions add a web interface.",
+        "legitimateUse": "Reach internal segments in an orderly way during an assessment on your own network or with explicit permission, to evaluate how far a compromised position allows movement."
+      }
+    }
+  },
+  {
+    "id": "sshuttle",
+    "category": "post-exploitation",
+    "subcategory": "pivoting",
+    "name": "sshuttle",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/sshuttle/sshuttle",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "chisel",
+      "ligolo-ng"
+    ],
+    "tags": [
+      "pivoting",
+      "ssh",
+      "vpn",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un proxy transparente que funciona como una VPN sencilla aprovechando una conexión SSH que ya tengas hacia un servidor: reenvía por ese túnel el tráfico hacia las redes que indiques, incluidas las consultas DNS. No necesita privilegios de administrador en el servidor remoto ni software especial allí, solo acceso SSH y Python, lo que lo hace muy cómodo para alcanzar redes internas detrás de una máquina accesible. Está pensado para Linux y macOS.",
+        "legitimateUse": "Encaminar tu tráfico hacia una red interna a través de un servidor propio o con permiso explícito, por ejemplo para administración remota o pruebas, sin montar una VPN completa."
+      },
+      "en": {
+        "summary": "A transparent proxy that works like a simple VPN by leveraging an SSH connection you already have to a server: it forwards traffic to the networks you specify through that tunnel, including DNS queries. It needs no administrator privileges on the remote server and no special software there, just SSH access and Python, which makes it very handy for reaching internal networks behind an accessible machine. It is aimed at Linux and macOS.",
+        "legitimateUse": "Route your traffic to an internal network through a server of your own or one you have explicit permission to use, for example for remote administration or testing, without setting up a full VPN."
+      }
+    }
+  },
+  {
+    "id": "bloodhound",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "BloodHound CE",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/SpecterOps/BloodHound",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "sharphound",
+      "ldapdomaindump"
+    ],
+    "tags": [
+      "active-directory",
+      "attack-paths",
+      "graph",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que representa un dominio de Active Directory (o de Entra ID) como un grafo y revela los caminos de ataque: cadenas de relaciones y permisos que, encadenadas, permitirían a un usuario sin privilegios acabar controlando el dominio. En lugar de revisar objetos uno a uno, cargas los datos recolectados y consultas visualmente quién puede llegar hasta dónde, lo que hace evidentes configuraciones peligrosas que pasarían desapercibidas. Se ejecuta como un servidor con interfaz web y se alimenta de recolectores como SharpHound.",
+        "legitimateUse": "Analizar el directorio de tu propia organización, o con permiso explícito, para encontrar y cortar caminos de ataque hacia cuentas privilegiadas antes de que los use un atacante."
+      },
+      "en": {
+        "summary": "A tool that represents an Active Directory (or Entra ID) domain as a graph and reveals attack paths: chains of relationships and permissions that, linked together, would let an unprivileged user end up controlling the domain. Instead of reviewing objects one by one, you load the collected data and visually query who can reach what, which makes dangerous configurations that would otherwise go unnoticed obvious. It runs as a server with a web interface and is fed by collectors such as SharpHound.",
+        "legitimateUse": "Analyse your own organisation's directory, or one you have explicit permission to test, to find and cut attack paths toward privileged accounts before an attacker uses them."
+      }
+    }
+  },
+  {
+    "id": "sharphound",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "SharpHound",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/SpecterOps/SharpHound",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bloodhound"
+    ],
+    "tags": [
+      "active-directory",
+      "collector",
+      "enumeration",
+      "ldap"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es el recolector de datos oficial de BloodHound: ejecutado desde un equipo unido al dominio, interroga a los controladores de dominio mediante LDAP y las API de Windows para reunir usuarios, grupos, equipos, sesiones y permisos. El resultado es un conjunto de ficheros que después se importan en BloodHound para construir el grafo y analizar los caminos de ataque. Separar la recolección (SharpHound) del análisis (BloodHound) permite capturar los datos en el entorno real y estudiarlos tranquilamente fuera de él.",
+        "legitimateUse": "Recolectar la información del directorio de tu propia organización, o con permiso explícito, para auditarla después con BloodHound y reducir su superficie de ataque."
+      },
+      "en": {
+        "summary": "The official BloodHound data collector: run from a domain-joined machine, it queries domain controllers through LDAP and Windows APIs to gather users, groups, computers, sessions and permissions. The result is a set of files that are then imported into BloodHound to build the graph and analyse attack paths. Separating collection (SharpHound) from analysis (BloodHound) lets you capture the data in the real environment and study it calmly outside it.",
+        "legitimateUse": "Collect the directory information of your own organisation, or one you have explicit permission to test, to later audit it with BloodHound and reduce its attack surface."
+      }
+    }
+  },
+  {
+    "id": "ldapdomaindump",
+    "category": "active-directory",
+    "subcategory": "ad-enum",
+    "name": "ldapdomaindump",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/dirkjanm/ldapdomaindump",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bloodhound",
+      "sharphound"
+    ],
+    "tags": [
+      "active-directory",
+      "ldap",
+      "enumeration",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta en Python que, con unas credenciales de dominio cualesquiera, vuelca a través de LDAP la información del Active Directory: usuarios, grupos, equipos, políticas y relaciones de confianza. Genera informes legibles en HTML, JSON y formato greppable, y puede convertir su salida para alimentar BloodHound. Es ligera y rápida como primera foto del dominio cuando quieres un inventario claro sin desplegar nada pesado.",
+        "legitimateUse": "Inventariar el directorio de tu propia organización, o con permiso explícito, para revisar cuentas, grupos y confianzas y detectar configuraciones de más."
+      },
+      "en": {
+        "summary": "A Python tool that, with any domain credentials, dumps Active Directory information over LDAP: users, groups, computers, policies and trust relationships. It produces readable reports in HTML, JSON and greppable format, and can convert its output to feed BloodHound. It is light and fast as a first snapshot of the domain when you want a clear inventory without deploying anything heavy.",
+        "legitimateUse": "Inventory your own organisation's directory, or one you have explicit permission to test, to review accounts, groups and trusts and spot over-permissive configurations."
+      }
+    }
+  },
+  {
+    "id": "rubeus",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Rubeus",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/GhostPack/Rubeus",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "impacket",
+      "kerbrute"
+    ],
+    "tags": [
+      "active-directory",
+      "kerberos",
+      "tickets",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un conjunto de herramientas en C# para interactuar directamente con Kerberos, el protocolo de autenticación de Active Directory, y abusar de sus debilidades. Permite solicitar, exportar e inyectar tickets, y automatiza ataques clásicos del dominio como el Kerberoasting (pedir tickets de servicio para intentar descifrar luego sus contraseñas) o el AS-REP roasting. Es una de las piezas de referencia en la fase de ataque a dominios Windows, y por eso conviene conocerla también para defenderse de ella.",
+        "legitimateUse": "Comprobar en el dominio de tu propia organización, o con permiso explícito, si existen cuentas de servicio débiles o mal configuradas frente a Kerberos, para endurecerlas."
+      },
+      "en": {
+        "summary": "A C# toolset for interacting directly with Kerberos, the Active Directory authentication protocol, and abusing its weaknesses. It can request, export and inject tickets, and it automates classic domain attacks such as Kerberoasting (requesting service tickets to then try to crack their passwords) or AS-REP roasting. It is one of the reference pieces in the Windows-domain attack phase, which is exactly why it is worth knowing in order to defend against it.",
+        "legitimateUse": "Check in your own organisation's domain, or one you have explicit permission to test, whether there are weak or misconfigured service accounts exposed to Kerberos attacks, in order to harden them."
+      }
+    }
+  },
+  {
+    "id": "impacket",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Impacket",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/fortra/impacket",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "rubeus",
+      "kerbrute"
+    ],
+    "tags": [
+      "active-directory",
+      "network-protocols",
+      "kerberos",
+      "python"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una colección de clases de Python para trabajar a bajo nivel con protocolos de red de Windows como SMB, MSRPC o Kerberos, acompañada de muchos scripts de ejemplo listos para usar. Esos scripts cubren tareas muy habituales en auditorías de dominio: ejecutar comandos en remoto, extraer hashes de la base de datos de cuentas, pedir tickets de servicio para Kerberoasting o volcar secretos. Al estar en Python y ser multiplataforma, es la navaja suiza que aparece una y otra vez en el trabajo con Active Directory.",
+        "legitimateUse": "Probar contra sistemas de tu propia organización, o con permiso explícito, cómo se pueden abusar protocolos como SMB o Kerberos, para verificar configuraciones y detectar exposiciones."
+      },
+      "en": {
+        "summary": "A collection of Python classes for working at a low level with Windows network protocols such as SMB, MSRPC or Kerberos, together with many ready-to-use example scripts. Those scripts cover very common domain-assessment tasks: running commands remotely, extracting hashes from the accounts database, requesting service tickets for Kerberoasting or dumping secrets. Being in Python and cross-platform, it is the swiss-army knife that shows up again and again in Active Directory work.",
+        "legitimateUse": "Test against systems in your own organisation, or ones you have explicit permission to test, how protocols such as SMB or Kerberos can be abused, to verify configurations and spot exposures."
+      }
+    }
+  },
+  {
+    "id": "kerbrute",
+    "category": "active-directory",
+    "subcategory": "ad-kerberos",
+    "name": "Kerbrute",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/ropnop/kerbrute",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "rubeus",
+      "impacket"
+    ],
+    "tags": [
+      "active-directory",
+      "kerberos",
+      "user-enumeration",
+      "password-spraying"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta rápida que abusa de la preautenticación de Kerberos para dos cosas: comprobar qué nombres de usuario existen realmente en un dominio y probar contraseñas contra muchas cuentas a la vez (password spraying) sin bloquearlas tan fácilmente como por otros medios. Al validar usuarios antes de atacar, evita ruido innecesario y acelera el reconocimiento del dominio. Está escrita en Go y trae binarios para Windows, Linux y macOS.",
+        "legitimateUse": "Verificar en el dominio de tu propia organización, o con permiso explícito, qué cuentas existen y si resisten contraseñas débiles, para mejorar políticas y detección."
+      },
+      "en": {
+        "summary": "A fast tool that abuses Kerberos pre-authentication for two things: checking which usernames actually exist in a domain and trying passwords against many accounts at once (password spraying) without locking them out as easily as by other means. By validating users before attacking, it avoids unnecessary noise and speeds up domain reconnaissance. It is written in Go and ships binaries for Windows, Linux and macOS.",
+        "legitimateUse": "Verify in your own organisation's domain, or one you have explicit permission to test, which accounts exist and whether they resist weak passwords, to improve policy and detection."
+      }
+    }
+  },
+  {
+    "id": "aircrack-ng",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Aircrack-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/aircrack-ng/aircrack-ng",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "wifite",
+      "kismet"
+    ],
+    "tags": [
+      "wifi",
+      "wpa",
+      "handshake",
+      "wireless"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la suite de referencia para auditar redes Wi-Fi: reúne herramientas para poner la tarjeta en modo monitor, capturar tráfico, provocar la reconexión de clientes y, sobre todo, intentar recuperar la contraseña de una red a partir del handshake capturado. Cada tarea la hace una utilidad distinta de la suite, que se combinan en un flujo típico de captura y descifrado. Es el conjunto que aparece por debajo de casi cualquier otra herramienta de Wi-Fi y el estándar para aprender cómo se rompe (y por tanto cómo se protege) una red inalámbrica.",
+        "legitimateUse": "Auditar la seguridad de tu propia red Wi-Fi, o de una red con permiso explícito, para comprobar si la contraseña y el cifrado resisten un ataque y reforzarlos."
+      },
+      "en": {
+        "summary": "The reference suite for auditing Wi-Fi networks: it brings together tools to put the card into monitor mode, capture traffic, force clients to reconnect and, above all, try to recover a network's password from the captured handshake. Each task is handled by a different utility in the suite, combined into a typical capture-and-crack workflow. It is the set that sits under almost any other Wi-Fi tool and the standard for learning how a wireless network is broken (and therefore how it is protected).",
+        "legitimateUse": "Audit the security of your own Wi-Fi network, or one you have explicit permission to test, to check whether the password and encryption resist an attack and to strengthen them."
+      }
+    }
+  },
+  {
+    "id": "wifite",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Wifite",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/kimocoder/wifite2",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "aircrack-ng"
+    ],
+    "tags": [
+      "wifi",
+      "automation",
+      "wpa",
+      "wps"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un automatizador de auditoría Wi-Fi que orquesta por ti las herramientas de bajo nivel (la suite Aircrack-ng, reaver, hashcat y otras): detecta las redes cercanas, elige los ataques aplicables a cada una y ejecuta todo el proceso sin tener que recordar decenas de comandos. Cubre ataques a WPA/WPA2 mediante handshake o PMKID y a WPS, y guarda los resultados de forma ordenada. Es ideal para empezar, porque enseña el flujo completo de una auditoría inalámbrica con una sola orden.",
+        "legitimateUse": "Revisar de forma rápida la seguridad de tu propia red Wi-Fi, o de una red con permiso explícito, para ver a qué ataques comunes sería vulnerable y corregirlo."
+      },
+      "en": {
+        "summary": "A Wi-Fi auditing automator that orchestrates the low-level tools for you (the Aircrack-ng suite, reaver, hashcat and others): it detects nearby networks, picks the attacks applicable to each and runs the whole process without having to remember dozens of commands. It covers WPA/WPA2 attacks via handshake or PMKID and WPS attacks, and stores the results in an orderly way. It is ideal for getting started, because it teaches the full flow of a wireless assessment with a single command.",
+        "legitimateUse": "Quickly review the security of your own Wi-Fi network, or one you have explicit permission to test, to see which common attacks it would be vulnerable to and fix it."
+      }
+    }
+  },
+  {
+    "id": "kismet",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Kismet",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/kismetwireless/kismet",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "aircrack-ng"
+    ],
+    "tags": [
+      "wifi",
+      "sniffer",
+      "wids",
+      "wardriving"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un detector y sniffer inalámbrico que trabaja de forma pasiva: sin emitir paquetes que lo delaten, descubre redes, puntos de acceso y clientes, y los relaciona entre sí mientras registra todo el tráfico para analizarlo después. Además de Wi-Fi reconoce otras tecnologías como Bluetooth/BTLE y Zigbee, y puede funcionar como sistema de detección de intrusos inalámbricos (WIDS) y para wardriving con GPS. Se controla desde una interfaz web y es la pieza típica para mapear el espectro de un entorno.",
+        "legitimateUse": "Inventariar y vigilar las redes inalámbricas de tu propio entorno, o con permiso explícito, para detectar puntos de acceso no autorizados y actividad sospechosa."
+      },
+      "en": {
+        "summary": "A wireless detector and sniffer that works passively: without emitting packets that would give it away, it discovers networks, access points and clients, relates them to each other and logs all traffic for later analysis. Beyond Wi-Fi it recognises other technologies such as Bluetooth/BTLE and Zigbee, and it can act as a wireless intrusion detection system (WIDS) and for GPS wardriving. It is driven from a web interface and is the typical piece for mapping the spectrum of an environment.",
+        "legitimateUse": "Inventory and monitor the wireless networks of your own environment, or one you have explicit permission to test, to detect rogue access points and suspicious activity."
+      }
+    }
+  },
+  {
+    "id": "bluing",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "Bluing",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/fO-000/bluing",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "btlejack",
+      "sniffle"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "recon",
+      "enumeration"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de recogida de información sobre Bluetooth (antes llamada bluescan) que ayuda a entender y enumerar dispositivos tanto clásicos (BR/EDR) como de bajo consumo (LE). Permite inventariar dispositivos cercanos y consultar sus características, servicios SDP/GATT y funciones del protocolo, dando una foto clara de su estructura interna. Funciona sobre la pila BlueZ de Linux y algunas funciones avanzadas requieren hardware adicional. Es un buen punto de partida para aprender cómo se expone un dispositivo Bluetooth.",
+        "legitimateUse": "Enumerar tus propios dispositivos Bluetooth, o con permiso explícito, para ver qué información y servicios exponen y reducir lo innecesario."
+      },
+      "en": {
+        "summary": "A Bluetooth intelligence-gathering tool (formerly called bluescan) that helps understand and enumerate both classic (BR/EDR) and low-energy (LE) devices. It can inventory nearby devices and query their characteristics, SDP/GATT services and protocol features, giving a clear picture of their internal structure. It runs on Linux's BlueZ stack and some advanced features require additional hardware. It is a good starting point for learning how a Bluetooth device exposes itself.",
+        "legitimateUse": "Enumerate your own Bluetooth devices, or ones you have explicit permission to test, to see what information and services they expose and trim what is unnecessary."
+      }
+    }
+  },
+  {
+    "id": "btlejack",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "btlejack",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/virtualabs/btlejack",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "bluing",
+      "sniffle"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "sniffing",
+      "research"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una navaja suiza para Bluetooth de bajo consumo (BLE) orientada a estudiar conexiones: puede capturar el tráfico de una conexión existente o nueva, exportarlo a formatos PCAP para analizarlo, y en escenarios de laboratorio incluso interferir o tomar el control de una conexión. Detecta de forma automática el algoritmo de salto de canal, lo que simplifica mucho la captura. Depende de una o varias placas BBC micro:bit con un firmware propio, así que requiere ese hardware para funcionar.",
+        "legitimateUse": "Analizar en laboratorio o con permiso explícito el tráfico BLE de tus propios dispositivos para entender su seguridad y detectar comunicaciones sin cifrar."
+      },
+      "en": {
+        "summary": "A swiss-army knife for Bluetooth Low Energy (BLE) aimed at studying connections: it can capture the traffic of an existing or new connection, export it to PCAP formats for analysis and, in lab scenarios, even jam or take over a connection. It automatically detects the channel-hopping algorithm, which greatly simplifies capture. It relies on one or more BBC micro:bit boards running dedicated firmware, so it requires that hardware to work.",
+        "legitimateUse": "Analyse, in a lab or with explicit permission, the BLE traffic of your own devices to understand their security and detect unencrypted communications."
+      }
+    }
+  },
+  {
+    "id": "sniffle",
+    "category": "wireless",
+    "subcategory": "bluetooth",
+    "name": "Sniffle",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/nccgroup/Sniffle",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "btlejack",
+      "bluing"
+    ],
+    "tags": [
+      "bluetooth",
+      "ble",
+      "sniffer",
+      "research"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un sniffer de Bluetooth de bajo consumo (BLE 5 y 4.x) formado por un firmware para ciertos chips de Texas Instruments y una herramienta de recepción en el PC. Captura anuncios y conexiones BLE con buena fiabilidad y soporta funciones modernas del estándar, y su salida se puede volcar a Wireshark para analizarla en detalle. Al basarse en un firmware concreto, necesita el hardware compatible (dongles con chips CC1352/CC26x2). Es una referencia para desarrollo, depuración y análisis de seguridad de dispositivos BLE.",
+        "legitimateUse": "Capturar y analizar en laboratorio o con permiso explícito el tráfico BLE de tus propios dispositivos para depurar y auditar su seguridad."
+      },
+      "en": {
+        "summary": "A Bluetooth Low Energy sniffer (BLE 5 and 4.x) made up of firmware for certain Texas Instruments chips and a receiver tool on the PC. It captures BLE advertisements and connections reliably and supports modern features of the standard, and its output can be fed into Wireshark for detailed analysis. Because it relies on specific firmware, it needs compatible hardware (dongles with CC1352/CC26x2 chips). It is a reference for development, debugging and security analysis of BLE devices.",
+        "legitimateUse": "Capture and analyse, in a lab or with explicit permission, the BLE traffic of your own devices to debug and audit their security."
+      }
+    }
   }
 ]

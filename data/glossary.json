@@ -236,5 +236,110 @@
       "es": "Técnica que usa el hash de una contraseña para autenticarse sin conocer la contraseña en claro.",
       "en": "Technique that uses a password's hash to authenticate without knowing the cleartext password."
     }
+  },
+  {
+    "term": "pivoting",
+    "i18n": {
+      "es": "Usar una máquina ya comprometida como punto de salto para alcanzar otras redes o equipos internos no accesibles directamente.",
+      "en": "Using an already-compromised machine as a jump point to reach other networks or internal hosts not directly accessible."
+    }
+  },
+  {
+    "term": "SOCKS",
+    "i18n": {
+      "es": "Protocolo de proxy que reenvía conexiones de red arbitrarias a través de un intermediario.",
+      "en": "Proxy protocol that forwards arbitrary network connections through an intermediary."
+    }
+  },
+  {
+    "term": "TUN",
+    "i18n": {
+      "es": "Interfaz de red virtual a nivel de IP que permite encaminar tráfico de una red a través de un túnel.",
+      "en": "Virtual network interface at the IP level that lets traffic be routed through a tunnel."
+    }
+  },
+  {
+    "term": "LDAP",
+    "i18n": {
+      "es": "Protocolo para consultar y modificar servicios de directorio como Active Directory.",
+      "en": "Protocol for querying and modifying directory services such as Active Directory."
+    }
+  },
+  {
+    "term": "camino de ataque",
+    "i18n": {
+      "es": "Secuencia de relaciones y permisos que un atacante puede encadenar para pasar de un acceso limitado al control del dominio.",
+      "en": "Sequence of relationships and permissions an attacker can chain to go from limited access to domain control."
+    }
+  },
+  {
+    "term": "Kerberos",
+    "i18n": {
+      "es": "Protocolo de autenticación basado en tickets usado por Active Directory.",
+      "en": "Ticket-based authentication protocol used by Active Directory."
+    }
+  },
+  {
+    "term": "Kerberoasting",
+    "i18n": {
+      "es": "Ataque que pide tickets de servicio Kerberos para descifrar offline la contraseña de cuentas de servicio.",
+      "en": "Attack that requests Kerberos service tickets to crack service-account passwords offline."
+    }
+  },
+  {
+    "term": "AS-REP roasting",
+    "i18n": {
+      "es": "Ataque contra cuentas sin preautenticación Kerberos para obtener material cifrado y descifrar su contraseña offline.",
+      "en": "Attack against accounts without Kerberos pre-authentication to obtain encrypted material and crack their password offline."
+    }
+  },
+  {
+    "term": "password spraying",
+    "i18n": {
+      "es": "Probar una o pocas contraseñas comunes contra muchas cuentas para evitar bloqueos.",
+      "en": "Trying one or a few common passwords against many accounts to avoid lockouts."
+    }
+  },
+  {
+    "term": "handshake",
+    "i18n": {
+      "es": "Intercambio inicial entre cliente y red Wi-Fi del que se puede extraer material para intentar descifrar la contraseña.",
+      "en": "Initial exchange between a client and a Wi-Fi network from which material can be extracted to try to crack the password."
+    }
+  },
+  {
+    "term": "modo monitor",
+    "i18n": {
+      "es": "Modo de una tarjeta Wi-Fi que permite capturar todo el tráfico del aire, no solo el dirigido a ella.",
+      "en": "Mode of a Wi-Fi card that lets it capture all traffic in the air, not just traffic addressed to it."
+    }
+  },
+  {
+    "term": "WPS",
+    "i18n": {
+      "es": "Mecanismo de configuración rápida de Wi-Fi históricamente vulnerable a ataques de PIN.",
+      "en": "Wi-Fi quick-setup mechanism historically vulnerable to PIN attacks."
+    }
+  },
+  {
+    "term": "BLE",
+    "i18n": {
+      "es": "Bluetooth Low Energy: variante de Bluetooth de bajo consumo usada por wearables, sensores y dispositivos IoT.",
+      "en": "Bluetooth Low Energy: the low-power variant of Bluetooth used by wearables, sensors and IoT devices."
+    }
+  },
+  {
+    "term": "GATT",
+    "i18n": {
+      "es": "Perfil que define cómo un dispositivo BLE expone sus servicios y características de datos.",
+      "en": "Profile defining how a BLE device exposes its services and data characteristics."
+    }
+  },
+  {
+    "term": "BR/EDR",
+    "i18n": {
+      "es": "Bluetooth clásico (Basic Rate/Enhanced Data Rate), frente al de bajo consumo (LE).",
+      "en": "Classic Bluetooth (Basic Rate/Enhanced Data Rate), as opposed to Low Energy (LE)."
+    }
   }
 ]
