@@ -5779,5 +5779,83 @@
         "legitimateUse": "Capture and analyse, in a lab or with explicit permission, the BLE traffic of your own devices to debug and audit their security."
       }
     }
+  },
+  {
+    "id": "gophish",
+    "category": "social-engineering",
+    "subcategory": "awareness",
+    "name": "GoPhish",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/gophish/gophish",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "king-phisher"
+    ],
+    "tags": [
+      "phishing",
+      "awareness",
+      "campaigns",
+      "training"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una plataforma de código abierto para montar y medir campañas de phishing simulado dentro de una organización, pensada como ejercicio de concienciación. Desde una interfaz web defines los grupos de destinatarios, la plantilla de correo y la página de aterrizaje, lanzas la campaña y ves en tiempo real quién abre, hace clic o introduce datos, con informes para medir la mejora. No busca engañar a terceros, sino entrenar a tu propia gente y obtener métricas para priorizar la formación.",
+        "legitimateUse": "Ejecutar campañas de phishing simulado entre los empleados de tu propia organización, con autorización, para medir el riesgo humano y enfocar la formación de concienciación."
+      },
+      "en": {
+        "summary": "An open-source platform to run and measure simulated phishing campaigns within an organisation, meant as an awareness exercise. From a web interface you define the recipient groups, the email template and the landing page, launch the campaign and see in real time who opens, clicks or submits data, with reports to measure improvement. It is not about deceiving outsiders, but about training your own people and getting metrics to prioritise awareness work.",
+        "legitimateUse": "Run simulated phishing campaigns among your own organisation's employees, with authorisation, to measure human risk and focus awareness training."
+      }
+    }
+  },
+  {
+    "id": "king-phisher",
+    "category": "social-engineering",
+    "subcategory": "awareness",
+    "name": "King Phisher",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "desktop"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/rsmusllp/king-phisher",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "gophish"
+    ],
+    "tags": [
+      "phishing",
+      "awareness",
+      "campaigns",
+      "training"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta de campañas de phishing con arquitectura cliente-servidor, orientada a probar y promover la concienciación de los usuarios simulando ataques realistas. Permite lanzar varias campañas a la vez, crear mensajes y páginas, y recoger métricas de interacción, con un sistema de plugins para ampliarlo. Su documentación recalca que solo debe usarse de forma legal y con permiso explícito de la organización objetivo, en línea con un uso estrictamente interno y autorizado.",
+        "legitimateUse": "Simular ataques de phishing contra los empleados de tu propia organización, con autorización explícita, para evaluar y mejorar su nivel de concienciación."
+      },
+      "en": {
+        "summary": "A phishing-campaign tool with a client-server architecture, aimed at testing and promoting user awareness by simulating realistic attacks. It lets you run several campaigns at once, create messages and pages, and collect interaction metrics, with a plugin system to extend it. Its documentation stresses that it must only be used legally and with the explicit permission of the targeted organisation, in line with strictly internal, authorised use.",
+        "legitimateUse": "Simulate phishing attacks against your own organisation's employees, with explicit authorisation, to assess and improve their awareness level."
+      }
+    }
   }
 ]
