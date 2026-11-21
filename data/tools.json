@@ -5046,5 +5046,126 @@
         "legitimateUse": "Check on your own Windows machines, or on systems you have explicit permission to test, whether there are misconfigured services and permissions that allow escalation, in order to harden them."
       }
     }
+  },
+  {
+    "id": "mimikatz",
+    "category": "post-exploitation",
+    "subcategory": "credentials",
+    "name": "Mimikatz",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/gentilkiwi/mimikatz",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "pypykatz",
+      "lazagne"
+    ],
+    "tags": [
+      "credentials",
+      "windows",
+      "lsass",
+      "pass-the-hash"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la herramienta de referencia para extraer credenciales en Windows: una vez tienes privilegios suficientes, recupera contraseñas, hashes, tickets Kerberos y otros secretos de autenticación directamente de la memoria del sistema. Sobre esos secretos permite además técnicas clásicas como pasar el hash o reutilizar tickets para moverse por una red sin conocer la contraseña en claro. Se usa desde una consola interactiva con módulos, y es el motor que incorporan por debajo muchas otras herramientas y frameworks.",
+        "legitimateUse": "Demostrar en tu propio laboratorio o en sistemas con permiso explícito cómo se exponen las credenciales en memoria, para justificar defensas como Credential Guard o la reducción de privilegios."
+      },
+      "en": {
+        "summary": "The reference tool for extracting credentials on Windows: once you have sufficient privileges, it recovers passwords, hashes, Kerberos tickets and other authentication secrets directly from system memory. On top of those secrets it also enables classic techniques such as passing the hash or reusing tickets to move across a network without knowing the cleartext password. It is driven from an interactive module-based console, and it is the engine many other tools and frameworks embed under the hood.",
+        "legitimateUse": "Demonstrate in your own lab or on systems with explicit permission how credentials are exposed in memory, to justify defences such as Credential Guard or privilege reduction."
+      }
+    }
+  },
+  {
+    "id": "lazagne",
+    "category": "post-exploitation",
+    "subcategory": "credentials",
+    "name": "LaZagne",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/AlessandroZ/LaZagne",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "mimikatz",
+      "pypykatz"
+    ],
+    "tags": [
+      "credentials",
+      "password-recovery",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una herramienta que recupera de forma automática las contraseñas guardadas en un equipo por todo tipo de programas: navegadores, clientes de correo, clientes de bases de datos, wifi, gestores y aplicaciones del sistema. En lugar de centrarse en la memoria, recorre los lugares donde cada aplicación almacena sus credenciales y las descifra cuando puede, devolviendo un listado único. Tiene versiones para Windows y Linux, y es útil para ver de un vistazo cuántos secretos quedan accesibles en una máquina.",
+        "legitimateUse": "Revisar en tus propios equipos, o en sistemas con permiso explícito, cuántas contraseñas quedan almacenadas y recuperables por las aplicaciones, para reducir esa exposición."
+      },
+      "en": {
+        "summary": "A tool that automatically recovers passwords stored on a machine by all kinds of programs: browsers, mail clients, database clients, wifi, managers and system applications. Rather than focusing on memory, it goes through the places where each application stores its credentials and decrypts them where it can, returning a single list. It has Windows and Linux versions, and it is useful for seeing at a glance how many secrets remain accessible on a machine.",
+        "legitimateUse": "Review on your own machines, or on systems you have explicit permission to test, how many passwords remain stored and recoverable by applications, in order to reduce that exposure."
+      }
+    }
+  },
+  {
+    "id": "pypykatz",
+    "category": "post-exploitation",
+    "subcategory": "credentials",
+    "name": "pypykatz",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/skelsec/pypykatz",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "mimikatz"
+    ],
+    "tags": [
+      "credentials",
+      "lsass",
+      "python",
+      "post-exploitation"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es una reimplementación de Mimikatz escrita íntegramente en Python, centrada sobre todo en extraer secretos de autenticación a partir de volcados de la memoria del proceso LSASS. Al no depender del binario original de Windows, permite analizar esos volcados desde otros sistemas operativos (por ejemplo una máquina Linux) y encaja bien en flujos automatizados. Es una alternativa cómoda cuando prefieres trabajar sobre un volcado ya obtenido en lugar de ejecutar nada en la máquina objetivo.",
+        "legitimateUse": "Analizar en tu propio laboratorio, o con permiso explícito, volcados de memoria para entender qué credenciales quedarían expuestas, sin ejecutar herramientas en el sistema afectado."
+      },
+      "en": {
+        "summary": "A reimplementation of Mimikatz written entirely in Python, focused mainly on extracting authentication secrets from dumps of the LSASS process memory. By not depending on the original Windows binary, it lets you analyse those dumps from other operating systems (for example a Linux machine) and fits well into automated workflows. It is a convenient alternative when you prefer to work on a dump you already obtained rather than running anything on the target machine.",
+        "legitimateUse": "Analyse memory dumps in your own lab, or with explicit permission, to understand which credentials would be exposed, without running tools on the affected system."
+      }
+    }
   }
 ]
