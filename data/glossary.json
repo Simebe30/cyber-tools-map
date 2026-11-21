@@ -222,5 +222,19 @@
       "es": "Opción de Windows que, si está activada, instala paquetes MSI con privilegios de SYSTEM; es una vía directa de escalada.",
       "en": "Windows setting that, when enabled, installs MSI packages with SYSTEM privileges; a direct escalation path."
     }
+  },
+  {
+    "term": "LSASS",
+    "i18n": {
+      "es": "Proceso de Windows que gestiona la autenticación y guarda en memoria credenciales y tickets; objetivo habitual para robarlas.",
+      "en": "Windows process that handles authentication and holds credentials and tickets in memory; a common target for stealing them."
+    }
+  },
+  {
+    "term": "pass-the-hash",
+    "i18n": {
+      "es": "Técnica que usa el hash de una contraseña para autenticarse sin conocer la contraseña en claro.",
+      "en": "Technique that uses a password's hash to authenticate without knowing the cleartext password."
+    }
   }
 ]
