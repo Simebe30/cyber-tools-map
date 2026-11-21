@@ -5535,5 +5535,126 @@
         "legitimateUse": "Verify in your own organisation's domain, or one you have explicit permission to test, which accounts exist and whether they resist weak passwords, to improve policy and detection."
       }
     }
+  },
+  {
+    "id": "aircrack-ng",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Aircrack-ng",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/aircrack-ng/aircrack-ng",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "wifite",
+      "kismet"
+    ],
+    "tags": [
+      "wifi",
+      "wpa",
+      "handshake",
+      "wireless"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es la suite de referencia para auditar redes Wi-Fi: reúne herramientas para poner la tarjeta en modo monitor, capturar tráfico, provocar la reconexión de clientes y, sobre todo, intentar recuperar la contraseña de una red a partir del handshake capturado. Cada tarea la hace una utilidad distinta de la suite, que se combinan en un flujo típico de captura y descifrado. Es el conjunto que aparece por debajo de casi cualquier otra herramienta de Wi-Fi y el estándar para aprender cómo se rompe (y por tanto cómo se protege) una red inalámbrica.",
+        "legitimateUse": "Auditar la seguridad de tu propia red Wi-Fi, o de una red con permiso explícito, para comprobar si la contraseña y el cifrado resisten un ataque y reforzarlos."
+      },
+      "en": {
+        "summary": "The reference suite for auditing Wi-Fi networks: it brings together tools to put the card into monitor mode, capture traffic, force clients to reconnect and, above all, try to recover a network's password from the captured handshake. Each task is handled by a different utility in the suite, combined into a typical capture-and-crack workflow. It is the set that sits under almost any other Wi-Fi tool and the standard for learning how a wireless network is broken (and therefore how it is protected).",
+        "legitimateUse": "Audit the security of your own Wi-Fi network, or one you have explicit permission to test, to check whether the password and encryption resist an attack and to strengthen them."
+      }
+    }
+  },
+  {
+    "id": "wifite",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Wifite",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "beginner",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/kimocoder/wifite2",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "aircrack-ng"
+    ],
+    "tags": [
+      "wifi",
+      "automation",
+      "wpa",
+      "wps"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un automatizador de auditoría Wi-Fi que orquesta por ti las herramientas de bajo nivel (la suite Aircrack-ng, reaver, hashcat y otras): detecta las redes cercanas, elige los ataques aplicables a cada una y ejecuta todo el proceso sin tener que recordar decenas de comandos. Cubre ataques a WPA/WPA2 mediante handshake o PMKID y a WPS, y guarda los resultados de forma ordenada. Es ideal para empezar, porque enseña el flujo completo de una auditoría inalámbrica con una sola orden.",
+        "legitimateUse": "Revisar de forma rápida la seguridad de tu propia red Wi-Fi, o de una red con permiso explícito, para ver a qué ataques comunes sería vulnerable y corregirlo."
+      },
+      "en": {
+        "summary": "A Wi-Fi auditing automator that orchestrates the low-level tools for you (the Aircrack-ng suite, reaver, hashcat and others): it detects nearby networks, picks the attacks applicable to each and runs the whole process without having to remember dozens of commands. It covers WPA/WPA2 attacks via handshake or PMKID and WPS attacks, and stores the results in an orderly way. It is ideal for getting started, because it teaches the full flow of a wireless assessment with a single command.",
+        "legitimateUse": "Quickly review the security of your own Wi-Fi network, or one you have explicit permission to test, to see which common attacks it would be vulnerable to and fix it."
+      }
+    }
+  },
+  {
+    "id": "kismet",
+    "category": "wireless",
+    "subcategory": "wifi",
+    "name": "Kismet",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "individual",
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "intermediate",
+    "status": "active",
+    "flagship": false,
+    "osiLayer": null,
+    "url": "https://github.com/kismetwireless/kismet",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "aircrack-ng"
+    ],
+    "tags": [
+      "wifi",
+      "sniffer",
+      "wids",
+      "wardriving"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un detector y sniffer inalámbrico que trabaja de forma pasiva: sin emitir paquetes que lo delaten, descubre redes, puntos de acceso y clientes, y los relaciona entre sí mientras registra todo el tráfico para analizarlo después. Además de Wi-Fi reconoce otras tecnologías como Bluetooth/BTLE y Zigbee, y puede funcionar como sistema de detección de intrusos inalámbricos (WIDS) y para wardriving con GPS. Se controla desde una interfaz web y es la pieza típica para mapear el espectro de un entorno.",
+        "legitimateUse": "Inventariar y vigilar las redes inalámbricas de tu propio entorno, o con permiso explícito, para detectar puntos de acceso no autorizados y actividad sospechosa."
+      },
+      "en": {
+        "summary": "A wireless detector and sniffer that works passively: without emitting packets that would give it away, it discovers networks, access points and clients, relates them to each other and logs all traffic for later analysis. Beyond Wi-Fi it recognises other technologies such as Bluetooth/BTLE and Zigbee, and it can act as a wireless intrusion detection system (WIDS) and for GPS wardriving. It is driven from a web interface and is the typical piece for mapping the spectrum of an environment.",
+        "legitimateUse": "Inventory and monitor the wireless networks of your own environment, or one you have explicit permission to test, to detect rogue access points and suspicious activity."
+      }
+    }
   }
 ]

@@ -299,5 +299,26 @@
       "es": "Probar una o pocas contraseñas comunes contra muchas cuentas para evitar bloqueos.",
       "en": "Trying one or a few common passwords against many accounts to avoid lockouts."
     }
+  },
+  {
+    "term": "handshake",
+    "i18n": {
+      "es": "Intercambio inicial entre cliente y red Wi-Fi del que se puede extraer material para intentar descifrar la contraseña.",
+      "en": "Initial exchange between a client and a Wi-Fi network from which material can be extracted to try to crack the password."
+    }
+  },
+  {
+    "term": "modo monitor",
+    "i18n": {
+      "es": "Modo de una tarjeta Wi-Fi que permite capturar todo el tráfico del aire, no solo el dirigido a ella.",
+      "en": "Mode of a Wi-Fi card that lets it capture all traffic in the air, not just traffic addressed to it."
+    }
+  },
+  {
+    "term": "WPS",
+    "i18n": {
+      "es": "Mecanismo de configuración rápida de Wi-Fi históricamente vulnerable a ataques de PIN.",
+      "en": "Wi-Fi quick-setup mechanism historically vulnerable to PIN attacks."
+    }
   }
 ]
