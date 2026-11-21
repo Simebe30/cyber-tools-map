@@ -5857,5 +5857,44 @@
         "legitimateUse": "Simulate phishing attacks against your own organisation's employees, with explicit authorisation, to assess and improve their awareness level."
       }
     }
+  },
+  {
+    "id": "evilginx",
+    "category": "social-engineering",
+    "subcategory": "mfa-phishing",
+    "name": "Evilginx",
+    "license": "free",
+    "github": true,
+    "appliesTo": [
+      "organization"
+    ],
+    "platforms": [
+      "cli"
+    ],
+    "level": "advanced",
+    "status": "active",
+    "flagship": true,
+    "osiLayer": null,
+    "url": "https://github.com/kgretzky/evilginx2",
+    "verifiedAt": "2026-11-21",
+    "related": [
+      "gophish"
+    ],
+    "tags": [
+      "phishing",
+      "aitm",
+      "mfa-bypass",
+      "session-hijacking"
+    ],
+    "i18n": {
+      "es": {
+        "summary": "Es un framework de phishing que se coloca como intermediario (ataque adversary-in-the-middle) entre la víctima y el sitio real: en lugar de clonar una página, hace de proxy transparente hacia el servicio legítimo, de modo que el usuario se autentica de verdad. Así captura no solo las credenciales, sino también la cookie o token de sesión ya validado, lo que le permite saltarse el segundo factor y entrar como la víctima. Su importancia es sobre todo didáctica y defensiva: demuestra por qué el MFA basado en códigos no es infalible y por qué conviene pasar a MFA resistente al phishing (claves FIDO2/passkeys).",
+        "legitimateUse": "Demostrar en ejercicios de red team autorizados, o en tu propio entorno, el riesgo del phishing que roba sesiones, para justificar el despliegue de MFA resistente al phishing (FIDO2) y mejores detecciones."
+      },
+      "en": {
+        "summary": "A phishing framework that positions itself as an intermediary (adversary-in-the-middle attack) between the victim and the real site: instead of cloning a page, it acts as a transparent proxy to the legitimate service, so the user actually authenticates. This way it captures not just the credentials but also the already-validated session cookie or token, which lets it bypass the second factor and log in as the victim. Its importance is mainly educational and defensive: it shows why code-based MFA is not infallible and why moving to phishing-resistant MFA (FIDO2 keys/passkeys) matters.",
+        "legitimateUse": "Demonstrate, in authorised red-team exercises or your own environment, the risk of session-stealing phishing, to justify deploying phishing-resistant MFA (FIDO2) and better detections."
+      }
+    }
   }
 ]
